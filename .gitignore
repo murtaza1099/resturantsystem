@@ -69,7 +69,11 @@ web-build/
 # @end expo-cli
 graphify-out/
 .env
-enatega-multivendor-app/.env
+apps/customer/.env
 goodbite-multivendor-app
 **/*service-account*.json
 **/serviceAccountKey*.json
+
+# Firebase config files: add your own locally or via EAS file secrets
+google-services.json
+GoogleService-Info.plist

@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+
+[build.environment]
+NODE_VERSION = "20"
+NPM_VERSION = "10"
+NEXT_PUBLIC_SERVER_URL = "https://api.flippin.app/"
+NEXT_PUBLIC_WS_SERVER_URL = "wss://api.flippin.app/"
+[[plugins]]
+package = "@netlify/plugin-nextjs"

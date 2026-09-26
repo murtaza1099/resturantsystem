@@ -1,4 +1,4 @@
-# Contributing to Enatega Multi Vendor Food Delivery System
+# Contributing to Flippin Restaurant Management System
 
 First off, thank you for considering contributing to our project! Your help is greatly appreciated.
 
@@ -27,8 +27,8 @@ If you would like to contribute code, follow these steps:
 1. **Fork the repository**: Create a fork of the repository on GitHub.
 2. **Clone your fork**: Clone your fork to your local machine.
     ```bash
-    git clone https://github.com/<your-username>/food-delivery-multivendor.git
-    cd food-delivery-multivendor
+    git clone https://github.com/<your-username>/resturantsystem.git
+    cd resturantsystem
     ```
 3. **Create a new branch**: Create a new branch for your feature or bugfix.
     ```bash
@@ -73,8 +73,8 @@ Ensure you have the following installed:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/enatega/food-delivery-multivendor.git
-    cd food-delivery-multivendor
+    git clone https://github.com/murtaza1099/resturantsystem.git
+    cd resturantsystem
     ```
 
 2. **Install dependencies**:
