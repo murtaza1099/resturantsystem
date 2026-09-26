@@ -34,7 +34,7 @@
     "autosuggest-highlight": "^3.3.4",
     "axios": "^1.8.4",
     "emailjs-com": "^3.2.0",
-    "firebase": "^11.8.1",
+    "firebase": "^12.19.0",
     "formik": "^2.4.6",
     "framer-motion": "^12.9.1",
     "graphql": "^16.9.0",
