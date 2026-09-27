@@ -31,7 +31,7 @@ Fix these three and the plan can be done. The rest of this document lists every 
 | C5 | Keep single-vendor admin as an open question | Single-vendor is not only the second admin. It is also 275 of the 724 source files in the customer app (`src/singlevendor/`), a separate GraphQL file in web (`lib/api/graphql/single-vendor/index.ts`), a `TOGGLE` mode in every app, and schema-check scripts in each app. Together the two admins carry about 180 operations each. | **Decide now: multi-restaurant only.** A one-restaurant client is just a platform with one restaurant. Delete `enatega-singlevendor-admin` and `src/singlevendor`, and hard-set `VENDOR_MODE=MULTI`. That removes about 40% of the API surface. |
 | C6 | "Secrets out of git: remove the old committed google-services.json…" | These keys belong to Enatega's Firebase project, not yours. Deleting the files in a new commit leaves them in git history. The rider app also has a hard-coded Sentry DSN (`enatega-multivendor-rider/lib/utils/service/sentry.ts:9`). Service workers carry a Firebase web key. | Delete them, then **give the buyer a fresh repo with clean history**: `git filter-repo`, or a squashed single-commit export. Never hand over this repo's history. |
 | C7 | Not mentioned | `.github/workflows/build-tenant-apk.yml` checks out a `saas-demo` branch that doesn't exist and POSTs build results to any `callback_url` given as input. `.codex/hooks.json` points to another developer's laptop (`/Users/muhammadali/...`). `enatega-multivendor-web/DESIGN.md` and `PRODUCT.md` tell AI tools to "preserve the Enatega name and existing logo" and keep the green `#75D04B`. | Delete the workflow and hooks. Replace DESIGN.md and PRODUCT.md with Flippin versions **before** any UI work. Otherwise Claude Code will follow them and rebuild the Enatega look. |
-| C8 | Live updates with Postgres `LISTEN/NOTIFY` on Supabase | Supabase's transaction pooler (port 6543) does not support `LISTEN`. The free plan also **pauses the project after 7 days without activity**. A paused demo is dead when the buyer opens the link. | Use the direct connection or the session pooler (port 5432) for the listener. Use Supabase Pro ($25/mo) for anything a client will see, or at minimum a daily keep-alive ping. |
+| C8 | Live updates with Postgres `LISTEN/NOTIFY` on Supabase | Supabase's transaction pooler (port 6543) does not support `LISTEN`. The free plan also **pauses the project after 7 days without activity**. A paused demo is dead when the buyer opens the link. | Use the session pooler (port 5432) for the listener. Keep the project awake with the free 10-minute ping in section 5. Only one backend instance runs on the free plan, so in-memory pub/sub is enough for now; keep LISTEN/NOTIFY behind an interface for later. |
 | C9 | POS prints to "80 mm ESC/POS thermal printers over network or USB via browser print" | A browser can't send raw ESC/POS. `window.print()` opens a dialog on every receipt, can't cut paper and can't open the cash drawer. Real restaurants won't accept that. | For the demo, use browser print with an `@page 80mm` stylesheet. That works on a tablet with a Wi-Fi printer. For production, choose one: (a) Epson TM-m30 series with ePOS-Print over HTTP from the browser, (b) Star WebPRNT, or (c) a Sunmi/iMin Android terminal with a built-in printer, running an Expo wrapper. Write this down as a decision. |
 
 ### 2.2 Important: UAE and domain rules
@@ -52,8 +52,8 @@ Fix these three and the plan can be done. The rest of this document lists every 
 
 | # | Issue | Fix |
 | --- | --- | --- |
-| B1 | Google Play: **new personal developer accounts must run a closed test with 12 testers for 14 days** before they can publish to production. | If you ever publish, open an **organization** Play account (needs a D-U-N-S number). For the demo, APK plus internal testing is enough. |
-| B2 | TestFlight: internal testers must be users in your App Store Connect team (up to 100). An external or public link needs Beta App Review first. | Plan 1 to 2 days for beta review if the buyer needs a public TestFlight link. Apple enrolment for a company also needs D-U-N-S. |
+| B1 | Google Play: **new personal developer accounts must run a closed test with 12 testers for 14 days** before they can publish to production. | Not needed for the free demo (APKs installed directly). If you publish later, open an **organization** Play account (needs a D-U-N-S number). |
+| B2 | TestFlight: internal testers must be users in your App Store Connect team (up to 100). An external or public link needs Beta App Review first. | Skipped in the free demo (no Apple account; iPhone users get the web PWA). Later: plan 1 to 2 days for beta review for a public TestFlight link; company enrolment needs D-U-N-S. |
 | B3 | Rider background location needs a Play Console declaration and a video, and an iOS justification string. The repo already has `GOOGLE_PLAY_BACKGROUND_LOCATION_SUBMISSION.md`. | Reuse it and rebrand it. For the APK demo it isn't blocking. |
 | B4 | Expo SDK 53 (customer, rider) and 54 (store). | Move all three to SDK 54 in their own steps, not in a separate step. Expo Go only runs the latest SDK, so SDK 53 apps need dev builds anyway. |
 | B5 | "Upgrade admin panels from Next.js 14 to 16" | Low value, high risk (PrimeReact 10, next-intl 3, React 18 → 19). **Defer.** The buyer never sees the framework version. Restyle PrimeReact with a Flippin preset instead. |
@@ -93,7 +93,7 @@ Answer these before Step 1. My recommendation comes first.
 2. **Demo payment gateway:** Stripe test mode (recommended: fastest, supports AED, Apple Pay and Google Pay). Switch to Network International or Telr per client later, behind a `PaymentProvider` interface.
 3. **Backend: build or buy.** Enatega sells its backend. Buying it would save the riskiest 30% of the work, but check whether its licence lets you rebrand and resell. If it doesn't, or if the price is high, build it (this plan assumes build).
 4. **Printing target:** browser print for the demo (recommended), then Epson ePOS for production.
-5. **Domain:** `flippin.app` or another. You need it before Step 12 (emails, Apple sign-in and OAuth redirect URLs depend on it).
+5. **Domain:** not needed for the free demo (use the free `vercel.app` and `onrender.com` URLs). Buy one before the first real sale.
 6. **What you sell:** source code only, or source + hosting + setup. This decides whether the backend needs multi-tenant billing (it does not, for the demo).
 
 ---
@@ -192,28 +192,40 @@ PNG only works, but I'll have to trace it, and edges on app icons will be softer
 
 ---
 
-## 5. What you need to set up (owner tasks)
+## 5. What you need to set up (owner tasks): zero-cost stack
 
-Create these accounts with a company email (for example `ops@flippin.app` or a Gmail for now). **Put keys only into the service's own settings (Railway, Vercel, EAS). Never paste keys into chat or commit them.**
+Everything below is **$0 a month**. Nothing here is a trial that runs out. Two services (Google Cloud and Firebase for Maps) ask for a card to verify you, but with the caps below they bill $0. Create the accounts with one email (a Gmail is fine). **Put keys only into each service's own settings (Render, Vercel, EAS). Never paste keys into chat or commit them.**
 
-| # | Account | What to do | Cost | Needed by |
+| # | Account | What to do | Free limit that matters | Needed by |
 | --- | --- | --- | --- | --- |
-| 1 | Supabase | Create project `flippin-demo`, region Frankfurt or Mumbai. Save the DB password in a password manager. Upgrade to Pro before any client sees it. | Free now, $25/mo later | Step 5 |
-| 2 | Railway | Sign up with GitHub, create an empty project `flippin-api`. | ~$5/mo | Step 6 |
-| 3 | Vercel | Already connected. Create a team for Flippin if you want it separate. Pro is required for commercial use. | $0 / $20/mo | Step 7 |
-| 4 | Expo | Sign up, create org `flippin`. Run `npx eas login` once. | Free | Step 8 |
-| 5 | Google Cloud | Project `flippin`. Enable Maps JavaScript, Maps SDK Android + iOS, Places (New), Directions/Routes, Geocoding. Add billing **and a budget alert at $20**. Create 3 keys: web (restricted by domain), Android (package + SHA-1), iOS (bundle ID). | Free credit covers the demo | Step 7 |
-| 6 | Firebase | Project `flippin`. Add Android apps `com.flippin.customer`, `com.flippin.rider`, `com.flippin.store` and iOS equivalents. Download the new `google-services.json` / `GoogleService-Info.plist` and give them to EAS as file secrets (not git). | Free | Step 8 |
-| 7 | Stripe | Account with country UAE, test mode. Turn on Apple Pay and Google Pay in test. | Free (test) | Step 6 |
-| 8 | Sentry | Org `flippin`, one project per app. | Free | Step 12 |
-| 9 | Resend | Verify the domain for emails. | Free | Step 12 |
-| 10 | PostHog | Project `flippin`, EU cloud. | Free | Step 12 |
-| 11 | Domain | Buy at Cloudflare Registrar (at-cost price, free DNS). | ~$15/yr | Step 12 |
-| 12 | Apple Developer | Only if the client must install on an iPhone. Company enrolment needs a D-U-N-S number (free, takes days, so start now if you want it). | $99/yr | Step 12 |
-| 13 | Google Play Console | Only if publishing. Use an **organization** account to skip the 12-tester rule. | $25 once | Later |
-| 14 | Google OAuth + Apple Sign-In | OAuth client IDs (web, iOS, Android) in Google Cloud; a Services ID + key in Apple Developer. | Free | Step 6 |
+| 1 | Supabase (free) | Create project `flippin-demo`, region Frankfurt. Save the DB password in a password manager. | 500 MB database, 1 GB storage, 2 projects. **Pauses after 7 days idle**, fixed by the ping in #3. | Step 5 |
+| 2 | Render (free) instead of Railway | Sign up with GitHub. Create one **Web Service** from `backend/` (Docker). | 750 hours a month, which is enough for one service running 24/7. 512 MB RAM. Sleeps after 15 min with no HTTP request or WebSocket message; wake-up takes about 1 minute. | Step 6 |
+| 3 | cron-job.org (free) | One job: `GET https://<your-api>.onrender.com/health` every 10 minutes. `/health` runs a tiny DB query, so this one ping keeps **both** Render and Supabase awake. | Unlimited jobs, 1-minute minimum interval | Step 6 |
+| 4 | Vercel (Hobby, free) | Already connected. One project each for web, admin and pos. Use the free `*.vercel.app` URLs. | Hobby is officially non-commercial. Fine for a demo; move to Cloudflare Pages (free, commercial use allowed) or Pro once a client pays. | Step 7 |
+| 5 | Expo (free) | Sign up, create org `flippin`, run `npx eas login` once. | About 15 Android + 15 iOS cloud builds a month, low-priority queue. If you run out, build the APK free with `eas build --local` or on GitHub Actions. | Step 8 |
+| 6 | Google Cloud (card for verification, $0) | Project `flippin`. Enable Maps JavaScript, Maps SDK Android, Places (New), Routes, Geocoding. **Set a daily quota cap on each API** (APIs & Services → Quotas) plus a $1 budget alert, so it can't bill. Create 2 keys: web (restricted to your vercel.app domains) and Android (package + SHA-1). Create OAuth client IDs for Google sign-in here too. | Monthly free calls per API cover a demo easily | Step 7 |
+| 7 | Firebase (Spark, free) | Project `flippin`. Add Android apps `com.flippin.customer`, `com.flippin.rider`, `com.flippin.store`. Give the `google-services.json` to EAS as a file secret (not git). | Push notifications are free and unlimited | Step 8 |
+| 8 | Stripe (test mode) | Account with country UAE. Stay in test mode. Turn on Google Pay in test. | Test mode is free forever | Step 6 |
+| 9 | Sentry (Developer, free) | Org `flippin`, one project per app. | 5k errors a month | Step 12 |
+| 10 | Resend (free) | Without a domain it only sends to your own email, which is enough for the demo. Add a domain later. | 3k emails a month | Step 12 |
+| 11 | PostHog (free) | Project `flippin`, EU cloud. Optional. | 1M events a month | Step 12 |
 
-**Demo logins:** you don't create these by hand. The seed script in Step 4 creates one per role (customer, rider, waiter, cashier, kitchen, manager, owner, super admin) with the OTP `111111` in demo mode.
+**What I dropped to stay at $0, and what replaces it**
+
+| Paid item | Free replacement for the demo | When to pay |
+| --- | --- | --- |
+| Railway (~$5/mo) | Render free + cron-job.org ping. Backups if Render is a problem: **Koyeb** free (1 service, sleeps after 1 h idle, 1–5 s cold start) or **Google Cloud Run** (WebSockets up to 60 min, then the app reconnects). | When a client uses it daily ($7/mo Render Starter removes sleep) |
+| Supabase Pro ($25/mo) | Free plan + the ping above | When real restaurants use it |
+| Domain (~$15/yr) | `flippin-web.vercel.app`, `flippin-admin.vercel.app`, `flippin-pos.vercel.app`, `flippin-api.onrender.com` | Before the first real sale (looks more serious in a pitch too) |
+| Apple Developer ($99/yr) | **No iOS app build.** iPhone users use the customer website, which works as a PWA ("Add to Home Screen"). Apple sign-in is dropped from the demo (it needs a paid Apple account). | When a client needs the iPhone app |
+| Google Play ($25 once) | APK files installed directly from the demo kit page | When publishing to the store |
+| Thermal printer + tablet | Print to PDF from the browser; use any tablet or laptop you own for the POS and KDS | For an in-person demo, if you want to impress |
+
+**Two limits to know on the free stack**
+- **The first request after the server has slept is slow** (about a minute on Render). The 10-minute ping prevents this. Before a live client demo, open the admin dashboard 5 minutes early anyway.
+- **One free Render service only** (750 hours covers one service all month). The whole backend (GraphQL, WebSockets and REST) has to be **one process**, which it already is in this plan.
+
+**Demo logins:** you don't create these by hand. The seed script in Step 5 creates one per role (customer, rider, waiter, cashier, kitchen, manager, owner, super admin) with the OTP `111111` in demo mode.
 
 **Hardware (optional, strong for a client demo):** one 10-inch Android tablet for the POS, one old tablet or TV for the KDS or pickup screen, and one 80 mm Wi-Fi thermal printer (Epson TM-m30III if you plan the ePOS route).
 
@@ -457,7 +469,7 @@ Goal: backend/ (Node 20, TypeScript, Apollo Server 4 on Express, graphql-ws) tha
    `stub_hit operation=... field=...`.
 2. Auth: argon2id passwords; JWT access tokens (15 min web/admin, 30 days mobile, revocable via sessions table);
    refresh tokens hashed and rotated (same contract as apps/admin REFRESH_TOKEN); OTP with 111111 when DEMO_MODE=true;
-   Google + Apple ID-token verification; staff PIN login with lockout; super admin TOTP.
+   Google ID-token verification (Apple sign-in hidden in the apps until there is a paid Apple account); staff PIN login with lockout; super admin TOTP.
 3. Authorization: a directive or wrapper on each resolver with allowed roles and restaurant scoping.
    Add a test that calls every restaurant-scoped resolver as restaurant A's manager with restaurant B's ids and expects FORBIDDEN.
 4. Pricing service used by PlaceOrder, qrPlaceOrder and takePayment: recomputes everything on the server
@@ -472,12 +484,14 @@ Goal: backend/ (Node 20, TypeScript, Apollo Server 4 on Express, graphql-ws) tha
 8. Idempotency-Key support on PlaceOrder, takePayment and refunds.
 9. Security: CORS allow-list from env, rate limits (login, OTP, place order, QR orders), depth/cost limits,
    introspection off in production, helmet headers, request id in every log line, Sentry.
-10. /health endpoint, Dockerfile, railway.json. Vitest tests for pricing, state machine, auth, and tenant isolation.
+10. /health endpoint that runs `select 1` on the database (the keep-alive ping hits it), Dockerfile, and render.yaml for a Render free Web Service.
+    It must run in 512 MB RAM: set NODE_OPTIONS=--max-old-space-size=384, and no in-process caches that grow without limit.
+    WebSocket clients must auto-reconnect and re-subscribe (the free server can restart). Vitest tests for pricing, state machine, auth, and tenant isolation.
 
 Report test results honestly and the list of stubbed operations that the demo flows still hit.
 ```
 
-**Gate:** tests pass; deployed on Railway; `/health` answers; you set Railway variables yourself.
+**Gate:** tests pass; deployed on Render (free); `/health` answers; the cron-job.org ping is set up; you set the Render environment variables yourself.
 
 ---
 
@@ -539,10 +553,10 @@ Goal: apps/customer matches the web experience on Android and iOS.
 
 1. Upgrade to Expo SDK 54. Replace colour values in src/utils/themeColors.js with the generated theme.js from packages/ui-tokens.
 2. Redesign the same screens as web (Step 7) with native patterns: bottom sheets for item and address, haptics on
-   add-to-cart and status changes, Apple Pay first on iOS, Google Pay on Android (Stripe test).
+   add-to-cart and status changes, card and Google Pay on Android (Stripe test). Keep the Apple Pay code path but hide it until there is an Apple account.
 3. Remove Amplitude and Microsoft Clarity (replace with PostHog if analytics is needed). Remove unused dependencies.
 4. English + Arabic only in the picker; full RTL check (I18nManager + restart handled cleanly).
-5. EAS preview APK and an iOS build if the Apple account exists.
+5. EAS preview APK (Android only; no iOS build on the free stack).
 
 Screenshots of every screen (light/dark, LTR/RTL) into docs/flippin/screens/customer/, checked against the banned list.
 ```
@@ -615,8 +629,8 @@ Goal: ship-ready demo.
 3. Visual QA: open every screen in every app, compare with DESIGN.md and the banned list, fix inconsistencies
    (spacing, colours, icon set, copy tone). Replace any leftover old mockups/screenshots.
 4. Copy pass in English and Arabic: short, specific, no marketing fluff; have the Arabic reviewed by a native speaker (list the strings for me).
-5. Production deploys: Vercel (web, admin, pos) on the real domain, Railway, APKs, TestFlight if available.
-6. Demo kit page (apps/web/app/demo or a small static page): every link, APK downloads, TestFlight steps, the
+5. Demo deploys on the free stack: Vercel (web, admin, pos) on vercel.app URLs, Render for the API, APKs from EAS. Make the web app an installable PWA for iPhone users (manifest, icons, offline page).
+6. Demo kit page (apps/web/app/demo or a small static page): every link, APK downloads, "Add to Home Screen" steps for iPhone, the
    demo logins from demo-accounts.md, and a 3-minute scripted walkthrough.
 7. Make a fresh clean-history export for the buyer (scripts/export-clean.sh: squashed single commit, no secrets, LICENSE files kept).
 ```
@@ -633,7 +647,7 @@ Run these as separate steps in the same style: loyalty, Flippin Plus subscriptio
 
 ## 9. Demo script (3 minutes, what the buyer sees)
 
-1. On the phone, the customer orders from "Marina Grill" with Apple Pay (test). The price shown includes VAT.
+1. On an Android phone, the customer orders from "Marina Grill" with a Stripe test card or Google Pay (test). The price shown includes VAT. (On an iPhone, show the same flow in the web PWA.)
 2. The store tablet rings. Accept, 15 minutes. The KDS ticket appears.
 3. The kitchen bumps it. The pickup TV shows #047 Ready with a chime.
 4. The rider phone gets the job, swipes Picked up, and the customer's map moves.
@@ -653,5 +667,9 @@ Run these as separate steps in the same style: loyalty, Flippin Plus subscriptio
 - [Gulf News: restaurants taking service charges will be fined](https://gulfnews.com/uae/restaurants-in-uae-taking-service-charges-will-be-slapped-with-heavy-fines-1.580651)
 - [The National: Abu Dhabi diners told to report illegal service charges](https://www.thenationalnews.com/uae/diners-in-abu-dhabi-told-to-report-illegal-restaurant-service-charges-1.561793)
 - [Supabase docs: free project pausing](https://supabase.com/docs/guides/platform/free-project-pausing)
+- [Render docs: deploy for free](https://render.com/docs/free)
+- [Render changelog: free services stay active on WebSocket messages](https://render.com/changelog/free-web-services-now-remain-active-while-receiving-websocket-messages)
+- [Koyeb docs: scale-to-zero](https://www.koyeb.com/docs/run-and-scale/scale-to-zero)
+- [Google Cloud Run: using WebSockets](https://docs.cloud.google.com/run/docs/triggering/websockets)
 
 Stated from general knowledge, so confirm before relying on them: the VAT-inclusive price display rule, Google Play's 12-tester rule for new personal accounts, TestFlight review requirements, UAE SMS sender-ID registration, and PDPL obligations. As the PRD says, confirm all tax points with a UAE tax adviser.
