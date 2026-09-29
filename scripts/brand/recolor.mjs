@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { walkFiles, isAllowed, toRel } from './legacy.mjs'
+import { walkFiles, isAllowed, isProbablyBinary, toRel } from './legacy.mjs'
 
 // Old Enatega greens -> Flippin palette (PRD §9).
 // Neon Green #00FD54 · Midnight Forest #001B0A · link green #007A29 (AA on white)
@@ -30,7 +30,9 @@ export function recolorTree(root, { dryRun = false } = {}) {
   for (const file of walkFiles(root)) {
     const rel = toRel(root, file)
     if (isAllowed(rel) || !CODE_EXT.test(rel) || rel.endsWith('package-lock.json')) continue
-    const before = readFileSync(file, 'utf8')
+    const buf = readFileSync(file)
+    if (isProbablyBinary(buf)) continue
+    const before = buf.toString('utf8')
     const after = recolorText(before)
     if (after === before) continue
     rewritten++
@@ -40,7 +42,7 @@ export function recolorTree(root, { dryRun = false } = {}) {
   return rewritten
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2)
   recolorTree(resolve(args.find((a) => !a.startsWith('--')) ?? '.'), { dryRun: args.includes('--dry-run') })
 }

@@ -11,8 +11,9 @@ const ALLOWED_FILES = new Set(['LICENSE', 'LICENSE.md', 'NOTICE.md'])
 // Docs that intentionally describe the fork origin, and these scripts themselves.
 const ALLOWED_PREFIXES = ['docs/flippin/', 'docs/superpowers/', 'scripts/brand/']
 const BINARY_EXT =
-  /\.(png|jpe?g|gif|webp|ico|icns|pdf|ttf|otf|woff2?|mp4|mov|mp3|wav|zip|gz|jar|keystore|jks|p12|bin|riv)$/i
+  /\.(png|jpe?g|gif|webp|ico|icns|pdf|ttf|otf|woff2?|mp4|mov|mp3|wav|zip|gz|jar|keystore|jks|p12|bin|riv|lottie|webm|avif|bmp|eot|apk|aab|ipa|hbc)$/i
 
+export const isProbablyBinary = (buf) => buf.subarray(0, 8000).includes(0)
 export const toRel = (root, file) => relative(root, file).split(sep).join('/')
 export const isText = (rel) => !BINARY_EXT.test(rel)
 export const isAllowed = (rel) =>

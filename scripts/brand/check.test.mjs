@@ -27,3 +27,9 @@ test('returns nothing for a clean tree', () => {
   writeFileSync(join(root, 'index.js'), 'export const brand = "Flippin"\n')
   assert.deepEqual(findLegacy(root), [])
 })
+
+test('does not report content hits in binary-looking files', () => {
+  const root = mkdtempSync(join(tmpdir(), 'brand-'))
+  writeFileSync(join(root, 'x.dat'), Buffer.from([0x65, 0x6e, 0x61, 0x74, 0x65, 0x67, 0x61, 0x00, 0x01]))
+  assert.deepEqual(findLegacy(root), [])
+})

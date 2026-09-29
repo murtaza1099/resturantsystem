@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync, renameSync } from 'node:fs'
+import { readFileSync, writeFileSync, renameSync, existsSync } from 'node:fs'
 import { basename, dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { walkFiles, isText, isAllowed, toRel, collectLegacyPaths } from './legacy.mjs'
+import { walkFiles, isText, isAllowed, isProbablyBinary, toRel, collectLegacyPaths } from './legacy.mjs'
 
 // Change these two lines to move Flippin to another domain / bundle-ID prefix.
 export const DOMAIN = 'rms.flippin.pk'
@@ -23,6 +23,10 @@ export function buildReplacements({ ghOwner } = {}) {
     [/enatega-web\.netlify\.app/g, DOMAIN],
     [/multivendor-admin\.ninjascode\.com/g, `admin.${DOMAIN}`],
     [/assets\.enatega\.com/g, `assets.${DOMAIN}`],
+    [/enatega-backend\.s3\.[a-z0-9-]+\.amazonaws\.com/g, `assets.${DOMAIN}`],
+    [/https:\/\/apps\.apple\.com\/[a-z]{2}\/app\/[^/\s"'<>)]*enatega[^/\s"'<>)]*\/id\d+/gi, `https://${DOMAIN}/download`],
+    [/github\.com\/(?:enatega|Ninjas-Code-official)\/(?!activity-controller)[\w.-]+/gi, `github.com/${ghOwner}/flippin`],
+    [/https?:\/\/(?:www\.)?(?:instagram|facebook|twitter|x|linkedin|youtube)\.com\/[^\s"'<>)]*(?:enatega|ninjas)[^\s"'<>)]*/gi, `https://${DOMAIN}`],
     [/(www\.)?enatega\.com/g, DOMAIN],
     [/(www\.)?ninjascode\.com/g, DOMAIN],
     // 3. App identifiers
@@ -36,8 +40,8 @@ export function buildReplacements({ ghOwner } = {}) {
     [/enatega-multivendor-(app|web|rider|store|admin)/g, 'flippin-$1'],
     [/enatega-singlevendor-admin/g, 'flippin-singlevendor-admin'],
     // 5. Display names
-    [/Enatega Multivendor Rider/g, 'Flippin Rider'],
-    [/Enatega Multi(vendor)?\b/g, 'Flippin'],
+    [/Enatega Multi[\s-]?vendor Rider/gi, 'Flippin Rider'],
+    [/Enatega Multi(?:[\s-]?vendor)?\b/gi, 'Flippin'],
     // 6. Arabic / Persian spellings
     [/إيناتيجا|إناتيغا/g, 'فليبن'],
     [/اناتگا/g, 'فلیپن'],
@@ -55,27 +59,37 @@ export const rebrandText = (text, replacements) =>
   replacements.reduce((out, [pattern, to]) => out.replace(pattern, to), text)
 
 export function rebrandTree(root, replacements, { dryRun = false, log = console.log } = {}) {
+  const paths = collectLegacyPaths(root).filter((p) => !isAllowed(toRel(root, p)))
+  const pairs = paths.map((p) => [p, join(dirname(p), rebrandText(basename(p), replacements))])
+  const seen = new Map()
+  const clashes = []
+  for (const [src, target] of pairs) {
+    if (existsSync(target) || seen.has(target)) clashes.push(`${toRel(root, src)} -> ${toRel(root, target)}`)
+    seen.set(target, src)
+  }
+  if (clashes.length) throw new Error(`refusing to overwrite: ${clashes.join(', ')}`)
+
   let rewritten = 0
   for (const file of walkFiles(root)) {
     const rel = toRel(root, file)
     if (isAllowed(rel) || !isText(rel)) continue
-    const before = readFileSync(file, 'utf8')
+    const buf = readFileSync(file)
+    if (isProbablyBinary(buf)) continue
+    const before = buf.toString('utf8')
     const after = rebrandText(before, replacements)
     if (after === before) continue
     rewritten++
     if (!dryRun) writeFileSync(file, after)
   }
-  const paths = collectLegacyPaths(root).filter((p) => !isAllowed(toRel(root, p)))
-  for (const p of paths) {
-    const target = join(dirname(p), rebrandText(basename(p), replacements))
+  for (const [p, target] of pairs) {
     log(`rename ${toRel(root, p)} -> ${toRel(root, target)}`)
     if (!dryRun) renameSync(p, target)
   }
-  log(`${dryRun ? '[dry-run] ' : ''}${rewritten} files rewritten, ${paths.length} paths renamed`)
-  return { rewritten, renamed: paths.length }
+  log(`${dryRun ? '[dry-run] ' : ''}${rewritten} files rewritten, ${pairs.length} paths renamed`)
+  return { rewritten, renamed: pairs.length }
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2)
   const ownerAt = args.indexOf('--gh-owner')
   const ghOwner = ownerAt >= 0 ? args[ownerAt + 1] : undefined

@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { LEGACY_PATTERN, walkFiles, isText, isAllowed, toRel } from './legacy.mjs'
+import { LEGACY_PATTERN, walkFiles, isText, isAllowed, isProbablyBinary, toRel } from './legacy.mjs'
 
 export function findLegacy(root) {
   const hits = []
@@ -11,7 +11,10 @@ export function findLegacy(root) {
     if (isAllowed(rel)) continue
     if (LEGACY_PATTERN.test(rel)) hits.push({ file: rel, line: 0, text: '(path name)' })
     if (!isText(rel)) continue
-    readFileSync(file, 'utf8')
+    const buf = readFileSync(file)
+    if (isProbablyBinary(buf)) continue
+    buf
+      .toString('utf8')
       .split('\n')
       .forEach((text, i) => {
         if (LEGACY_PATTERN.test(text)) hits.push({ file: rel, line: i + 1, text: text.trim().slice(0, 120) })
@@ -20,7 +23,7 @@ export function findLegacy(root) {
   return hits
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const hits = findLegacy(resolve(process.argv[2] ?? '.'))
   for (const h of hits.slice(0, 50)) console.log(`${h.file}:${h.line}  ${h.text}`)
   if (hits.length) {

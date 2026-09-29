@@ -28,7 +28,18 @@ const cases = [
   ['مرحبا بك في إيناتيجا', 'مرحبا بك في فليبن'],
   ['به اناتگا خوش آمدید', 'به فلیپن خوش آمدید'],
   ['git+https://github.com/enatega/activity-controller.git#72b4', 'git+https://github.com/flippin-sa/activity-controller.git#72b4'],
-  ['Powered by Ninjas Code', 'Powered by Flippin']
+  ['Powered by Ninjas Code', 'Powered by Flippin'],
+  ['Enatega Multi-Vendor', 'Flippin'],
+  ['Enatega Multi Vendor Food Delivery System', 'Flippin Food Delivery System'],
+  ['Enatega Multi vendor Rider', 'Flippin Rider'],
+  ['Enatega MultiVendor', 'Flippin'],
+  ['remotePatterns: "enatega-backend.s3.eu-north-1.amazonaws.com"', 'remotePatterns: "assets.rms.flippin.pk"'],
+  ['https://apps.apple.com/pk/app/enatega-multivendor/id1526488093', 'https://rms.flippin.pk/download'],
+  ['https://github.com/enatega/food-delivery-multivendor', 'https://github.com/flippin-sa/flippin'],
+  ['https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/pulls', 'https://github.com/flippin-sa/flippin/pulls'],
+  ['https://www.instagram.com/ninjascodeofficial', 'https://rms.flippin.pk'],
+  ['https://www.linkedin.com/company/enatega', 'https://rms.flippin.pk'],
+  ['https://twitter.com/EnategaA', 'https://rms.flippin.pk']
 ]
 
 for (const [input, expected] of cases) {
@@ -59,6 +70,32 @@ test('rebrandTree rewrites content and renames nested paths', () => {
   const result = rebrandTree(root, R, { log: () => {} })
   assert.deepEqual(result, { rewritten: 1, renamed: 2 })
   assert.ok(existsSync(join(root, 'FlippinLogo.imageset', 'flippin-logo.png')))
+  assert.equal(existsSync(join(root, 'EnategaLogo.imageset')), false)
   assert.equal(readFileSync(join(root, 'app.js'), 'utf8'), "import logo from './FlippinLogo.imageset/flippin-logo.png'\n")
   assert.equal(readFileSync(join(root, 'LICENSE'), 'utf8'), 'Copyright Ninjas Code\n')
+})
+
+test('rebrandTree refuses to overwrite existing or colliding targets', () => {
+  const root = mkdtempSync(join(tmpdir(), 'rebrand-'))
+  writeFileSync(join(root, 'enatega-logo.png'), 'old')
+  writeFileSync(join(root, 'flippin-logo.png'), 'new')
+  assert.throws(() => rebrandTree(root, R, { log: () => {} }), /refusing to overwrite/)
+  assert.equal(readFileSync(join(root, 'enatega-logo.png'), 'utf8'), 'old')
+  assert.equal(readFileSync(join(root, 'flippin-logo.png'), 'utf8'), 'new')
+  assert.throws(() => rebrandTree(root, R, { log: () => {}, dryRun: true }), /refusing to overwrite/)
+})
+
+test('rebrandTree refuses when two sources map to the same target', () => {
+  const root = mkdtempSync(join(tmpdir(), 'rebrand-'))
+  writeFileSync(join(root, 'enatega-x.txt'), 'a')
+  writeFileSync(join(root, 'ninjascode-x.txt'), 'b')
+  assert.throws(() => rebrandTree(root, R, { log: () => {} }), /refusing to overwrite/)
+})
+
+test('rebrandTree skips binary content without NUL-safe text handling', () => {
+  const root = mkdtempSync(join(tmpdir(), 'rebrand-'))
+  const buf = Buffer.from([0x65,0x6e,0x61,0x74,0x65,0x67,0x61,0x00,0x01])
+  writeFileSync(join(root, 'x.dat'), buf)
+  rebrandTree(root, R, { log: () => {} })
+  assert.deepEqual(readFileSync(join(root, 'x.dat')), buf)
 })
