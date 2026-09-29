@@ -134,7 +134,7 @@ const InfoModal = ({ visible, onHide, restaurantInfo }: IInfoModalProps) => {
               className={`text-[10px] md:text-xs font-normal md:text-[16px] mr-2 ${
                 restaurantInfo.isAvailable &&
                 getCurrentDayHours() !== t("Closed")
-                  ? "text-primary-color"
+                  ? "text-brand-link"
                   : "text-red-500"
               }`}
             />
@@ -159,7 +159,7 @@ const InfoModal = ({ visible, onHide, restaurantInfo }: IInfoModalProps) => {
               href={`https://www.google.com/maps/search/?api=1&query=${mapCenter.lat},${mapCenter.lng}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary-color hover:text-primary-dark hover:underline text-xs md:text-[16px] font-normal"
+              className="text-brand-link hover:text-primary-dark hover:underline text-xs md:text-[16px] font-normal"
             >
               {t("SeeMap")}
             </a>
@@ -223,7 +223,7 @@ const InfoModal = ({ visible, onHide, restaurantInfo }: IInfoModalProps) => {
               {restaurantInfo?.phone !== "N/A" ? (
                 <a
                   href={`tel:${restaurantInfo?.phone}`}
-                  className="text-secondary-color hover:text-primary-dark hover:underline"
+                  className="text-brand-link hover:text-primary-dark hover:underline"
                 >
                   {restaurantInfo?.phone}
                 </a>
@@ -239,7 +239,7 @@ const InfoModal = ({ visible, onHide, restaurantInfo }: IInfoModalProps) => {
               {restaurantInfo?.username !== "N/A" ? (
                 <a
                   href={`mailto:${restaurantInfo?.username || "N/A"}`}
-                  className="text-secondary-color hover:text-primary-dark hover:underline"
+                  className="text-brand-link hover:text-primary-dark hover:underline"
                 >
                   {restaurantInfo?.username}
                 </a>

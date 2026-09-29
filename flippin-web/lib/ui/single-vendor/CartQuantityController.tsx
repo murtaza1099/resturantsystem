@@ -122,9 +122,9 @@ export default function CartQuantityController({
         whileTap={isOutOfStock ? undefined : { scale: isDetails ? 0.98 : 0.9 }}
         className={`${
           isDetails
-            ? "relative h-14 w-full min-w-[190px] gap-3 rounded-2xl border-transparent bg-primary-color px-5 text-white shadow-[0_10px_24px_rgba(90,193,47,0.28)] hover:brightness-95 sm:w-auto"
+            ? "relative h-14 w-full min-w-[190px] gap-3 rounded-2xl border-transparent bg-primary-color px-5 text-on-primary shadow-[0_10px_24px_rgba(90,193,47,0.28)] hover:brightness-95 sm:w-auto"
             : "absolute end-2.5 top-2.5 h-9 min-w-9"
-        } z-20 inline-flex items-center justify-center ${isDetails ? "" : "rounded-full border border-primary-color/25 bg-white text-primary-color shadow-[0_5px_18px_rgba(0,0,0,0.16)] hover:bg-primary-light dark:bg-gray-900 dark:hover:bg-gray-800"} transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-color/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:border-dispatch-line disabled:bg-dispatch-map disabled:text-dispatch-muted disabled:opacity-100 disabled:shadow-none dark:disabled:bg-gray-800`}
+        } z-20 inline-flex items-center justify-center ${isDetails ? "" : "rounded-full border border-primary-color/25 bg-white text-brand-link shadow-[0_5px_18px_rgba(0,0,0,0.16)] hover:bg-primary-light dark:bg-gray-900 dark:hover:bg-gray-800"} transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-color/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:border-dispatch-line disabled:bg-dispatch-map disabled:text-dispatch-muted disabled:opacity-100 disabled:shadow-none dark:disabled:bg-gray-800`}
       >
         {isDetails ? (
           <>
@@ -134,7 +134,7 @@ export default function CartQuantityController({
             <span className="font-semibold tracking-[-0.01em]">
               {isOutOfStock ? t("out_of_stock_label") : "Add to cart"}
             </span>
-            <span className="ms-auto inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-primary-color shadow-sm">
+            <span className="ms-auto inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-brand-link shadow-sm">
               <FiPlus aria-hidden className="h-4 w-4" />
             </span>
           </>
@@ -169,7 +169,7 @@ export default function CartQuantityController({
           void changeQuantity(Math.max(0, quantity - 1));
         }}
         whileTap={{ scale: 0.82 }}
-        className={`${isDetails ? "h-10 w-10 bg-white/15 hover:bg-white/25" : "h-7 w-7 bg-primary-color hover:brightness-95"} inline-flex items-center justify-center rounded-xl text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:cursor-wait disabled:opacity-70`}
+        className={`${isDetails ? "h-10 w-10 bg-white/15 hover:bg-white/25" : "h-7 w-7 bg-primary-color hover:brightness-95"} inline-flex items-center justify-center rounded-xl text-on-primary transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:cursor-wait disabled:opacity-70`}
       >
         {quantity <= 1 ? <FiTrash2 aria-hidden /> : <FiMinus aria-hidden />}
       </motion.button>
@@ -200,7 +200,7 @@ export default function CartQuantityController({
           void changeQuantity(quantity + 1);
         }}
         whileTap={{ scale: 0.82 }}
-        className={`${isDetails ? "h-10 w-10 bg-white text-primary-color hover:bg-white/90" : "h-7 w-7 bg-primary-color text-white hover:brightness-95"} inline-flex items-center justify-center rounded-xl transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:cursor-wait disabled:opacity-70`}
+        className={`${isDetails ? "h-10 w-10 bg-white text-brand-link hover:bg-white/90" : "h-7 w-7 bg-primary-color text-on-primary hover:brightness-95"} inline-flex items-center justify-center rounded-xl transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:cursor-wait disabled:opacity-70`}
       >
         <FiPlus aria-hidden />
       </motion.button>

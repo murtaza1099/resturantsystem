@@ -9,5 +9,5 @@ export default function SingleVendorCategory({ categoryId }: { categoryId: strin
   const category = data?.getCategoryItemsSingleVendor;
   if (loading) return <div className="skeleton-surface h-72 animate-pulse rounded-2xl" />;
   if (error) return <p className="py-8 text-red-600">Unable to load this category.</p>;
-  return <div className="pb-12"><SingleVendorProductSection title={category?.categoryName ?? "Products"} products={normalizeProducts(category?.items).map((item) => ({ ...item, categoryId }))} />{category?.pagination?.hasMore && <button onClick={() => void fetchMore({ variables: { skip: category.items.length, limit: 24 } })} className="mx-auto block rounded-full bg-primary-color px-6 py-3 font-semibold text-white">Load more</button>}</div>;
+  return <div className="pb-12"><SingleVendorProductSection title={category?.categoryName ?? "Products"} products={normalizeProducts(category?.items).map((item) => ({ ...item, categoryId }))} />{category?.pagination?.hasMore && <button onClick={() => void fetchMore({ variables: { skip: category.items.length, limit: 24 } })} className="mx-auto block rounded-full bg-primary-color px-6 py-3 font-semibold text-on-primary">Load more</button>}</div>;
 }

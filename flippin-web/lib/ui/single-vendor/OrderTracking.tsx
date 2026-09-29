@@ -252,7 +252,7 @@ function TrackingUnavailable({ message }: { message: string }) {
     <div className="flex h-[400px] items-center justify-center bg-dispatch-map px-6 text-center dark:bg-gray-950">
       <div className="max-w-md">
         <i
-          className="pi pi-map-marker text-2xl text-primary-color"
+          className="pi pi-map-marker text-2xl text-brand-link"
           aria-hidden
         />
         <p className="mt-3 font-semibold text-dispatch-ink dark:text-gray-100">

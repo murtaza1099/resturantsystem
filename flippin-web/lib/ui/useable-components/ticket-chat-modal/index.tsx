@@ -208,7 +208,7 @@ const pollingIntervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
               <span
                 className={`text-xs ${
                   ticket?.status === "open"
-                    ? "text-primary-color"
+                    ? "text-brand-link"
                     : ticket?.status === "inProgress"
                       ? "text-yellow-300"
                       : "text-gray-300"
@@ -274,7 +274,7 @@ const pollingIntervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
                     key={msg._id}
                     className={`rounded-lg p-3 max-w-[80%] ${
                       isUserMessage
-                        ? "bg-primary-color text-white ml-auto" 
+                        ? "bg-primary-color text-on-primary ml-auto" 
                         : "bg-gray-100 text-gray-800 mr-auto"
                     }`}
                   >
@@ -316,7 +316,7 @@ const pollingIntervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
               <button
                 onClick={handleSendMessage}
                 disabled={!message.trim() || isSending}
-                className={`bg-primary-color ${direction === "rtl" ? "rounded-l-md" : "rounded-r-md"} p-2 text-white flex items-center justify-center ${
+                className={`bg-primary-color ${direction === "rtl" ? "rounded-l-md" : "rounded-r-md"} p-2 text-on-primary flex items-center justify-center ${
                   !message.trim() || isSending
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:bg-primary-dark"

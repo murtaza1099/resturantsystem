@@ -125,7 +125,7 @@ export default function EnterPassword({
 
                   handleChangePanel(8);
                 }}
-                className="text-primary-color hover:underline text-sm font-medium cursor-pointer"
+                className="text-brand-link hover:underline text-sm font-medium cursor-pointer"
               >
                 {t("forgot_password_label")}
               </span>

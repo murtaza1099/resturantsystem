@@ -95,7 +95,7 @@ export default function CustomerTicketsMain() {
   const getStatusColor = (status: string) => {
     switch(status.toLowerCase()) {
       case 'open':
-        return 'text-secondary-color bg-primary-light';
+        return 'text-brand-link bg-primary-light';
       case 'inprogress':
         return 'text-yellow-600 bg-yellow-100';
       case 'closed':
@@ -148,7 +148,7 @@ export default function CustomerTicketsMain() {
         <CustomButton 
           label={t('retry_button')}
           onClick={() => window.location.reload()}
-          className="bg-primary-color text-white px-4 py-2 rounded-full"
+          className="bg-primary-color text-on-primary px-4 py-2 rounded-full"
         />
       </div>
     );
@@ -187,7 +187,7 @@ export default function CustomerTicketsMain() {
               <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-700 flex justify-end">
                 <CustomButton 
                   label={t("view_messages_button")}
-                  className="text-secondary-color dark:text-primary-color hover:text-primary-dark bg-transparent"
+                  className="text-brand-link dark:text-primary-color hover:text-primary-dark bg-transparent"
                   onClick={() => handleOpenChat(ticket._id)}
                 />
               </div>
@@ -201,7 +201,7 @@ export default function CustomerTicketsMain() {
           <CustomButton 
             label={t("create_first_ticket_button")}
             onClick={handleCreateTicket}
-            className="bg-primary-color text-white px-4 py-2 rounded-full"
+            className="bg-primary-color text-on-primary px-4 py-2 rounded-full"
           />
         </div>
       )}

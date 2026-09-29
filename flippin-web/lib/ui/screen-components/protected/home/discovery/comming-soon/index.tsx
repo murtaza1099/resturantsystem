@@ -90,7 +90,7 @@ export default function ComingSoonScreen() {
       <CustomButton
         label={"Click anywhere on this screen to explore restaurants."}
         // onClick={handleClick}
-        className="px-8 py-3 rounded-full font-semibold bg-white text-primary-color shadow-lg 
+        className="px-8 py-3 rounded-full font-semibold bg-white text-brand-link shadow-lg 
                    hover:bg-white/90 hover:scale-105 transition-transform duration-200"
       />
     </div>

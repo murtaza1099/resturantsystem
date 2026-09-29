@@ -35,7 +35,7 @@ export default function PhoneConflictModal({
 
                     <CustomButton
                         label={"Confirm"}
-                        className="w-1/2 bg-primary-color text-white hover:bg-opacity-90 rounded-full h-10 border-none"
+                        className="w-1/2 bg-primary-color text-on-primary hover:bg-opacity-90 rounded-full h-10 border-none"
                         onClick={onConfirm}
                         loading={isLoading}
                     />

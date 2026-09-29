@@ -9,7 +9,7 @@ export default function LandingCtaBand() {
     <section className="bg-[#151914] text-white" aria-label={t("cta.label")}>
       <div className="mx-auto grid max-w-dispatch-page md:grid-cols-2">
         <article className="px-6 py-14 md:px-10 md:py-16 lg:px-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-color">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-link">
             {t("cta.business.eyebrow")}
           </p>
           <h2 className="mt-4 text-3xl font-medium tracking-[-0.03em] sm:text-4xl">
@@ -28,7 +28,7 @@ export default function LandingCtaBand() {
         </article>
 
         <article className="border-t border-white/12 px-6 py-14 md:border-l md:border-t-0 md:px-10 md:py-16 lg:px-16 rtl:md:border-l-0 rtl:md:border-r">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-color">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-link">
             {t("cta.rider.eyebrow")}
           </p>
           <h2 className="mt-4 text-3xl font-medium tracking-[-0.03em] sm:text-4xl">

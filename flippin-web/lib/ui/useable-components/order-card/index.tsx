@@ -505,7 +505,7 @@ const OrderCard: FC<IOrderCardProps> = ({
                 {t("cancel_label")}
               </button>
               <button
-                className="px-5 py-2 text-sm rounded-lg bg-primary-color hover:bg-[#4bb126] text-white w-full sm:w-auto disabled:opacity-50 transition"
+                className="px-5 py-2 text-sm rounded-lg bg-primary-color hover:bg-[#4bb126] text-on-primary w-full sm:w-auto disabled:opacity-50 transition"
                 disabled={selectedItems.length === 0}
                 onClick={
                   handleConfirmReorder
@@ -549,7 +549,7 @@ const OrderCard: FC<IOrderCardProps> = ({
               Cancel
             </button>
             <button
-              className="px-5 py-2 text-sm rounded-lg bg-primary-color hover:bg-[#4bb126] text-white w-full sm:w-auto transition"
+              className="px-5 py-2 text-sm rounded-lg bg-primary-color hover:bg-[#4bb126] text-on-primary w-full sm:w-auto transition"
               onClick={handleClearCartAndReorder}
             >
               Clear Cart & Reorder

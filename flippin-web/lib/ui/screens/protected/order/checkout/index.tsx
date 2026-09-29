@@ -999,7 +999,7 @@ export default function OrderCheckoutScreen() {
               height={300}
               className="w-full h-64 object-cover"
             />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary-color text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary-color text-on-primary rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
               H
             </div>{" "}
           </>
@@ -1008,7 +1008,7 @@ export default function OrderCheckoutScreen() {
       {/* <!-- Toggle Prices Button for Mobile --> 
           <div className="sm:hidden fixed top-14 left-0 right-0 bg-transparent z-10 p-4">
             <button
-              className="bg-white text-primary-color w-full py-2 px-4 rounded-full border border-gray-300 flex justify-between items-center"
+              className="bg-white text-brand-link w-full py-2 px-4 rounded-full border border-gray-300 flex justify-between items-center"
               onClick={togglePriceSummary}
             >
               <span className="font-inter text-[14px]">
@@ -1175,14 +1175,14 @@ export default function OrderCheckoutScreen() {
                             },
                           )}
                         </div>
-                        <p className="text-secondary-color font-semibold text-sm sm:text-base md:text-[11px] lg:text-[12px] xl:text-[14px]">
+                        <p className="text-brand-link font-semibold text-sm sm:text-base md:text-[11px] lg:text-[12px] xl:text-[14px]">
                           {CURRENCY_SYMBOL}
                           {item.price}
                         </p>
                       </div>
                     </div>
 
-                    <div className="border border-secondary-color text-secondary-color py-1 px-3 rounded-lg text-xs sm:text-sm font-medium w-fit">
+                    <div className="border border-secondary-color text-brand-link py-1 px-3 rounded-lg text-xs sm:text-sm font-medium w-fit">
                       {item.quantity}
                     </div>
                   </div>
@@ -1273,8 +1273,8 @@ export default function OrderCheckoutScreen() {
                           key={index}
                           className={`text-[12px] ${
                             selectedTip === tip
-                              ? "text-white bg-secondary-color"
-                              : "text-secondary-color bg-white dark:bg-gray-800 dark:text-secondary-color"
+                              ? "text-on-primary bg-secondary-color"
+                              : "text-brand-link bg-white dark:bg-gray-800 dark:text-secondary-color"
                           } border border-secondary-color px-4 py-2 rounded-full w-full`}
                           onClick={() => {
                             if (selectedTip === tip) {
@@ -1452,7 +1452,7 @@ export default function OrderCheckoutScreen() {
                 </div>
               )}
 
-              {/* <div className="text-secondary-color mb-1 text-left font-inter text-xs lg:text-[12px]">
+              {/* <div className="text-brand-link mb-1 text-left font-inter text-xs lg:text-[12px]">
                     Choose an offer (1 available)
                   </div>
 
@@ -1565,7 +1565,7 @@ export default function OrderCheckoutScreen() {
                 </div>
               )}
 
-              {/* <div className="text-secondary-color mb-1 text-left font-inter text-xs lg:text-[12px]">
+              {/* <div className="text-brand-link mb-1 text-left font-inter text-xs lg:text-[12px]">
                     Choose an offer (1 available)
                   </div> */}
 
@@ -1577,7 +1577,7 @@ export default function OrderCheckoutScreen() {
               </div>
 
               <button
-                className="bg-primary-color text-gray-900 dark:text-white w-full py-2 rounded-full text-xs lg:text-[12px]"
+                className="bg-primary-color text-on-primary w-full py-2 rounded-full text-xs lg:text-[12px]"
                 onClick={onPlaceOrder}
                 disabled={cart.length === 0 || loadingOrderMutation}
               >
@@ -1677,7 +1677,7 @@ export default function OrderCheckoutScreen() {
                         </span>
                       </div>
 
-                      <div className="text-secondary-color mb-1 text-left font-inter text-[14px] md:text-lg leading-6 md:leading-7">
+                      <div className="text-brand-link mb-1 text-left font-inter text-[14px] md:text-lg leading-6 md:leading-7">
                         Choose an offer (1 available)
                       </div>
                       <Divider />

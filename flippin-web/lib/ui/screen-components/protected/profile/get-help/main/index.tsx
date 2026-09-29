@@ -251,7 +251,7 @@ export default function GetHelpMain() {
         <CustomButton
           label={t("chat_with_person_button")}
           onClick={handleChatWithPerson}
-          className="bg-primary-color text-white px-6 py-3 rounded-full"
+          className="bg-primary-color text-on-primary px-6 py-3 rounded-full"
         />
       </div>
 
@@ -370,7 +370,7 @@ export default function GetHelpMain() {
                 !description.trim() ||
                 isSubmitting
               }
-              className={`bg-primary-color text-white w-full py-3 rounded-full flex items-center justify-center ${
+              className={`bg-primary-color text-on-primary w-full py-3 rounded-full flex items-center justify-center ${
                 !reason ||
                 (reason === "order related" && !orderId.trim()) ||
                 (reason === "others" && !ticketTitle.trim()) ||

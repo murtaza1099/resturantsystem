@@ -403,7 +403,7 @@ a {
 
 .p-multiselect-token {
   background-color: var(--primary-color);
-  color: white; /* optional: change the text color to white for better contrast */
+  color: var(--on-primary);
 }
 
 .p-multiselect-filter-container {
@@ -648,6 +648,7 @@ a {
 .p-stepper-number {
   font-size: 16px;
   background-color: var(--primary-color);
+  color: var(--on-primary);
 }
 
 /* Sidebar */
@@ -997,7 +998,7 @@ Discovery Caurousal
 
 .p-panelmenu .p-panelmenu-header.p-highlight .p-menuitem-text,
 .p-panelmenu .p-panelmenu-header.p-highlight .p-panelmenu-header-link {
-  color: var(--primary-color) !important;
+  color: var(--brand-link) !important;
 }
 
 /* Remove background color on hover for menu items */
@@ -1028,6 +1029,7 @@ Discovery Caurousal
 
 .p-highlight {
   background: var(--primary-color) !important;
+  color: var(--on-primary);
   border-color: var(--primary-light) !important;
 }
 .p-inputotp-input {
@@ -1069,7 +1071,7 @@ Discovery Caurousal
   background-color: var(--primary-color); /* Light green for current user */
   border-radius: 3px;
   padding: 5px;
-  color: white;
+  color: var(--on-primary);
   width: fit-content;
 }
 

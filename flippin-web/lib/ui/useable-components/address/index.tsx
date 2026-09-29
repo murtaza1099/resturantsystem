@@ -521,12 +521,12 @@ export default function UserAddressComponent(
                 </div>
                 <div className="w-full flex flex-col gap-y-[2px]">
                   <span
-                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${address.selected && !hasCurrentLocation ? "text-secondary-color" : "text-gray-500"}`}
+                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${address.selected && !hasCurrentLocation ? "text-brand-link" : "text-gray-500"}`}
                   >
                     {address.label}
                   </span>
                   <span
-                    className={`font-inter font-normal text-xs leading-4 tracking-normal ${address.selected && !hasCurrentLocation ? "text-secondary-color" : "text-gray-400"}`}
+                    className={`font-inter font-normal text-xs leading-4 tracking-normal ${address.selected && !hasCurrentLocation ? "text-brand-link" : "text-gray-400"}`}
                   >
                     {address.deliveryAddress}
                   </span>
@@ -538,7 +538,7 @@ export default function UserAddressComponent(
                     label={t("choose_Address_label")}
                     rounded
                     loading={modifiyingId === address._id && loading}
-                    className="border p-2 pl-4 pr-4 border-gray-300 text-secondary-color font-medium"
+                    className="border p-2 pl-4 pr-4 border-gray-300 text-brand-link font-medium"
                     onClick={() => onHandleSelectAddress(address)}
                   />
                 </div>
@@ -705,7 +705,7 @@ export default function UserAddressComponent(
                 </div>
                 <div className="flex flex-col gap-y-[2px]">
                   <span
-                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${selectedLocationType === item.name ? "text-secondary-color" : "text-gray-500 dark:text-gray-300"}`}
+                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${selectedLocationType === item.name ? "text-brand-link" : "text-gray-500 dark:text-gray-300"}`}
                   >
                     {item.translatedName}
                   </span>
@@ -902,7 +902,7 @@ export default function UserAddressComponent(
                 </div>
                 <div className="flex flex-col gap-y-[2px]">
                   <span
-                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${selectedLocationType === item.name ? "text-secondary-color" : "text-gray-500 dark:text-gray-300"}`}
+                    className={`font-inter font-medium text-sm leading-5 tracking-normal ${selectedLocationType === item.name ? "text-brand-link" : "text-gray-500 dark:text-gray-300"}`}
                   >
                     {item.translatedName}
                   </span>

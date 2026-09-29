@@ -320,7 +320,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
               {t("you_recently_searched")}
             </span>
             <span
-              className="text-sm font-normal mb-2 text-secondary-color hover:cursor-pointer dark:text-primary-color"
+              className="text-sm font-normal mb-2 text-brand-link hover:cursor-pointer dark:text-primary-color"
               onClick={() => {
                 deleteSearchedKeywords();
                 setSearchedKeywords([]);
@@ -541,7 +541,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                     aria-haspopup
                     title={userName}
                   >
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-color text-sm font-semibold uppercase text-white select-none md:h-9 md:w-9">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-color text-sm font-semibold uppercase text-on-primary select-none md:h-9 md:w-9">
                       {profile?.name
                         ?.trim()
                         .split(" ")
@@ -557,7 +557,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                     </span>
                     <FontAwesomeIcon
                       icon={faChevronDown}
-                      className="shrink-0 text-xs text-primary-color"
+                      className="shrink-0 text-xs text-brand-link"
                     />
                   </button>
                 )}
@@ -625,7 +625,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       }}
                     >
                       <div className="flex items-center gap-2">
-                        <div className="flex h-6 min-w-[24px] items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-primary-color">
+                        <div className="flex h-6 min-w-[24px] items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-brand-link">
                           {cartCount}
                         </div>
                         <span className="text-sm font-semibold">
@@ -664,7 +664,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                     >
                       <CartSvg color="currentColor" width={20} height={20} />
                       {cartCount > 0 && (
-                        <div className="absolute -right-1 -top-1 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary-color px-1 text-xs font-semibold text-white shadow-sm">
+                        <div className="absolute -right-1 -top-1 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary-color px-1 text-xs font-semibold text-on-primary shadow-sm">
                           {cartCount}
                         </div>
                       )}
@@ -774,7 +774,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       <LocationSvg width={20} height={20} />
                     </div>
                     <p
-                      className="min-w-0 truncate text-sm text-primary-color"
+                      className="min-w-0 truncate text-sm text-brand-link"
                       title={userAddress?.deliveryAddress || ""}
                     >
                       {userAddress?.deliveryAddress}
@@ -782,7 +782,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                     <div className="flex shrink-0 items-center">
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className="text-xs text-primary-color"
+                        className="text-xs text-brand-link"
                       />
                     </div>
                   </button>
@@ -796,7 +796,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       aria-haspopup
                       title={userName}
                     >
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-color text-sm font-semibold uppercase text-white select-none">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-color text-sm font-semibold uppercase text-on-primary select-none">
                         {profile?.name
                           ?.trim()
                           .split(" ")
@@ -809,7 +809,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       </span>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className="shrink-0 text-xs text-primary-color"
+                        className="shrink-0 text-xs text-brand-link"
                       />
                     </button>
                   )}
@@ -886,7 +886,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
             />
 
             <button
-              className="w-1/2 h-fit flex items-center justify-center gap-2 bg-primary-color text-white py-2 rounded-full text-sm font-medium"
+              className="w-1/2 h-fit flex items-center justify-center gap-2 bg-primary-color text-on-primary py-2 rounded-full text-sm font-medium"
               onClick={onLogout}
             >
               <FontAwesomeIcon icon={faSignOutAlt} />

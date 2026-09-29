@@ -111,8 +111,8 @@ export default function DeleteAccountDialog({
         hover:bg-gray-100 dark:hover:bg-gray-700 
         transition-colors duration-150
 
-        [&.p-highlight]:bg-primary-color [&.p-highlight]:text-white 
-        dark:[&.p-highlight]:bg-primary-color dark:[&.p-highlight]:text-white 
+        [&.p-highlight]:bg-primary-color [&.p-highlight]:text-on-primary 
+        dark:[&.p-highlight]:bg-primary-color dark:[&.p-highlight]:text-on-primary 
 
         [&.p-focus]:bg-gray-100 dark:[&.p-focus]:bg-gray-700
       `,

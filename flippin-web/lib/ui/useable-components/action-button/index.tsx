@@ -15,7 +15,7 @@ const ActionButton = ({
     className={twMerge(
       "w-full py-3 rounded-full text-center font-medium transition-colors justify-center",
       primary
-        ? "bg-primary-color text-white font-medium transition-colors"
+        ? "bg-primary-color text-on-primary font-medium transition-colors"
         : disabled
           ? "bg-gray-100 dark:bg-gray-600 dark:text-gray-400 text-gray-400 cursor-not-allowed"
           : "bg-primary-color  hover:bg-[#5ab633]  text-gray-800"

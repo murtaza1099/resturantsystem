@@ -68,7 +68,7 @@ export function Vouchers() {
               key={item._id}
               className="rounded-2xl border border-dashed border-primary-color bg-primary-light p-5 dark:bg-gray-800"
             >
-              <p className="font-bold text-primary-color">{item.title}</p>
+              <p className="font-bold text-brand-link">{item.title}</p>
               <p className="mt-2 dark:text-gray-200">
                 {item.discount}% discount
               </p>
@@ -84,7 +84,7 @@ export function Wallet() {
   const { formatCurrency } = useCurrencyFormatter();
   return (
     <Shell title="Wallet">
-      <div className="rounded-3xl bg-primary-color p-8 text-white">
+      <div className="rounded-3xl bg-primary-color p-8 text-on-primary">
         <p>Available credits</p>
         <p className="mt-2 text-4xl font-bold">
           {loading
@@ -145,7 +145,7 @@ function MembershipForm({ plans }: { plans: any[] }) {
             className={`rounded-2xl border p-5 text-left dark:bg-gray-800 ${selected === plan.id ? "border-primary-color ring-2 ring-primary-color/20" : "border-gray-200 dark:border-gray-700"}`}
           >
             <h2 className="font-bold dark:text-white">{plan.productName}</h2>
-            <p className="my-3 text-2xl font-bold text-primary-color">
+            <p className="my-3 text-2xl font-bold text-brand-link">
               {formatCurrency(plan.amount)}
             </p>
             <p className="text-sm text-gray-500">
@@ -163,7 +163,7 @@ function MembershipForm({ plans }: { plans: any[] }) {
         <button
           disabled={!selected || createState.loading || updateState.loading}
           onClick={() => void submit()}
-          className="rounded-full bg-primary-color px-6 py-3 font-semibold text-white disabled:opacity-50"
+          className="rounded-full bg-primary-color px-6 py-3 font-semibold text-on-primary disabled:opacity-50"
         >
           {profile?.stripe_plan_id ? "Update membership" : "Start membership"}
         </button>
@@ -222,12 +222,12 @@ export function Referral() {
         <p className="text-gray-600 dark:text-gray-300">
           Share your referral code with friends.
         </p>
-        <p className="my-5 text-3xl font-bold tracking-widest text-primary-color">
+        <p className="my-5 text-3xl font-bold tracking-widest text-brand-link">
           {loading ? "…" : code}
         </p>
         <button
           onClick={() => void navigator.clipboard.writeText(code)}
-          className="rounded-full bg-primary-color px-6 py-3 font-semibold text-white"
+          className="rounded-full bg-primary-color px-6 py-3 font-semibold text-on-primary"
         >
           Copy code
         </button>

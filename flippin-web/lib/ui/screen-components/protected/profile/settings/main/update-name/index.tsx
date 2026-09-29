@@ -157,7 +157,7 @@ export default function NameUpdateModal({
 
         <CustomButton
           label={t('save_label')}
-          className="bg-primary-color text-white flex items-center justify-center rounded-full p-3 w-full md:w-[268px] mb-4 h-14 text-lg font-medium"
+          className="bg-primary-color text-on-primary flex items-center justify-center rounded-full p-3 w-full md:w-[268px] mb-4 h-14 text-lg font-medium"
           onClick={handleSubmit}
         />
       </div>

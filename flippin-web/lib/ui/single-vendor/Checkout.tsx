@@ -148,7 +148,7 @@ export default function SingleVendorCheckout() {
         </h1>
         <button
           onClick={() => router.push("/browse")}
-          className="mt-5 rounded-full bg-primary-color px-6 py-3 font-semibold text-white"
+          className="mt-5 rounded-full bg-primary-color px-6 py-3 font-semibold text-on-primary"
         >
           Browse products
         </button>
@@ -165,13 +165,13 @@ export default function SingleVendorCheckout() {
           <div className="mt-4 grid grid-cols-2 gap-3">
             <button
               onClick={() => setPickup(false)}
-              className={`rounded-xl border p-3 ${!pickup ? "border-primary-color bg-primary-light text-primary-color" : "border-gray-200 dark:border-gray-700"}`}
+              className={`rounded-xl border p-3 ${!pickup ? "border-primary-color bg-primary-light text-brand-link" : "border-gray-200 dark:border-gray-700"}`}
             >
               Delivery
             </button>
             <button
               onClick={() => setPickup(true)}
-              className={`rounded-xl border p-3 ${pickup ? "border-primary-color bg-primary-light text-primary-color" : "border-gray-200 dark:border-gray-700"}`}
+              className={`rounded-xl border p-3 ${pickup ? "border-primary-color bg-primary-light text-brand-link" : "border-gray-200 dark:border-gray-700"}`}
             >
               Pickup
             </button>
@@ -298,7 +298,7 @@ export default function SingleVendorCheckout() {
               <dd>{formatCurrency(summary?.taxAmount)}</dd>
             </div>
             {summary?.discountDetails?.dealDiscount > 0 && (
-              <div className="flex justify-between text-primary-color">
+              <div className="flex justify-between text-brand-link">
                 <dt>Deals savings</dt>
                 <dd>{formatCurrency(-summary.discountDetails.dealDiscount)}</dd>
               </div>
@@ -316,7 +316,7 @@ export default function SingleVendorCheckout() {
             (!pickup && !hasDeliveryCoordinates)
           }
           onClick={() => void submit()}
-          className="w-full rounded-full bg-primary-color px-5 py-3 font-semibold text-white disabled:opacity-50"
+          className="w-full rounded-full bg-primary-color px-5 py-3 font-semibold text-on-primary disabled:opacity-50"
         >
           {placeState.loading ? "Placing order…" : "Place order"}
         </button>

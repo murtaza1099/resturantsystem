@@ -174,7 +174,7 @@ export default function StripeSuccessScreen() {
         {isTimedOut ? (
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <button
-              className="rounded-full bg-primary-color px-5 py-3 text-sm font-medium text-white"
+              className="rounded-full bg-primary-color px-5 py-3 text-sm font-medium text-on-primary"
               onClick={() => router.push("/profile/order-history")}
             >
               View my orders

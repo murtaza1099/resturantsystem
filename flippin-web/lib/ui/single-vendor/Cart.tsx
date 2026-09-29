@@ -115,7 +115,7 @@ export default function SingleVendorCart({ onClose }: { onClose: () => void }) {
               onClose();
               router.push("/order/checkout");
             }}
-            className="w-full rounded-full bg-primary-color py-3 font-semibold text-white"
+            className="w-full rounded-full bg-primary-color py-3 font-semibold text-on-primary"
           >
             Continue to checkout
           </button>

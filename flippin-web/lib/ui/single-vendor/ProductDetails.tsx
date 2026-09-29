@@ -127,7 +127,7 @@ export default function SingleVendorProductDetails({
             <button
               aria-label="Toggle favorite"
               onClick={() => void toggleFavorite({ variables: { id: foodId } })}
-              className="text-2xl text-primary-color"
+              className="text-2xl text-brand-link"
             >
               ♡
             </button>

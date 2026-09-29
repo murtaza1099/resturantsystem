@@ -67,7 +67,7 @@ export default function PersonalInfoMain() {
                   ? t("verified")
                   : t("not_verified")
               }
-              className={`text-sm font-medium ${profileData?.profile?.emailIsVerified ? "text-secondary-color dark:text-primary-color" : "text-red-500 dark:text-red-500"}`}
+              className={`text-sm font-medium ${profileData?.profile?.emailIsVerified ? "text-brand-link dark:text-primary-color" : "text-red-500 dark:text-red-500"}`}
             />
           </div>
           <div>
@@ -84,7 +84,7 @@ export default function PersonalInfoMain() {
             <h1
               onClick={handleUpdatePhoneModal}
               title="Update phone number"
-              className=" text-secondary-color dark:text-primary-color hover:text-primary-dark font-normal text-sm md:text-base cursor-pointer"
+              className=" text-brand-link dark:text-primary-color hover:text-primary-dark font-normal text-sm md:text-base cursor-pointer"
             >
               {profileData?.profile?.phone || "N/A"}
             </h1>
@@ -94,7 +94,7 @@ export default function PersonalInfoMain() {
                   ? t("verified")
                   : t("not_verified")
               }
-              className={`text-sm font-medium ${profileData?.profile?.phoneIsVerified ? "text-secondary-color dark:text-primary-color" : "text-red-500 dark:text-red-500"}`}
+              className={`text-sm font-medium ${profileData?.profile?.phoneIsVerified ? "text-brand-link dark:text-primary-color" : "text-red-500 dark:text-red-500"}`}
             />
           </div>
         </div>

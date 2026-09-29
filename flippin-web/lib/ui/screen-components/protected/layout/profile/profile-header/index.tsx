@@ -20,7 +20,7 @@ export default function ProfileHeader() {
           onClick={() => router.push("/profile/getHelp")}
           label={t("ProfileSection.gethelp")}
           type="button"
-          className="text-base font-light bg-primary-light dark:bg-gray-800 px-[16px] py-[8px] text-primary-color"
+          className="text-base font-light bg-primary-light dark:bg-gray-800 px-[16px] py-[8px] text-brand-link"
         />
       </div>
       <div className="flex w-full justify-center">

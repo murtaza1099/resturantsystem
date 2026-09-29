@@ -203,7 +203,7 @@ export default function OrderHistoryScreen() {
           <button
             onClick={loadMore}
             disabled={activeOrderLoading || pastOrderLoading}
-            className="flex items-center space-x-2 px-6 py-3 bg-primary-color dark:text-black text-white font-semibold rounded-full shadow-md hover:bg-primary-color transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center space-x-2 px-6 py-3 bg-primary-color dark:text-black text-on-primary font-semibold rounded-full shadow-md hover:bg-primary-color transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {activeOrderLoading || pastOrderLoading ? (
               <>

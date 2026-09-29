@@ -157,13 +157,13 @@ const VerificationPhone = ({
 
       {/* <CustomButton
     label={"Continue"}
-    className="bg-primary-color text-white flex items-center justify-center rounded-full p-3 w-full mb-4 h-12 sm:h-14 text-md lg:text-lg sm:text-md font-medium"
+    className="bg-primary-color text-on-primary flex items-center justify-center rounded-full p-3 w-full mb-4 h-12 sm:h-14 text-md lg:text-lg sm:text-md font-medium"
     onClick={handleSubmit}
   /> */}
       <button
         onClick={handleSubmit}
         disabled={loading}
-        className={`bg-primary-color text-white flex items-center justify-center rounded-full p-3 w-full mb-4 h-12 sm:h-14 text-md lg:text-lg sm:text-md font-medium ${
+        className={`bg-primary-color text-on-primary flex items-center justify-center rounded-full p-3 w-full mb-4 h-12 sm:h-14 text-md lg:text-lg sm:text-md font-medium ${
           loading ? "opacity-70 cursor-not-allowed" : ""
         }`}
       >

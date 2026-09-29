@@ -67,7 +67,7 @@ function MainSection({
           <CustomButton
             label={t("see_all")}
             onClick={onSeeAllClick}
-            className="text-secondary-color dark:text-primary-color transition-colors duration-200 text-sm md:text-base"
+            className="text-brand-link dark:text-primary-color transition-colors duration-200 text-sm md:text-base"
           />
         )}
       </div>
@@ -126,7 +126,7 @@ function MainSection({
               <CustomButton
                 label={t("load_more")}
                 onClick={onLoadMore}
-                className="px-6 py-2 bg-secondary-color hover:bg-primary-dark text-white rounded-lg"
+                className="px-6 py-2 bg-secondary-color hover:bg-primary-dark text-on-primary rounded-lg"
               />
             </div>
           )} */}

@@ -164,7 +164,7 @@ function TrackingStatusCard({
           className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
             orderTrackingDetails.orderStatus === "CANCELLED"
               ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200"
-              : "bg-primary-light text-secondary-color dark:bg-[#2E3B23] dark:text-primary-color"
+              : "bg-primary-light text-brand-link dark:bg-[#2E3B23] dark:text-primary-color"
           }`}
         >
           {orderTrackingDetails.orderStatus === "CANCELLED"
@@ -197,7 +197,7 @@ function TrackingStatusCard({
             <div className="w-8 h-8 flex items-center justify-center bg-primary-light dark:bg-[#2E3B23] rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-secondary-color"
+                className="h-5 w-5 text-brand-link"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -226,7 +226,7 @@ function TrackingStatusCard({
             <div className="w-8 h-8 flex items-center justify-center bg-primary-light dark:bg-primary-light rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-primary-color"
+                className="h-5 w-5 text-brand-link"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

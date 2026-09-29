@@ -646,7 +646,7 @@ export default function RestaurantDetailsScreen() {
 
             {/* Info Link */}
             <a
-              className="flex items-center gap-2 text-secondary-color dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
+              className="flex items-center gap-2 text-brand-link dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
@@ -663,7 +663,7 @@ export default function RestaurantDetailsScreen() {
 
             {/* Review Link */}
             <a
-              className="flex items-center gap-2 text-secondary-color dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
+              className="flex items-center gap-2 text-brand-link dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
@@ -717,7 +717,7 @@ export default function RestaurantDetailsScreen() {
                             aria-pressed={isSelected}
                             className={`${
                               isSelected
-                                ? "bg-primary-light text-primary-color dark:bg-[#2E3B23] dark:text-[#D2F29E]"
+                                ? "bg-primary-light text-brand-link dark:bg-[#2E3B23] dark:text-[#D2F29E]"
                                 : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                             } min-h-9 whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium leading-none transition-colors sm:text-sm`}
                             onClick={() => handleScroll(categorySlug)}
@@ -761,7 +761,7 @@ export default function RestaurantDetailsScreen() {
                 </span>
                 <button
                   type="button"
-                  className="font-medium text-primary-color dark:text-[#D2F29E]"
+                  className="font-medium text-brand-link dark:text-[#D2F29E]"
                   onClick={() => setFilter("")}
                 >
                   Clear
@@ -828,7 +828,7 @@ export default function RestaurantDetailsScreen() {
                         </p>
 
                         <div className="flex items-center gap-2">
-                          <span className="text-secondary-color dark:text-primary-color text-base sm:text-lg font-semibold">
+                          <span className="text-brand-link dark:text-primary-color text-base sm:text-lg font-semibold">
                             {CURRENCY_SYMBOL} {meal.variations[0].price}
                           </span>
                         </div>

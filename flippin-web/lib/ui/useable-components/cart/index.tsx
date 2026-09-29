@@ -192,7 +192,7 @@ export default function Cart({ onClose }: CartProps) {
                       <h3 className="font-inter font-semibold text-sm text-gray-700 dark:text-white ">
                         {item.foodTitle || item.title || t("food_item_label")}
                       </h3>
-                      <p className="text-secondary-color font-semibold text-sm">
+                      <p className="text-brand-link font-semibold text-sm">
                         {CURRENCY_SYMBOL}
                         {item.price || 0}
                       </p>
@@ -233,7 +233,7 @@ export default function Cart({ onClose }: CartProps) {
                       e.stopPropagation();
                       updateItemQuantity(item.key, 1);
                     }}
-                    className="bg-secondary-color text-white rounded-full w-6 h-6 flex items-center justify-center"
+                    className="bg-secondary-color text-on-primary rounded-full w-6 h-6 flex items-center justify-center"
                     type="button"
                   >
                     <FontAwesomeIcon icon={faPlus} size="xs" />
@@ -279,7 +279,7 @@ export default function Cart({ onClose }: CartProps) {
                         <p className="text-sm font-semibold text-gray-700 dark:text-white truncate">
                           {food.title}
                         </p>
-                        <p className="text-secondary-color text-sm font-semibold">
+                        <p className="text-brand-link text-sm font-semibold">
                           {CURRENCY_SYMBOL}
                           {food.variations[0].price}
                         </p>

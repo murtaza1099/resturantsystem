@@ -160,7 +160,7 @@ function TrackingOrderDetails({
             <h1 className="text-gray-700 dark:text-gray-300">
               {t("order_details_subheading")} #{" "}
             </h1>
-            <h1 className="text-secondary-color dark:text-primary-color">
+            <h1 className="text-brand-link dark:text-primary-color">
               {orderTrackingDetails?.orderId}
             </h1>
           </div>
@@ -225,7 +225,7 @@ function TrackingOrderDetails({
                   {formatCurrency(getItemPricing(item).originalLineTotal)}
                 </span>
               )}
-              <span className="text-secondary-color dark:text-primary-color font-semibold">
+              <span className="text-brand-link dark:text-primary-color font-semibold">
                 {formatCurrency(getItemPricing(item).finalLineTotal)}
               </span>
               <p className="mt-1 text-xs text-gray-500">

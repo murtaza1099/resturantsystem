@@ -127,7 +127,7 @@ const SliderCard = <T,>({
             <CustomButton
               label={t("see_all")}
               onClick={onSeeAllClick}
-              className="text-sm font-medium text-primary-color transition-colors hover:text-primary-hover md:text-base"
+              className="text-sm font-medium text-brand-link transition-colors hover:text-primary-hover md:text-base"
             />
 
             {/* Navigation Buttons */}

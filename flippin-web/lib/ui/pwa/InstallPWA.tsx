@@ -59,7 +59,7 @@ export default function InstallPWA() {
       </div>
       <button
         onClick={handleInstallClick}
-        className="mt-2 bg-secondary-color text-white px-4 py-2 rounded hover:bg-primary-dark transition w-full"
+        className="mt-2 bg-secondary-color text-on-primary px-4 py-2 rounded hover:bg-primary-dark transition w-full"
       >
         {t("install_app_label")}
       </button>

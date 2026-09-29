@@ -702,7 +702,7 @@ export default function StoreDetailsScreen() {
 
                 {/* Info Link */}
                 <a
-                  className="flex items-center gap-2 text-secondary-color dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
+                  className="flex items-center gap-2 text-brand-link dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
@@ -718,7 +718,7 @@ export default function StoreDetailsScreen() {
                 </a>
                 {/* Review Link */}
                 <a
-                  className="flex items-center gap-2 text-secondary-color dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
+                  className="flex items-center gap-2 text-brand-link dark:text-primary-color font-inter font-normal text-sm sm:text-base md:text-lg leading-5 sm:leading-6 md:leading-7 tracking-[0px] align-middle"
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
@@ -905,7 +905,7 @@ export default function StoreDetailsScreen() {
                                 </p>
 
                                 <div className="flex items-center gap-2">
-                                  <span className="text-secondary-color dark:text-primary-color text-lg font-semibold">
+                                  <span className="text-brand-link dark:text-primary-color text-lg font-semibold">
                                     {CURRENCY_SYMBOL} {meal.variations[0].price}
                                   </span>
                                 </div>

@@ -225,7 +225,7 @@ const handleConfirmDelete = async () => {
             <h1
               title={t("updatePhoneTitle")}
               onClick={handleUpdatePhoneModal}
-              className="font-medium text-secondary-color dark:text-primary-color hover:text-primary-dark text-base md:text-lg cursor-pointer"
+              className="font-medium text-brand-link dark:text-primary-color hover:text-primary-dark text-base md:text-lg cursor-pointer"
             >
               {profileData?.profile?.phone || "N/A"}
             </h1>
@@ -243,7 +243,7 @@ const handleConfirmDelete = async () => {
           <h1
             title={t("updateNameTitle")}
             onClick={handleUpdateNameModal}
-            className="font-medium text-secondary-color dark:text-primary-color hover:text-primary-dark text-base md:text-lg cursor-pointer"
+            className="font-medium text-brand-link dark:text-primary-color hover:text-primary-dark text-base md:text-lg cursor-pointer"
           >
             {profileData?.profile?.name || "N/A"}
           </h1>
@@ -348,7 +348,7 @@ const handleConfirmDelete = async () => {
               />
 
               <button
-                className="w-1/2 h-fit flex items-center justify-center gap-2 bg-primary-color text-white py-2 rounded-full text-sm font-medium"
+                className="w-1/2 h-fit flex items-center justify-center gap-2 bg-primary-color text-on-primary py-2 rounded-full text-sm font-medium"
                 onClick={handleLogout}
               >
                 <FontAwesomeIcon icon={faSignOutAlt} />
