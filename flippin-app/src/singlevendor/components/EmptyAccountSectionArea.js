@@ -49,7 +49,7 @@ const EmptyAccountSectionArea = ({
           activeOpacity={0.7}
         >
           <TextDefault
-            textColor={currentTheme.headerMainFontColor}
+            textColor={currentTheme.linkText}
             style={styles(currentTheme).buttonText}
             bolder
           >

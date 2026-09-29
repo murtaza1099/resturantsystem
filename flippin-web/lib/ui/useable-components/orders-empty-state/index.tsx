@@ -39,7 +39,7 @@ const EmptyState: FC<EmptyStateProps> = ({
       {actionLabel && actionLink && (
         <Link
           href={actionLink}
-          className="inline-flex items-center justify-center px-6 py-3 bg-primary-light dark:bg-gray-700 dark:hover:bg-primary-color text-on-primary hover:text-on-primary font-medium rounded-full transition-colors hover:bg-primary-color focus:outline-none focus:ring-2 focus:ring-primary-color focus:ring-offset-2"
+          className="inline-flex items-center justify-center px-6 py-3 bg-primary-light dark:bg-gray-700 dark:hover:bg-primary-color text-on-primary dark:text-white hover:text-on-primary dark:hover:text-on-primary font-medium rounded-full transition-colors hover:bg-primary-color focus:outline-none focus:ring-2 focus:ring-primary-color focus:ring-offset-2"
         >
           {t("explore_store")}
         </Link>

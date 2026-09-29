@@ -63,7 +63,7 @@ const CustomDrawerHeader = () => {
           <Text
             className="text-[16px] font-semibold"
             style={{
-              color: appTheme.linkText,
+              color: "#007A29",
             }}
           >
             {dataProfile?.name

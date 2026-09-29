@@ -175,7 +175,7 @@ export default function CartQuantityController({
       </motion.button>
 
       <span
-        className={`${isDetails ? "min-w-14 text-lg text-white" : "min-w-7 text-sm text-gray-900 dark:text-white"} relative inline-flex h-8 items-center justify-center overflow-hidden font-bold tabular-nums`}
+        className={`${isDetails ? "min-w-14 text-lg text-on-primary" : "min-w-7 text-sm text-gray-900 dark:text-white"} relative inline-flex h-8 items-center justify-center overflow-hidden font-bold tabular-nums`}
         aria-live="polite"
       >
         <AnimatePresence mode="popLayout" initial={false}>

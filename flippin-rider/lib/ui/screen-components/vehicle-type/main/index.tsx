@@ -141,7 +141,7 @@ export default function VehicleTypeMainScreen() {
           {mutationLoading ? (
             <SpinnerComponent color={appTheme.buttonText} />
           ) : (
-            <Text className="text-center text-white text-lg font-medium">
+            <Text className="text-center text-lg font-medium" style={{ color: appTheme.buttonText }}>
               {t("Update")}
             </Text>
           )}

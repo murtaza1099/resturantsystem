@@ -45,7 +45,7 @@ export default function ProfileHeader() {
               <Text
                 className="text-[16px] font-semibold"
                 style={{
-                  color: appTheme.linkText,
+                  color: "#007A29",
                   textShadowColor: appTheme.black,
                   textShadowOffset: { width: 24, height: 22 },
                   textShadowRadius: 40,

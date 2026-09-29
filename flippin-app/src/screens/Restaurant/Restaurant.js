@@ -411,7 +411,7 @@ function Restaurant(props) {
           return (
             <>
               <View style={styles(currentTheme).triangleCorner} />
-              <TextDefault style={styles(currentTheme).tagText} numberOfLines={1} textColor={currentTheme.fontWhite} bold small center>
+              <TextDefault style={styles(currentTheme).tagText} numberOfLines={1} textColor={currentTheme.onPrimary} bold small center>
                 {cartValue.quantity}
               </TextDefault>
             </>

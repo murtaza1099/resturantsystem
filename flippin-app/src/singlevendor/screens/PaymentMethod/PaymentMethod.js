@@ -161,7 +161,7 @@ const PaymentMethod = () => {
           <Ionicons 
             name="add" 
             size={24} 
-            color={currentTheme.headerMainFontColor}
+            color={currentTheme.linkText}
           />
           <TextDefault bold style={styles(currentTheme).addButtonText}>
             {t('Add payment method') || 'Add payment method'}

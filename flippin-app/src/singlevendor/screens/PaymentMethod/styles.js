@@ -125,7 +125,7 @@ export const styles = (currentTheme) =>
     defaultText: {
       fontSize: scale(14),
       // fontWeight: '500',
-      color: currentTheme?.headerMainFontColor 
+      color: currentTheme?.linkText 
     },
     cardRight: {
       marginLeft: scale(12)

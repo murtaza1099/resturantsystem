@@ -39,7 +39,7 @@ function DrawerProfile(props) {
         {isLoggedIn && profile && (
           <View style={styles().subContainer}>
             <View style={styles(currentTheme).imgContainer}>
-              <TextDefault textColor={currentTheme.linkText} bold H1>
+              <TextDefault textColor={"#007A29"} bold H1>
                 {profile.name.substr(0, 1).toUpperCase()}
               </TextDefault>
             </View>

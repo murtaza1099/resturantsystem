@@ -94,7 +94,7 @@ const AppFooter = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition-colors hover:text-brand-link focus-visible:outline-none"
+                  className="transition-colors hover:text-primary-color focus-visible:outline-none"
                 >
                   {link.label}
                 </Link>
