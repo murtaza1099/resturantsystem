@@ -1,0 +1,23 @@
+name: Brand guard
+
+on:
+  push:
+    branches: [main, 'rebrand/**']
+  pull_request:
+
+jobs:
+  brand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Script unit tests
+        run: npm run test:scripts
+      - name: No legacy brand references
+        run: npm run brand:check
+      - name: No secrets committed
+        run: docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest detect -s /repo --no-banner --redact
