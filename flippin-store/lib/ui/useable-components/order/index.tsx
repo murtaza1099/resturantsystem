@@ -273,7 +273,7 @@ const Order = ({
                 <View style={{ flex: 1 }}>
                   <Text
                     style={{
-                      color: appTheme.primary,
+                      color: appTheme.linkText,
                       fontSize: 14,
                       fontWeight: "700",
                     }}
@@ -463,7 +463,7 @@ const Order = ({
                   ]}
                 >
                   {loadingPicked ? (
-                    <SpinnerComponent color={appTheme.white} />
+                    <SpinnerComponent color={appTheme.buttonText} />
                   ) : (
                     <Text
                       style={{

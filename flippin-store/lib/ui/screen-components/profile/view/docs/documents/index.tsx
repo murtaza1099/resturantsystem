@@ -38,7 +38,7 @@ export default function DocumentsSection() {
             className="top-6"
             onPress={() => router.push("/bank-management")}
           >
-            <Text className="font-semibold" style={{ color: appTheme.primary }}>
+            <Text className="font-semibold" style={{ color: appTheme.linkText }}>
               {hasBusinessDetails ? t("Update") : t("Add")}
             </Text>
           </TouchableOpacity>
@@ -54,7 +54,7 @@ export default function DocumentsSection() {
         >
           <Text
             className="font-semibold"
-            style={{ color: hasBusinessDetails ? appTheme.primary : "#991B1B" }}
+            style={{ color: hasBusinessDetails ? appTheme.linkText : "#991B1B" }}
           >
             {hasBusinessDetails ? t("Submitted Data") : t("Missing Data")}
           </Text>

@@ -168,7 +168,7 @@ export default function WorkScheduleStack({
                   >
                     <Text
                       className=" font-bold text-center"
-                      style={{ color: appTheme.primary }}
+                      style={{ color: appTheme.linkText }}
                     >
                       +
                     </Text>

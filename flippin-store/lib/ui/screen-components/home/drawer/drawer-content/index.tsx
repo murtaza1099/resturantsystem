@@ -155,7 +155,7 @@ export default function CustomDrawerContent(
                   <Text
                     className="text-sm font-semibold"
                     style={{
-                      color: isFocused ? appTheme.primary : appTheme.buttonText,
+                      color: isFocused ? appTheme.linkText : appTheme.buttonText,
                       fontWeight: isFocused ? "bold" : "normal",
                     }}
                   >

@@ -68,7 +68,7 @@ const OrderItem = ({
               lineHeight: 20,
             }}
           >
-            <Text style={{ color: appTheme.primary, fontWeight: "700" }}>
+            <Text style={{ color: appTheme.linkText, fontWeight: "700" }}>
               {`${item.quantity}× `}
             </Text>
             {item.title}
@@ -112,7 +112,7 @@ const OrderItem = ({
           >
             <Text
               style={{
-                color: appTheme.primary,
+                color: appTheme.linkText,
                 fontSize: 13,
                 fontWeight: "600",
               }}

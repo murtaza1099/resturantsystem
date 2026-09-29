@@ -31,14 +31,14 @@ export const InstructionCard = ({
       }}
     >
       <Ionicons
-        color={appTheme.primary}
+        color={appTheme.linkText}
         name="document-text-outline"
         size={compact ? 16 : 18}
       />
       <View style={{ flex: 1 }}>
         <Text
           style={{
-            color: appTheme.primary,
+            color: appTheme.linkText,
             fontSize: compact ? 11 : 12,
             fontWeight: "700",
           }}
@@ -98,7 +98,7 @@ export const AmountRow = ({
         minimumFontScale={0.75}
         numberOfLines={1}
         style={{
-          color: emphasized ? appTheme.primary : appTheme.fontMainColor,
+          color: emphasized ? appTheme.linkText : appTheme.fontMainColor,
           flexShrink: 1,
           fontSize: emphasized ? 20 : 14,
           fontVariant: ["tabular-nums"],

@@ -374,7 +374,7 @@ export default function EarningsMain() {
                   style={{
                     fontSize: 14,
                     fontWeight: "bold",
-                    color: appTheme.primary,
+                    color: appTheme.linkText,
                   }}
                 >
                   {t("See More")}

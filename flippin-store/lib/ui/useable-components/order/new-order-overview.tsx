@@ -181,7 +181,7 @@ const NewOrderOverview = ({ order }: { order: IOrder }) => {
               >
                 <Text
                   style={{
-                    color: appTheme.primary,
+                    color: appTheme.linkText,
                     fontSize: 13,
                     fontWeight: "600",
                   }}
