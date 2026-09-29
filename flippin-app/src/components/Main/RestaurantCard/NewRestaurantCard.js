@@ -208,8 +208,8 @@ function NewRestaurantCard(props) {
             <View style={styles().border} />
             <View style={styles(cardTheme).metaRow}>
               <View style={styles(cardTheme).metaPill}>
-                <AntDesign name='clockcircleo' size={13} color={currentTheme.editProfileButton} />
-                <TextDefault textColor={isDarkMode ? currentTheme.white : currentTheme.editProfileButton} numberOfLines={1} small bolder>
+                <AntDesign name='clockcircleo' size={13} color={currentTheme.linkText} />
+                <TextDefault textColor={isDarkMode ? currentTheme.white : currentTheme.linkText} numberOfLines={1} small bolder>
                   {props?.deliveryTime + ' '}
                   {t('min')}
                 </TextDefault>

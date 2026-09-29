@@ -301,7 +301,7 @@ const Notifications = () => {
             style={styles(currentTheme).showMoreButton}
           >
             <TextDefault
-              textColor={currentTheme?.fontWhite}
+              textColor={currentTheme?.onPrimary}
               style={styles(currentTheme).showMoreText}
             >
               {t('Show More') || 'Show More'}

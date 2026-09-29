@@ -205,7 +205,7 @@ export default function MapSection() {
                       />
 
                       <TextDefault
-                        textColor={currentTheme.editProfileButton}
+                        textColor={currentTheme.linkText}
                         numberOfLines={1}
                         bold
                         Small

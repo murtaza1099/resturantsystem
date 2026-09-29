@@ -96,7 +96,7 @@ const SectionList = ({
                   style={styles(currentTheme).loadMoreButton}
                 >
                   {loadingMore
-                    ? <ActivityIndicator color={currentTheme.singleVendorOnBrand || '#10200A'} />
+                    ? <ActivityIndicator color={currentTheme.singleVendorOnBrand || '#001B0A'} />
                     : (
                       <Text style={styles(currentTheme).loadMoreText}>
                         {t('loadMore', { defaultValue: 'Load more' })}
@@ -157,7 +157,7 @@ const styles = (currentTheme) =>
       paddingHorizontal: scale(20)
     },
     loadMoreText: {
-      color: currentTheme.singleVendorOnBrand || '#10200A',
+      color: currentTheme.singleVendorOnBrand || '#001B0A',
       fontSize: scale(14),
       fontWeight: '700'
     },

@@ -90,7 +90,7 @@ const Item = ({ item, navigation, currentTheme }) => {
         </View>
         <View style={styles(currentTheme).line} />
         <View style={styles().rightContainer}>
-          <TextDefault textColor={currentTheme.iconColorPink} bold center>
+          <TextDefault textColor={currentTheme.linkText} bold center>
             {' '}
             {t(item.orderStatus)}
           </TextDefault>

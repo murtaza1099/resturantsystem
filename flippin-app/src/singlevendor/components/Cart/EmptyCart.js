@@ -51,7 +51,7 @@ const EmptyCart = ({ onStartShopping }) => {
         onPress={onStartShopping}
       >
         <TextDefault 
-          textColor={currentTheme.headerMainFontColor} 
+          textColor={currentTheme.onPrimary} 
           bold 
           H5
           center

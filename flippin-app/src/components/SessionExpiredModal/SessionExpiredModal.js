@@ -40,7 +40,7 @@ const SessionExpiredModal = ({ visible, onLogin }) => {
               }
             ]}
           >
-            <TextDefault H4 bolder textColor={currentTheme.white} center>
+            <TextDefault H4 bolder textColor={currentTheme.onPrimary} center>
               Login
             </TextDefault>
           </TouchableOpacity>

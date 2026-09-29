@@ -121,7 +121,7 @@ const styles = (colors, compact) => StyleSheet.create({
     backgroundColor: colors.singleVendorBrand || '#00FD54'
   },
   retryPressed: { opacity: 0.78 },
-  retryText: { color: colors.singleVendorOnBrand || '#10200A', fontSize: scale(12) }
+  retryText: { color: colors.singleVendorOnBrand || '#001B0A', fontSize: scale(12) }
 })
 
 export default SectionErrorCard

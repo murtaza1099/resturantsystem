@@ -516,7 +516,7 @@ function Menu({ route, props }) {
           <View style={styles(currentTheme).emptyViewBox}>
             {activeCollection ? (
               <View style={styles(currentTheme).emptyBadge}>
-                <TextDefault small bold textColor={currentTheme.main}>
+                <TextDefault small bold textColor={currentTheme.linkText}>
                   {cuisinesHeaderTitle}
                 </TextDefault>
               </View>

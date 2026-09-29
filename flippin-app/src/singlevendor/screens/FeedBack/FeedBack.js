@@ -182,7 +182,7 @@ const FeedBack = () => {
               activeOpacity={0.7}
             >
               <TextDefault
-                textColor={isSubmitEnabled ? currentTheme.fontWhite : currentTheme.fontSecondColor}
+                textColor={isSubmitEnabled ? currentTheme.onPrimary : currentTheme.fontSecondColor}
                 style={styles(currentTheme).submitButtonText}
                 bolder
               >

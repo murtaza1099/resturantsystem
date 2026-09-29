@@ -23,7 +23,7 @@ function CheckboxBtn(props) {
         <FontAwesome
           name="check"
           size={scale(13)}
-          color={currentTheme.fontWhite}
+          color={currentTheme.onPrimary}
         />
       ) : null}
     </TouchableOpacity>

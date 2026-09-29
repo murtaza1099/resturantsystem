@@ -226,7 +226,7 @@ const styles = (tablet = false) => StyleSheet.create({
     shadowRadius: 2
   },
   detailButtonText: {
-    color: '#10200A',
+    color: '#001B0A',
     fontSize: scale(12),
     fontWeight: '700'
   },

@@ -51,7 +51,7 @@ const styles = (props = null) =>
       fontSize: scale(12)
     },
     selectedCategoryText: {
-      color: props?.primary
+      color: props?.linkText || props?.primary
     },
     // Sub Category
     subcategoryItem: {

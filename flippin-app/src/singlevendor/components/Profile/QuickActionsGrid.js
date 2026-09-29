@@ -56,7 +56,7 @@ const QuickActionsGrid = () => {
             color={action.id === 3 ? currentTheme.singlevendorcolor : currentTheme.iconColor}
           />
           <TextDefault
-            textColor={action.id === 3 ? currentTheme.singlevendorcolor : currentTheme.fontMainColor}
+            textColor={action.id === 3 ? currentTheme.linkText : currentTheme.fontMainColor}
             style={styles(currentTheme).actionLabel}
             numberOfLines={2}
             center

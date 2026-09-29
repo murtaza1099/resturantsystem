@@ -183,7 +183,7 @@ const CreateAccount = (props) => {
           <Spinner backColor='rgba(0,0,0,0.1)' spinnerColor={currentTheme.main} />
           )
         : (
-          <TextDefault H4 textColor={currentTheme.primary} center bold>
+          <TextDefault H4 textColor={currentTheme.linkText} center bold>
             {t('continueAsGuest')}
           </TextDefault>
           )}

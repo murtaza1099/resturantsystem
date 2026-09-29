@@ -321,7 +321,7 @@ function Settings(props) {
               onPress={() => modalVisibleSetter(true)}
               style={styles().button}
             >
-              <TextDefault H5 bold textColor={currentTheme.editProfileButton}>
+              <TextDefault H5 bold textColor={currentTheme.linkText}>
                 {t('edit')}
               </TextDefault>
             </TouchableOpacity>
@@ -486,7 +486,7 @@ function Settings(props) {
             >
               <TextDefault
                 numberOfLines={1}
-                textColor={currentTheme.main}
+                textColor={currentTheme.linkText}
                 small
                 bolder
                 uppercase
@@ -500,7 +500,7 @@ function Settings(props) {
               onPress={() => onSelectedLanguage()}
             >
               <TextDefault
-                textColor={currentTheme.main}
+                textColor={currentTheme.linkText}
                 bolder
                 uppercase
                 small
