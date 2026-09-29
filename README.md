@@ -64,7 +64,7 @@ Brand colours: Neon Green `#00FD54`, Midnight Forest `#001B0A`, Frosted White `#
 
 ## Credits
 
-Flippin includes software originally developed by Ninjas Code under the MIT License. See [NOTICE.md](NOTICE.md).
+Flippin includes software derived from an open-source MIT-licensed project. See [NOTICE.md](NOTICE.md).
 
 ## License
 
