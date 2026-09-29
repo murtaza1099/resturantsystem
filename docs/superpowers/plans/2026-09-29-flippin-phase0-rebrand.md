@@ -73,7 +73,7 @@ The current root `package.json` is absent (only a stub `package-lock.json` exist
     "brand:check": "node scripts/brand/check.mjs .",
     "brand:rebrand": "node scripts/brand/rebrand.mjs .",
     "brand:recolor": "node scripts/brand/recolor.mjs .",
-    "test:scripts": "node --test scripts/brand/*.test.mjs scripts/firebase-sw/*.test.mjs"
+    "test:scripts": "node --test scripts/brand/*.test.mjs"
   }
 }
 ```
@@ -735,6 +735,12 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
 
 Run: `node --test scripts/firebase-sw/*.test.mjs`
 Expected: `ℹ pass 3` · `ℹ fail 0`
+
+Then extend the root `package.json` script so CI runs these too:
+
+```json
+"test:scripts": "node --test scripts/brand/*.test.mjs scripts/firebase-sw/*.test.mjs"
+```
 
 - [ ] **Step 6: Turn the service workers into templates**
 
