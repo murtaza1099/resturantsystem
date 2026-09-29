@@ -13,7 +13,8 @@ module.exports = {
     description:
       "Flippin is a starter kit food ordering app built in React Native using Expo for IOS and Android. It's made keeping good aesthetics in mind as well keeping the best coding practices in mind. Its fully customisable to easily help you in your next food delivery project. https://market.nativebase.io/view/react-native-food-delivery-backend-app",
     version: '1.1.95',
-    slug: 'food-delivery-rider-multivendor',
+    slug: 'flippin-rider',
+    owner: 'flippin',
     orientation: 'portrait',
     icon: './lib/assets/images/icon.png',
     assetBundlePatterns: ['lib/assets/**/*'],
@@ -109,11 +110,6 @@ module.exports = {
       adaptiveIcon: {
         foregroundImage: './lib/assets/images/appIcon.png',
         backgroundColor: '#ffffff'
-      }
-    },
-    extra: {
-      eas: {
-        projectId: '9144a7fc-b205-464a-8fb6-64eb66fc8743'
       }
     },
     experiments: {

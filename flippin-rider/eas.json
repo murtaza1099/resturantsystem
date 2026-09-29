@@ -15,6 +15,10 @@
       "developmentClient": false,
       "channel": "staging",
       "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_SINGLE_VENDOR_GRAPHQL_URL": "https://api-staging.rms.flippin.pk/graphql",
+        "EXPO_PUBLIC_SINGLE_VENDOR_WS_GRAPHQL_URL": "wss://api-staging.rms.flippin.pk/graphql"
+      },
       "android": {
         "buildType": "apk",
         "resourceClass": "large"

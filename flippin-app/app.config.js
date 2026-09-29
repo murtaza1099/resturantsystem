@@ -5,21 +5,14 @@ module.exports = () => {
   const reversedGoogleIosClientId =
     process.env.EXPO_PUBLIC_GOOGLE_IOS_REVERSED_CLIENT_ID
 
-  const fallbackUrlTypes = [
-    {
-      CFBundleURLSchemes: [
-        'com.googleusercontent.apps.650001300965-dkji7jutv8gc5m4n7cdg3nft87sauhn7'
-      ]
-    }
-  ]
-
+  if (!reversedGoogleIosClientId) {
+    console.warn(
+      'EXPO_PUBLIC_GOOGLE_IOS_REVERSED_CLIENT_ID not set — Google Sign-In on iOS disabled for this build'
+    )
+  }
   const googleUrlTypes = reversedGoogleIosClientId
-    ? [
-        {
-          CFBundleURLSchemes: [reversedGoogleIosClientId]
-        }
-      ]
-    : fallbackUrlTypes
+    ? [{ CFBundleURLSchemes: [reversedGoogleIosClientId] }]
+    : []
   const urlTypes = [
     ...googleUrlTypes,
     { CFBundleURLSchemes: ['flippin'] }
@@ -29,8 +22,7 @@ module.exports = () => {
     name: 'Flippin',
     scheme: 'flippin',
     version: '1.1.41',
-    description:
-      "Flippin is a starter kit food ordering app built in React Native using Expo for IOS and Android. It's made keeping good aesthetics in mind as well keeping the best coding practices in mind. Its fully customisable to easily help you in your next food delivery project. https://market.nativebase.io/view/react-native-food-delivery-backend-app",
+    description: 'Flippin — food, groceries and more, delivered fast.',
     slug: 'flippin',
     owner: 'flippin',
     experiments: {
@@ -225,16 +217,10 @@ module.exports = () => {
         accentColor: '#FFA921',
         logoResourceName: 'flippin_logo',
         riderResourceName: 'flippin_rider'
-      },
-      eas: {
-        projectId: '331d4e5b-b12a-434a-92ec-d6d283dc0e46'
       }
     },
     runtimeVersion: {
       policy: 'sdkVersion'
-    },
-    updates: {
-      url: 'https://u.expo.dev/331d4e5b-b12a-434a-92ec-d6d283dc0e46'
     }
   }
 }
