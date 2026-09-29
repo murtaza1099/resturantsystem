@@ -238,7 +238,7 @@ const AddDealForm = ({
                 <CustomButton
                   label={t('Save Deal')}
                   type="submit"
-                  className="bg-black dark:bg-primary-color text-white px-6 py-2 rounded-md hover:bg-gray-800 dark:hover:bg-primary-dark"
+                  className="bg-black dark:bg-primary-color text-white dark:text-on-primary px-6 py-2 rounded-md hover:bg-gray-800 dark:hover:bg-primary-dark"
                 />
               </div>
             </Form>

@@ -422,7 +422,7 @@ const ScheduleOrderMain = () => {
                                       }
                                       type="button"
                                       disabled={mutationLoading}
-                                      className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-primary-color text-primary-color hover:bg-primary-color hover:text-white transition-colors"
+                                      className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-primary-color text-brand-link hover:bg-primary-color hover:text-on-primary transition-colors"
                                     >
                                       <FontAwesomeIcon
                                         icon={faPlus}
@@ -538,7 +538,7 @@ const ScheduleOrderMain = () => {
 
             <div className="flex justify-end mt-6">
               <CustomButton
-                className="h-11 rounded-md border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color px-10 text-white hover:bg-gray-800 dark:hover:bg-primary-dark"
+                className="h-11 rounded-md border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color px-10 text-white dark:text-on-primary hover:bg-gray-800 dark:hover:bg-primary-dark"
                 label={t('Save')}
                 rounded={false}
                 disabled={loading || mutationLoading || !dirty}

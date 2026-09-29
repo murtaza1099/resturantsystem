@@ -144,7 +144,7 @@ export default function ReferralWalletMain({
             </div>
             <button
               onClick={handleReferralLevelsClick}
-              className="text-black dark:text-white hover:text-primary-color dark:hover:text-primary-color"
+              className="text-black dark:text-white hover:text-brand-link dark:hover:text-primary-color"
             >
               <FontAwesomeIcon
                 icon={faPen}
@@ -179,7 +179,7 @@ export default function ReferralWalletMain({
             </div>
             <button
               onClick={handleLoyaltyLevelsClick}
-              className="text-black dark:text-white hover:text-primary-color dark:hover:text-primary-color"
+              className="text-black dark:text-white hover:text-brand-link dark:hover:text-primary-color"
             >
               <FontAwesomeIcon
                 icon={faPen}

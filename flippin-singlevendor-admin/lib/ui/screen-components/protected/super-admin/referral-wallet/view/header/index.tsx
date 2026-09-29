@@ -57,7 +57,7 @@ export default function ReferralWalletHeader({
         </h1>
         <button
           onClick={handleAdjustPointsClick}
-          className="h-10 rounded-md bg-black dark:bg-primary-color px-6 text-white hover:bg-gray-800 dark:hover:bg-primary-dark"
+          className="h-10 rounded-md bg-black dark:bg-primary-color px-6 text-white dark:text-on-primary hover:bg-gray-800 dark:hover:bg-primary-dark"
         >
           {t('Adjust Points')}
         </button>

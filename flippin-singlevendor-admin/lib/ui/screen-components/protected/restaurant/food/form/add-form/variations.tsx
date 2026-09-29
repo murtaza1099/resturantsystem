@@ -427,7 +427,7 @@ export default function VariationAddForm() {
                                           </div>
                                         ) : (
                                           <TextIconClickable
-                                            className="h-8 w-fit rounded border border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color text-white px-3 text-xs hover:bg-gray-800 dark:hover:bg-primary-dark"
+                                            className="h-8 w-fit rounded border border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color text-white dark:text-on-primary px-3 text-xs hover:bg-gray-800 dark:hover:bg-primary-dark"
                                             title={t('Add Deal')}
                                             onClick={() =>
                                               onAddDealClick(index)

@@ -21,7 +21,7 @@ export default function SubscriptionHeader({
       <div className="flex w-full justify-between">
         <HeaderText text={t('Manage subscription plans')} />
         <TextIconClickable
-          className="rounded border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color text-white sm:w-auto hover:bg-gray-800 dark:hover:bg-primary-dark"
+          className="rounded border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color text-white dark:text-on-primary sm:w-auto hover:bg-gray-800 dark:hover:bg-primary-dark"
           icon={faAdd}
           iconStyles={{ color: 'white' }}
           onClick={handleButtonClick}

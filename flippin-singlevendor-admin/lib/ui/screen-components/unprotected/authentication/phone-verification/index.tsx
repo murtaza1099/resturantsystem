@@ -27,7 +27,7 @@ export default function PhoneVerificationMain() {
             /> */}{' '}
             {/*  Whoever is working on this module,  I have commented out the phone field, because of some type issues so please uncomment to continue`*/}
             <CustomButton
-              className="h-12 w-full border-primary-color bg-primary-color text-white hover:bg-white hover:text-primary-color"
+              className="h-12 w-full border-primary-color bg-primary-color text-on-primary hover:bg-white hover:text-brand-link"
               label="Continue"
               rounded={true}
             />

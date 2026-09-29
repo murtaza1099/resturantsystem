@@ -275,7 +275,7 @@ const RestaurantTiming = ({
                                   setFieldValue(`${dayIndex}.times`, prev);
                                 }}
                                 type="button"
-                                className="mt-2 flex h-6 w-6 select-none items-center justify-center rounded-full border border-primary-color text-primary-color hover:cursor-pointer hover:bg-secondary-color hover:text-white"
+                                className="mt-2 flex h-6 w-6 select-none items-center justify-center rounded-full border border-primary-color text-brand-link hover:cursor-pointer hover:bg-secondary-color hover:text-on-primary"
                               >
                                 +
                               </button>

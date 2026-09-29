@@ -223,7 +223,7 @@ export default function ReferralLevelsForm({
                 </div>
 
                 <button
-                  className="float-end h-10 w-fit border dark:border-dark-600 rounded-md dark:bg-primary-color dark:hover:bg-primary-dark border-gray-300 bg-black px-8 text-white disabled:opacity-50"
+                  className="float-end h-10 w-fit border dark:border-dark-600 rounded-md dark:bg-primary-color dark:hover:bg-primary-dark border-gray-300 bg-black px-8 text-white dark:text-on-primary disabled:opacity-50"
                   disabled={isSubmitting}
                   type="submit"
                 >

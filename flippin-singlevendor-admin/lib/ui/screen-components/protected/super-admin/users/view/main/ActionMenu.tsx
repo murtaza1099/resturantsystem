@@ -310,7 +310,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({
           primaryButtonProp: {
             label: t('Yes, unblock'),
             className:
-              'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-white  ',
+              'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-on-primary  ',
           },
           secondaryButtonProp: {
             label: t('Cancel'),
@@ -398,7 +398,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({
                 primaryButtonProp: {
                   label: t('Yes, activate'),
                   className:
-                    'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-white  ',
+                    'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-on-primary  ',
                 },
                 secondaryButtonProp: {
                   label: t('Cancel'),
@@ -486,7 +486,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({
           primaryButtonProp: {
             label: t('Save'),
             className:
-              'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-white  ',
+              'p-button-warning p-3 !px-5 rounded-md  bg-primary-color text-on-primary  ',
           },
           secondaryButtonProp: {
             label: t('Cancel'),

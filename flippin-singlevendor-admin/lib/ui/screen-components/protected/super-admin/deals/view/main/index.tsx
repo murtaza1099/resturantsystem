@@ -345,7 +345,7 @@ export default function DealsMain({
           </p>
           <button
             onClick={() => setVisible(true)}
-            className="rounded-md bg-black dark:bg-primary-color px-6 py-2 text-white hover:bg-gray-800 dark:hover:bg-primary-dark"
+            className="rounded-md bg-black dark:bg-primary-color px-6 py-2 text-white dark:text-on-primary hover:bg-gray-800 dark:hover:bg-primary-dark"
           >
             {t('Add Deal')}
           </button>

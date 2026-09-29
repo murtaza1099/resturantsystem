@@ -47,7 +47,7 @@ export default function OrdersDashboardDateFilter({
       className={`flex justify-center items-center p-3 absoulte z-10 ${className} `}
     >
       <div className="bg-white dark:bg-dark-950 rounded-lg shadow-lg w-full">
-        <div className="bg-primary-color text-white text-center py-2 rounded-t-lg">
+        <div className="bg-primary-color text-on-primary text-center py-2 rounded-t-lg">
           <h2 className="text-lg font-semibold">Date Filter</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center p-4 space-y-4 md:space-y-0 md:space-x-4">

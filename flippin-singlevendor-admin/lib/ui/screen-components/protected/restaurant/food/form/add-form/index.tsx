@@ -518,7 +518,7 @@ const FoodForm = ({ position = 'right' }: IFoodAddFormComponentProps) => {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="px-6 py-2 bg-black dark:bg-primary-color text-white rounded-md hover:bg-gray-800 dark:hover:bg-primary-dark disabled:opacity-50 flex items-center justify-center min-w-[100px]"
+                      className="px-6 py-2 bg-black dark:bg-primary-color text-white dark:text-on-primary rounded-md hover:bg-gray-800 dark:hover:bg-primary-dark disabled:opacity-50 flex items-center justify-center min-w-[100px]"
                     >
                       {isLoading ? (
                         <ProgressSpinner

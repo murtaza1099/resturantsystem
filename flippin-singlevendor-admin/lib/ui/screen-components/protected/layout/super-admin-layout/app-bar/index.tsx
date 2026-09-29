@@ -222,7 +222,7 @@ const AppTopbar = () => {
     template(item: any) {
       return (
         <div
-          className={`hover:bg-primary-color hover:text-white ${currentLocale === lang.code ? 'bg-primary-color text-white' : ''} p-2 cursor-pointer`}
+          className={`hover:bg-primary-color hover:text-on-primary ${currentLocale === lang.code ? 'bg-primary-color text-on-primary' : ''} p-2 cursor-pointer`}
           onClick={() => onLocaleChange(lang.code)}
         >
           {item.label}
@@ -255,7 +255,7 @@ const AppTopbar = () => {
             title={t('Zone')}
             className={
               pathname === '/zone'
-                ? 'rounded bg-primary-color text-white'
+                ? 'rounded bg-primary-color text-on-primary'
                 : 'bg-transparent hover:rounded hover:bg-secondary-color dark:hover:text-black '
             }
             iconStyles={{
@@ -270,7 +270,7 @@ const AppTopbar = () => {
             title={t('Dispatch')}
             className={
               pathname === '/dispatch'
-                ? 'rounded bg-primary-color text-white'
+                ? 'rounded bg-primary-color text-on-primary'
                 : 'bg-transparent hover:rounded hover:bg-secondary-color dark:hover:text-black'
             }
             iconStyles={{

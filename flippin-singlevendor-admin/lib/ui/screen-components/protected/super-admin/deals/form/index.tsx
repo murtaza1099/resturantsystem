@@ -652,7 +652,7 @@ export default function DealsForm({
                 </div>
 
                 <button
-                  className="float-end h-10 w-fit rounded-md border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color px-8 text-white hover:bg-gray-800 dark:hover:bg-primary-dark disabled:opacity-50"
+                  className="float-end h-10 w-fit rounded-md border-gray-300 dark:border-dark-600 bg-black dark:bg-primary-color px-8 text-white dark:text-on-primary hover:bg-gray-800 dark:hover:bg-primary-dark disabled:opacity-50"
                   disabled={isSubmitting || createLoading || updateLoading}
                   type="submit"
                 >
