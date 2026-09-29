@@ -35,7 +35,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "public/serviceWorker.js",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

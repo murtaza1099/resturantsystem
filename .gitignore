@@ -79,5 +79,4 @@ google-services.json
 GoogleService-Info.plist
 # Generated service workers
 flippin-web/public/sw.js
-flippin-web/public/serviceWorker.js
 flippin-*/public/firebase-messaging-sw.js

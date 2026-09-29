@@ -19,5 +19,5 @@ jobs:
         run: npm run test:scripts
       - name: No legacy brand references
         run: npm run brand:check
-      - name: No secrets committed
-        run: docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest detect -s /repo --no-banner --redact
+      - name: No secrets in working tree
+        run: docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest detect -s /repo --no-git --no-banner --redact

@@ -1,27 +1,20 @@
-/// <reference lib="webworker" />
 /* eslint-disable no-undef */
+// Classic (non-module) service worker. Generated to public/sw.js by scripts/firebase-sw/write-sw.mjs.
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
 
-// ✅ Firebase Scripts for background messaging
+// Firebase Scripts for background messaging
 importScripts("https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js");
 importScripts("https://www.gstatic.com/firebasejs/10.3.1/firebase-messaging-compat.js");
 
-// ✅ Workbox Scripts
-import { precacheAndRoute } from 'workbox-precaching';
-// import { registerRoute } from 'workbox-routing';
-// import { NetworkFirst, StaleWhileRevalidate } from 'workbox-strategies';
-// import { ExpirationPlugin } from 'workbox-expiration';
-
-
-// ✅ Firebase Config
+// Firebase Config
 firebase.initializeApp(__FIREBASE_CONFIG__);
 
-// ✅ Get messaging instance
+// Get messaging instance
 const messaging = firebase.messaging();
 
-// ✅ Handle background messages
+// Handle background messages
 messaging.onBackgroundMessage((payload) => {
-  
-  console.log(" message recieved ",payload)
   const notificationTitle = payload.notification?.title || 'Notification';
   const notificationOptions = {
     body: payload.notification?.body,
@@ -31,13 +24,6 @@ messaging.onBackgroundMessage((payload) => {
 
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
-
-precacheAndRoute(self.__WB_MANIFEST);
-
-// precacheAndRoute([
-//   { url: '/', revision: 'v1' },
-//   { url: '/offline.html', revision: 'v1' }
-// ]);
 
 self.addEventListener("notificationclick", function (event) {
   event.notification.close();
@@ -59,79 +45,3 @@ self.addEventListener("notificationclick", function (event) {
     );
   }
 })
-
-
-// ✅ Cache GraphQL Queries
-/* registerRoute(
-  ({ url, request }) =>
-    url.pathname.includes('/graphql') && request.method === 'GET',
-  new NetworkFirst({
-    cacheName: 'graphql-cache',
-    networkTimeoutSeconds: 3,
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 50,
-        maxAgeSeconds: 60 * 60, // 1 hour
-      }),
-    ],
-  }),
-);
-
-// ✅ Cache static resources
-registerRoute(
-  ({ request }) =>
-    request.method === 'GET' &&
-    (
-      request.destination === 'script' ||
-      request.destination === 'style' ||
-      request.destination === 'image' ||
-      request.destination === 'document'
-    ),
-  new StaleWhileRevalidate({
-    cacheName: 'static-resources',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 60,
-        maxAgeSeconds: 7 * 24 * 60 * 60, // 1 week
-      }),
-    ],
-  })
-);
-
-
-registerRoute(
-  ({ url }) => url.origin === self.location.origin && url.pathname.startsWith('/'),
-  new NetworkFirst({
-    cacheName: 'pages-cache',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 20,
-        maxAgeSeconds: 24 * 60 * 60, // 1 day
-      }),
-    ],
-  })
-);
- */
-
-// self.addEventListener('install', (event) => {
-//   console.log('[Service Worker] Installing...');
-
-//   console.log("[Service Worker] Installing...');",event)
-//   event.waitUntil(
-//     (async () => {
-//       console.log("hereee i am ")
-//       self.skipWaiting(); // Forces the waiting SW to become active
-//     })()
-//   );
-// });
-
-// self.addEventListener('activate', (event) => {
-//   console.log('[Service Worker] Activating...');
-//   event.waitUntil(
-//     (async () => {
-
-//       console.log("here in activation ")
-//       await self.clients.claim(); // Take control of open pages
-//     })()
-//   );
-// });
