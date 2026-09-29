@@ -1,4 +1,4 @@
-# Contributing to Enatega Multi Vendor Food Delivery System
+# Contributing to Flippin Food Delivery System
 
 First off, thank you for considering contributing to our project! Your help is greatly appreciated.
 
@@ -73,7 +73,7 @@ Ensure you have the following installed:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/enatega/food-delivery-multivendor.git
+    git clone https://github.com/flippin-sa/flippin
     cd food-delivery-multivendor
     ```
 

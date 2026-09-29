@@ -1,18 +1,18 @@
 <div align="right">
-<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution" style="text-decoration:none">
+<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/flippin-sa/flippin" style="text-decoration:none">
   <img src="https://img.shields.io/badge/-0d1117?logo=facebook"  width="40" height="30">
 </a>
-<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution" style="text-decoration:none">
+<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/flippin-sa/flippin" style="text-decoration:none">
   <img src="https://img.shields.io/badge/-0d1117?logo=linkedin"  width="40" height="30">
 </a>
-<a target="_blank" href="https://twitter.com/intent/tweet?&url=https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution&via=TWITTER-HANDLE" style="text-decoration:none">
+<a target="_blank" href="https://twitter.com/intent/tweet?&url=https://github.com/flippin-sa/flippin&via=TWITTER-HANDLE" style="text-decoration:none">
   <img src="https://img.shields.io/badge/-0d1117?logo=twitter" width="40" height="30">
 </a>
 
 </div>
 
 <div align="center">
-  <h2>Enatega Multi Vendor Delivery Management System</h2>
+  <h2>Flippin Delivery Management System</h2>
   <i>A modern and customizable platform for managing online ordering and logistics across industries.</i>
  <br/>
 <br />
@@ -20,25 +20,25 @@
 
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/License-MIT-red)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution.svg)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/stargazers)
-[![Forks](https://img.shields.io/github/forks/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution.svg)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/network/members)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution)
-[![GitHub contributors](https://img.shields.io/github/contributors/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/graphs/contributors)
-[![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution.svg)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/pulls)
-[![Activity](https://img.shields.io/github/last-commit/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution.svg)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/commits/main)
-[![YouTube Channel](https://img.shields.io/badge/Watch_us-Youtube-red)](https://www.youtube.com/@ninjascode509)
-[![Company Website](https://img.shields.io/badge/Visit_us-Website-blue)](https://enatega.com)
-[![Closed Issues](https://img.shields.io/github/issues-closed/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution?color=success)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/issues?q=is%3Aissue+is%3Aclosed)
-[![Closed Pull Requests](https://img.shields.io/badge/Closed%20Pull%20Requests-View%20on%20GitHub-blue.svg)](https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/pulls?q=is%3Apr+is%3Aclosed)
+[![Static Badge](https://img.shields.io/badge/License-MIT-red)](https://github.com/flippin-sa/flippin/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/stargazers)
+[![Forks](https://img.shields.io/github/forks/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/network/members)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/flippin-official/Flippin-Multivendor-Food-Delivery-Solution)
+[![GitHub contributors](https://img.shields.io/github/contributors/flippin-official/Flippin-Multivendor-Food-Delivery-Solution)](https://github.com/flippin-sa/flippin/graphs/contributors)
+[![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/pulls)
+[![Activity](https://img.shields.io/github/last-commit/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/commits/main)
+[![YouTube Channel](https://img.shields.io/badge/Watch_us-Youtube-red)](https://rms.flippin.pk)
+[![Company Website](https://img.shields.io/badge/Visit_us-Website-blue)](https://rms.flippin.pk)
+[![Closed Issues](https://img.shields.io/github/issues-closed/flippin-official/Flippin-Multivendor-Food-Delivery-Solution?color=success)](https://github.com/flippin-sa/flippin/issues?q=is%3Aissue+is%3Aclosed)
+[![Closed Pull Requests](https://img.shields.io/badge/Closed%20Pull%20Requests-View%20on%20GitHub-blue.svg)](https://github.com/flippin-sa/flippin/pulls?q=is%3Apr+is%3Aclosed)
 
 </div>
 
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/facebook-blue?logo=facebook&logoColor=Blue&color=%23fbfbfb)](https://www.facebook.com/enatega)
-[![Static Badge](https://img.shields.io/badge/Instagram-blue?logo=instagram&logoColor=D815BE&color=%23fcfcfc)](https://www.instagram.com/enatega.nb/)
-[![Static Badge](https://img.shields.io/badge/Twitter-blue?logo=Twitter&logoColor=blue&color=%23fcfcfc)](https://twitter.com/EnategaA)
+[![Static Badge](https://img.shields.io/badge/facebook-blue?logo=facebook&logoColor=Blue&color=%23fbfbfb)](https://rms.flippin.pk)
+[![Static Badge](https://img.shields.io/badge/Instagram-blue?logo=instagram&logoColor=D815BE&color=%23fcfcfc)](https://rms.flippin.pk)
+[![Static Badge](https://img.shields.io/badge/Twitter-blue?logo=Twitter&logoColor=blue&color=%23fcfcfc)](https://rms.flippin.pk)
 [![Static Badge](https://img.shields.io/badge/LinkedIn-blue?logo=LinkedIn&logoColor=darkblue&color=%23fcfcfc)](https://www.linkedin.com/company/14583783/)
 
 </div>
@@ -53,8 +53,8 @@
 
 <br>
 
-The Enatega Multi Vendor Delivery Management System is designed for businesses looking to deploy a complete, ready-to-use platform for running their online ordering and delivery operations. Whether it is food or grocery delivery, parcel logistics, home services, flowers, pharmacy orders, or other delivery-based businesses, Enatega can be adapted to your needs.
-Built with ease of use and intuitiveness in mind, the Enatega system supports multiple vendors and multiple service regions. With separate applications for customers, vendors and delivery agents, along with a powerful admin dashboard, Enatega enables you to launch and operate your own end-to-end ordering and delivery ecosystem without building everything from scratch.
+The Flippin Delivery Management System is designed for businesses looking to deploy a complete, ready-to-use platform for running their online ordering and delivery operations. Whether it is food or grocery delivery, parcel logistics, home services, flowers, pharmacy orders, or other delivery-based businesses, Flippin can be adapted to your needs.
+Built with ease of use and intuitiveness in mind, the Flippin system supports multiple vendors and multiple service regions. With separate applications for customers, vendors and delivery agents, along with a powerful admin dashboard, Flippin enables you to launch and operate your own end-to-end ordering and delivery ecosystem without building everything from scratch.
 
 The solution is fully open source, but the backend and API are proprietary and can be licensed as part of a paid package.
 
@@ -84,11 +84,11 @@ The solution is fully open source, but the backend and API are proprietary and c
 
 ## :question: What is included: <a id="heading-1"></a>
 
-Enatega provides a complete set of software components, including:
+Flippin provides a complete set of software components, including:
 
-- Enatega Multi Vendor Customer App
-- Enatega Multi Vendor Rider/Driver App
-- Enatega Multi Vendor Vendor/Store App
+- Flippin Customer App
+- Flippin Rider/Driver App
+- Flippin Vendor/Store App
 - Customer Ordering Website
 - Admin Web Dashboard
 - API Server
@@ -123,7 +123,7 @@ The required credentials and keys have been set already. You can setup your own 
 
 The version of nodejs should be between 18 to 20 (with 16 as minor version and 0 as patch)
 
-[![Guide Badge](https://img.shields.io/badge/Do_with_guided_tutorial-blue?style=for-the-badge&logo=book-reader)](https://enatega.com/multi-vendor-doc/)
+[![Guide Badge](https://img.shields.io/badge/Do_with_guided_tutorial-blue?style=for-the-badge&logo=book-reader)](https://rms.flippin.pk/multi-vendor-doc/)
 
 ## :information_source: Prerequisites: <a id="heading-4"></a>
 
@@ -166,11 +166,11 @@ NOTE: Email provider has been only been tested for gmail accounts
 
 |                                               Expo                                                |                                                   React-Navigation                                                   |                                                Apollo GraphQL                                                |                                               ReactJS                                                |                                                NodeJS                                                 |                                                 MongoDB                                                 |                                                   Firebase                                                   |
 | :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-| <a href="https://expo.dev/"><img src="./assets/expoicon.png" alt="Enatega Logos" width="100"></a> | <a href="https://reactnavigation.org/"><img src="./assets/react-navigation.png" alt="Enatega Logos" width="100"></a> | <a href="https://www.apollographql.com/"><img src="./assets/apollo.png" alt="Enatega Logos" width="100"></a> | <a href="https://reactjs.org/"><img src="./assets/react-js.png" alt="Enatega Logos" width="100"></a> | <a href="https://nodejs.org/en/"><img src="./assets/node-js.png" alt="Enatega Logos" width="100"></a> | <a href="https://www.mongodb.com/"><img src="./assets/mongoDB.png" alt="Enatega Logos" width="100"></a> | <a href="https://firebase.google.com/"><img src="./assets/firebase.png" alt="Enatega Logos" width="100"></a> |
+| <a href="https://expo.dev/"><img src="./assets/expoicon.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactnavigation.org/"><img src="./assets/react-navigation.png" alt="Flippin Logos" width="100"></a> | <a href="https://www.apollographql.com/"><img src="./assets/apollo.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactjs.org/"><img src="./assets/react-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://nodejs.org/en/"><img src="./assets/node-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://www.mongodb.com/"><img src="./assets/mongoDB.png" alt="Flippin Logos" width="100"></a> | <a href="https://firebase.google.com/"><img src="./assets/firebase.png" alt="Flippin Logos" width="100"></a> |
 
 |                                                 React Native                                                 |                                                       React Router                                                       |                                                GraphQL                                                |                                                ExpressJS                                                 |                                                   React Strap                                                    |                                                Amplitude                                                |
 | :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
-| <a href="https://reactnative.dev/"><img src="./assets/react-native.png" alt="Enatega Logos" width="100"></a> | <a href="https://reactrouter.com/"><img src="./assets/react-router-svgrepo-com.png" alt="Enatega Logos" width="100"></a> | <a href="https://graphql.org/"><img src="./assets/graphQl-1.png" alt="Enatega Logos" width="100"></a> | <a href="https://expressjs.com/"><img src="./assets/express-js.png" alt="Enatega Logos" width="100"></a> | <a href="https://reactstrap.github.io/"><img src="./assets/React-strap.png" alt="Enatega Logos" width="100"></a> | <a href="https://amplitude.com/"><img src="./assets/amplitude.png" alt="Enatega Logos" width="100"></a> |
+| <a href="https://reactnative.dev/"><img src="./assets/react-native.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactrouter.com/"><img src="./assets/react-router-svgrepo-com.png" alt="Flippin Logos" width="100"></a> | <a href="https://graphql.org/"><img src="./assets/graphQl-1.png" alt="Flippin Logos" width="100"></a> | <a href="https://expressjs.com/"><img src="./assets/express-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactstrap.github.io/"><img src="./assets/React-strap.png" alt="Flippin Logos" width="100"></a> | <a href="https://amplitude.com/"><img src="./assets/amplitude.png" alt="Flippin Logos" width="100"></a> |
 
 ## :framed_picture: Screenshots: <a id="heading-6"></a>
 
@@ -200,7 +200,7 @@ NOTE: Email provider has been only been tested for gmail accounts
 
 ## :book: Documentation <a id="heading-8"></a>
 
-Find the link for the complete documentation of the Enatega Multi Vendor Solution [here](https://enatega.com/multivendor-documentation/).
+Find the link for the complete documentation of the Flippin Solution [here](https://rms.flippin.pk/multivendor-documentation/).
 
 ## :tv: Demo Videos: <a id="heading-14"></a>
 
@@ -212,15 +212,15 @@ Find the link for the complete documentation of the Enatega Multi Vendor Solutio
 
 |                                                                                                                                               Customer App                                                                                                                                                |                                                                                                                                                   Rider App                                                                                                                                                    |                                                                                                                                                       Store App                                                                                                                                                        |                                                   Customer Web                                                   |                                                    Admin Dashboard                                                     |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
-|                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/customer-app-logo.png" alt="Enatega Logos" width="180"></a>                                                                                           |                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Rider-app-logo.png" alt="Enatega Logos" width="180"></a>                                                                                          |                                                                                            <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Store-app-logo.png" alt="Enatega Logos" width="180"></a>                                                                                            | <a href="http://multivendor.enatega.com/"><img src="./assets/customer-app-logo.png" alt="Enatega Logos" width="180"></a> | <a href="http://multivendor-admin.enatega.com/"><img src="./assets/customer-app-logo.png" alt="Enatega Logos" width="180"></a> |
-| <a href="https://play.google.com/store/apps/details?id=com.enatega.multivendor"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://apps.apple.com/pk/app/enatega-multivendor/id1526488093"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=com.enatega.multirider"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://apps.apple.com/pk/app/enatega-mulitvendor-rider/id1526674511"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=multivendor.enatega.restaurant"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://apps.apple.com/pk/app/enatega-multivendor-restaurant/id1526672537"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> |
+|                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                           |                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Rider-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                          |                                                                                            <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Store-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                            | <a href="http://rms.flippin.pk/"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a> | <a href="http://multivendor-admin.rms.flippin.pk/"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a> |
+| <a href="https://play.google.com/store/apps/details?id=pk.flippin.customer"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=pk.flippin.rider"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=pk.flippin.store"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> |
 
 ## :people_holding_hands: Contributors: <a id="heading-10"></a>
 
 <div align="center">
 <br>
-<a href="https://github.com/Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Ninjas-Code-official/Enatega-Multivendor-Food-Delivery-Solution" style="max-width: 50%; height: auto;" />
+<a href="https://github.com/flippin-sa/flippin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=flippin-official/Flippin-Multivendor-Food-Delivery-Solution" style="max-width: 50%; height: auto;" />
 </a>
 </div>
 
@@ -230,36 +230,36 @@ The frontend source code for our solution is completely open source. However, th
 
 ## :mailbox_with_mail: Contact Us: <a id="heading-13"></a>
 
-[Check out the Product Page and Pricing and more for Enatega Multivendor Food Delivery Solution](https://enatega.com/?utm_source=github&utm_medium=referral&utm_campaign=github_guide&utm_id=12345678)
+[Check out the Product Page and Pricing and more for Flippin Food Delivery Solution](https://rms.flippin.pk/?utm_source=github&utm_medium=referral&utm_campaign=github_guide&utm_id=12345678)
 
 ## :computer: Project Setup Guide <a id="heading-15"></a>
 
-This section provides detailed instructions for setting up and running each component of the Enatega Multi-vendor Food Delivery Solution.
+This section provides detailed instructions for setting up and running each component of the Flippin Food Delivery Solution.
 
 ### Quick Run Matrix
 
 | Module | Development | Production |
 | :--- | :--- | :--- |
-| API | `cd ../enatega-multivendor-api && npm install && npm run start:dev` | `cd ../enatega-multivendor-api && npm install && npm start` |
-| Admin | `cd enatega-multivendor-admin && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd enatega-multivendor-admin && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
-| Web | `cd enatega-multivendor-web && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd enatega-multivendor-web && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
-| Customer App | `cd enatega-multivendor-app && nvm use && npm install && npm run ios` or `npm run android` | `cd enatega-multivendor-app && nvm use && npm install && npm run build:production` |
-| Store App | `cd enatega-multivendor-store && nvm use && npm install && npm run ios` or `npm run android` | `cd enatega-multivendor-store && nvm use && npm install && eas build --profile production -p all` |
-| Rider App | `cd enatega-multivendor-rider && nvm use && npm install && npm run ios` or `npm run android` | `cd enatega-multivendor-rider && nvm use && npm install && eas build --profile production -p all` |
+| API | `cd ../flippin-multivendor-api && npm install && npm run start:dev` | `cd ../flippin-multivendor-api && npm install && npm start` |
+| Admin | `cd flippin-admin && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd flippin-admin && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
+| Web | `cd flippin-web && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd flippin-web && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
+| Customer App | `cd flippin-app && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-app && nvm use && npm install && npm run build:production` |
+| Store App | `cd flippin-store && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-store && nvm use && npm install && eas build --profile production -p all` |
+| Rider App | `cd flippin-rider && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-rider && nvm use && npm install && eas build --profile production -p all` |
 
 ### Recommended local full-stack order
 
-1. Start the API from `../enatega-multivendor-api`
-2. Start `enatega-multivendor-admin` or `enatega-multivendor-web`
-3. Start the mobile app you need from `enatega-multivendor-app`, `enatega-multivendor-store`, or `enatega-multivendor-rider`
+1. Start the API from `../flippin-multivendor-api`
+2. Start `flippin-admin` or `flippin-web`
+3. Start the mobile app you need from `flippin-app`, `flippin-store`, or `flippin-rider`
 
-### Enatega Admin Dashboard (Next.js)
+### Flippin Admin Dashboard (Next.js)
 
 The admin dashboard allows you to manage restaurants, orders, riders, and more.
 
 ```bash
 # Navigate to the admin dashboard directory
-cd enatega-multivendor-admin
+cd flippin-admin
 
 # Install dependencies
 npm install
@@ -270,13 +270,13 @@ npm run dev
 
 After running these commands, open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the admin dashboard. You can also CTRL+click on the localhost link that appears in your terminal.
 
-### Enatega Customer Web (React.js)
+### Flippin Customer Web (React.js)
 
 The customer web application allows users to browse restaurants and place orders through a web browser.
 
 ```bash
 # Navigate to the customer web directory
-cd enatega-multivendor-web
+cd flippin-web
 
 # Install dependencies
 npm install
@@ -287,13 +287,13 @@ npm start
 
 After running these commands, the application will be available at [http://localhost:3000](http://localhost:3000) in your web browser.
 
-### Enatega Customer App (React Native)
+### Flippin Customer App (React Native)
 
 The customer mobile application allows users to browse restaurants and place orders on their mobile devices.
 
 ```bash
 # Navigate to the customer app directory
-cd enatega-multivendor-app
+cd flippin-app
 
 # Install dependencies
 npm install
@@ -311,13 +311,13 @@ npm start -c
    - Android: Open the Expo Go app and scan the QR code
    - iOS: Use the device's camera app to scan the QR code
 
-### Enatega Rider App (React Native)
+### Flippin Rider App (React Native)
 
 The rider app allows delivery personnel to manage and complete deliveries.
 
 ```bash
 # Navigate to the rider app directory
-cd enatega-multivendor-rider
+cd flippin-rider
 
 # Install dependencies
 npm install
@@ -335,13 +335,13 @@ npm start -c
    - Android: Open the Expo Go app and scan the QR code
    - iOS: Use the device's camera app to scan the QR code
 
-### Enatega Restaurant App (React Native)
+### Flippin Restaurant App (React Native)
 
 The restaurant app allows restaurant owners to manage orders and their menu.
 
 ```bash
 # Navigate to the restaurant app directory
-cd enatega-multivendor-restaurant
+cd flippin-multivendor-restaurant
 
 # Install dependencies
 npm install

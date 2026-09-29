@@ -17,9 +17,9 @@ If the variable is missing or invalid, the apps default to `TOGGLE`.
 
 This applies to:
 
-- `enatega-multivendor-app` (customer)
-- `enatega-multivendor-rider`
-- `enatega-multivendor-store`
+- `flippin-app` (customer)
+- `flippin-rider`
+- `flippin-store`
 
 In the required profile inside each app's `eas.json`, add
 `EXPO_PUBLIC_VENDOR_MODE` to `env`:
@@ -45,7 +45,7 @@ EXPO_PUBLIC_VENDOR_MODE=SINGLE
 
 ## 3. Configure the web app
 
-Set `NEXT_PUBLIC_VENDOR_MODE` in `enatega-multivendor-web/.env` or in the web
+Set `NEXT_PUBLIC_VENDOR_MODE` in `flippin-web/.env` or in the web
 hosting provider's deployment environment:
 
 ```dotenv
