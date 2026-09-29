@@ -82,7 +82,7 @@ module.exports = () => {
     },
     notification: {
       iosDisplayInForeground: true,
-      color: '#90E36D',
+      color: '#00FD54',
       icon: './assets/not-icon.png',
       androidMode: 'default',
       androidCollapsedTitle: 'Flippin'
@@ -213,7 +213,7 @@ module.exports = () => {
         appGroupId: 'group.pk.flippin.customer.shared',
         appScheme: 'flippin',
         brandName: 'Flippin',
-        primaryColor: '#90E36D',
+        primaryColor: '#00FD54',
         accentColor: '#FFA921',
         logoResourceName: 'flippin_logo',
         riderResourceName: 'flippin_rider'

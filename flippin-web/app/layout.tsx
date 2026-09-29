@@ -73,7 +73,7 @@ export default async function RootLayout({
         </Script>
 
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#75D04B" />
+        <meta name="theme-color" content="#00FD54" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
@@ -94,7 +94,7 @@ export default async function RootLayout({
           data-impeccable-contract="c6a71e2f"
           dangerouslySetInnerHTML={{
             __html:
-              "<!-- THESIS: Quiet Orbit presents Flippin as one elegant everyday-delivery system without duplicating discovery content. OWN-WORLD: #75D04B route geometry crosses warm ivory, pale sage, and charcoal fields with precise oversized type, editorial italic accents, hairline rules, isolated product still lifes, and restrained 12–16px corners. STORY: select a city, understand the food-grocery-essentials orbit, follow the Choose-Moving-Arrived route, then branch toward business or rider partnership. FIRST VIEWPORT: a concise city gateway at left and a calm three-product orbit at right, joined by one animated route and one decisive action. FORM: Quiet Orbit, implemented from the user-approved hero and scroll-story frames; seed c6a71e2f. FINISH: the independent finish review, visual evidence, detector pass, design documentation, and raster provenance are part of the shipping contract -->",
+              "<!-- THESIS: Quiet Orbit presents Flippin as one elegant everyday-delivery system without duplicating discovery content. OWN-WORLD: #00FD54 route geometry crosses warm ivory, pale sage, and charcoal fields with precise oversized type, editorial italic accents, hairline rules, isolated product still lifes, and restrained 12–16px corners. STORY: select a city, understand the food-grocery-essentials orbit, follow the Choose-Moving-Arrived route, then branch toward business or rider partnership. FIRST VIEWPORT: a concise city gateway at left and a calm three-product orbit at right, joined by one animated route and one decisive action. FORM: Quiet Orbit, implemented from the user-approved hero and scroll-story frames; seed c6a71e2f. FINISH: the independent finish review, visual evidence, detector pass, design documentation, and raster provenance are part of the shipping contract -->",
           }}
         />
 

@@ -981,7 +981,7 @@ export default function OrderCheckoutScreen() {
                   directions,
                   suppressMarkers: true, // Hide default markers
                   polylineOptions: {
-                    strokeColor: "#5AC12F", // blue line
+                    strokeColor: "#007A29", // blue line
                     strokeOpacity: 0.8,
                     strokeWeight: 3, // thickness
                     zIndex: 10,

@@ -84,13 +84,13 @@ const styles = (props = null) =>
       width: scale(8),
       height: scale(8),
       borderRadius: scale(4),
-      backgroundColor: props?.singleVendorBrand || '#90E36D',
+      backgroundColor: props?.singleVendorBrand || '#00FD54',
       marginBottom: verticalScale(2)
     },
     buttonLine: {
       width: scale(1),
       height: verticalScale(20),
-      backgroundColor: props?.singleVendorBrand || '#90E36D',
+      backgroundColor: props?.singleVendorBrand || '#00FD54',
       opacity: 0.3
     },
     browseButton: {
@@ -127,7 +127,7 @@ const styles = (props = null) =>
       minWidth: scale(80)
     },
     filterButtonActive: {
-      backgroundColor: props?.singleVendorBrandSubtle || '#F3FFEE'
+      backgroundColor: props?.singleVendorBrandSubtle || '#E6FFEE'
     },
     filterButtonText: {
       fontSize: scale(14),
@@ -184,7 +184,7 @@ const styles = (props = null) =>
       gap: verticalScale(6)
     },
     historyBadge: {
-      backgroundColor: props?.singleVendorBrand || '#90E36D',
+      backgroundColor: props?.singleVendorBrand || '#00FD54',
       paddingHorizontal: scale(8),
       paddingVertical: verticalScale(4),
       borderRadius: scale(6)

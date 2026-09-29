@@ -463,12 +463,12 @@ export default function UserAddressComponent(
                       height={18}
                       darkColor={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : "#ffffff"
                       }
                       color={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : undefined
                       }
                     />
@@ -478,12 +478,12 @@ export default function UserAddressComponent(
                       height={18}
                       darkColor={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : "#ffffff"
                       }
                       color={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : undefined
                       }
                     />
@@ -493,12 +493,12 @@ export default function UserAddressComponent(
                       height={18}
                       darkColor={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : "#ffffff"
                       }
                       color={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : undefined
                       }
                     />
@@ -508,12 +508,12 @@ export default function UserAddressComponent(
                       height={18}
                       darkColor={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : "#ffffff"
                       }
                       color={
                         address.selected && !hasCurrentLocation
-                          ? "#75D04B"
+                          ? "#00FD54"
                           : undefined
                       }
                     />
@@ -699,8 +699,8 @@ export default function UserAddressComponent(
               >
                 <div>
                   {item.icon(
-                    selectedLocationType === item.name ? "#75D04B" : undefined,
-                    selectedLocationType === item.name ? "#75D04B" : undefined
+                    selectedLocationType === item.name ? "#00FD54" : undefined,
+                    selectedLocationType === item.name ? "#00FD54" : undefined
                   )}
                 </div>
                 <div className="flex flex-col gap-y-[2px]">
@@ -896,8 +896,8 @@ export default function UserAddressComponent(
               >
                 <div>
                   {item.icon(
-                    selectedLocationType === item.name ? "#75D04B" : undefined,
-                    selectedLocationType === item.name ? "#75D04B" : undefined
+                    selectedLocationType === item.name ? "#00FD54" : undefined,
+                    selectedLocationType === item.name ? "#00FD54" : undefined
                   )}
                 </div>
                 <div className="flex flex-col gap-y-[2px]">

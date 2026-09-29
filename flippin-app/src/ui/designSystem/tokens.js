@@ -89,10 +89,10 @@ export const resolveMultivendorTokens = (themeName, legacyTheme = {}) => {
     isDark,
     colors: {
       ...colors,
-      accent: legacyTheme.main || '#90E36D',
+      accent: legacyTheme.main || '#00FD54',
       accentForeground: isDark ? '#B9F3A0' : '#397A20',
       accentSubtle: isDark ? 'rgba(144, 227, 109, 0.14)' : 'rgba(144, 227, 109, 0.18)',
-      focus: legacyTheme.main || '#90E36D'
+      focus: legacyTheme.main || '#00FD54'
     },
     spacing,
     radii,

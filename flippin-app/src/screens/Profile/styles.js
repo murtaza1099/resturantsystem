@@ -38,7 +38,7 @@ const styles = (props = null) =>
       width: scale(7),
       height: scale(7),
       borderRadius: scale(999),
-      backgroundColor: props?.colors?.accent ?? '#90E36D'
+      backgroundColor: props?.colors?.accent ?? '#00FD54'
     },
     activeOrderText: {
       flex: 1,
@@ -91,7 +91,7 @@ const styles = (props = null) =>
       ...alignment.PLmedium
     },
     saveContainer: {
-      backgroundColor: props !== null ? props?.main : '#90E36D',
+      backgroundColor: props !== null ? props?.main : '#00FD54',
       padding: scale(8),
       borderRadius: scale(16),
       justifyContent: 'center',
@@ -270,7 +270,7 @@ const styles = (props = null) =>
       ...alignment.MTlarge
     },
     seeAll: {
-      backgroundColor: props !== null ? props?.newButtonBackground : '#F3FFEE',
+      backgroundColor: props !== null ? props?.newButtonBackground : '#E6FFEE',
       ...alignment.Psmall,
       borderRadius: scale(5)
     },

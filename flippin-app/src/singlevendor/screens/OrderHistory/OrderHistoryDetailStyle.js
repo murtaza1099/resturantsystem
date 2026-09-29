@@ -82,7 +82,7 @@ const styles = (props = null) =>
         borderTopColor: props?.colorBorder || '#E5E7EB'
       },
       increaseTipButton: {
-        backgroundColor: props?.singleVendorBrandSubtle || '#F3FFEE',
+        backgroundColor: props?.singleVendorBrandSubtle || '#E6FFEE',
         borderRadius: scale(12),
         paddingVertical: verticalScale(14),
         paddingHorizontal: scale(16),
@@ -92,7 +92,7 @@ const styles = (props = null) =>
         justifyContent: 'center'
       },
       trackProgressButton: {
-        backgroundColor: props?.singleVendorBrand || '#90E36D',
+        backgroundColor: props?.singleVendorBrand || '#00FD54',
         borderRadius: scale(12),
         paddingVertical: verticalScale(14),
         paddingHorizontal: scale(16),

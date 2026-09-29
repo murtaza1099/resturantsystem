@@ -49,7 +49,7 @@ const defaultConfiguration = {
   appGroupId: 'group.pk.flippin.customer.shared',
   appScheme: 'flippin',
   brandName: 'Flippin',
-  primaryColor: '#90E36D',
+  primaryColor: '#00FD54',
   accentColor: '#FFA921',
   logoResourceName: 'flippin_logo',
   riderResourceName: 'flippin_rider',

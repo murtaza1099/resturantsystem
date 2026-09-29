@@ -17,6 +17,10 @@
 :root {
   --primary-color: #006189;
   --primary-dark: #1986BB;
+  --brand-ink: #001b0a;          /* Midnight Forest */
+  --brand-surface: #ffffff;      /* Frosted White */
+  --on-primary: #001b0a;         /* text/icons on Neon Green */
+  --brand-link: #007a29;         /* green text on light surfaces (AA) */
   --secondary-color: #99D3EB;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
@@ -484,7 +488,7 @@ body {
 
 .dark .p-datatable-table tr.p-highlight {
   background-color: rgba(90, 193, 47, 0.15) !important; /* soft green tint */
-  color: #5ac12f !important;
+  color: #007A29 !important;
 }
 
 /* === Dark mode: dropdown input inside DataTable === */

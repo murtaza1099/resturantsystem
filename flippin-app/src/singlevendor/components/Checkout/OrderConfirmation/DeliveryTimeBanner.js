@@ -95,7 +95,7 @@ const DeliveryTimeBanner = ({ eta, orderStatus, riderLocation, isPickUpOrder = f
 const styles = (props = null) =>
   StyleSheet.create({
     container: {
-      backgroundColor: props?.singleVendorBrand || '#90E36D',
+      backgroundColor: props?.singleVendorBrand || '#00FD54',
       paddingVertical: scale(14),
       paddingHorizontal: scale(16),
       alignItems: 'center',

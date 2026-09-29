@@ -28,6 +28,9 @@ const config = {
       colors: {
         'primary-color': 'var(--primary-color)',
         'primary-dark': 'var(--primary-dark)',
+        'brand-ink': 'var(--brand-ink)',
+        'on-primary': 'var(--on-primary)',
+        'brand-link': 'var(--brand-link)',
         'secondary-color': 'var(--secondary-color)',
         'secondary-border-color': '#111827',
         'dark-950': 'var(--dark-950)',

@@ -5,20 +5,20 @@
 
 export const Colors = {
   light: {
-    primary: "#90E36D",
+    primary: "#00FD54",
     themeBackground: "#FAFAFA",
     iconColor: "#333333",
-    tagColor: "#AAC810",
-    iconPink: "#AAC810",
+    tagColor: "#00FD54",
+    iconPink: "#00FD54",
     radioColor: "#FFF",
-    radioOuterColor: "#AAC810",
-    spinnerColor: "#AAC810",
-    orderComplete: "#89a207",
+    radioOuterColor: "#00FD54",
+    spinnerColor: "#00FD54",
+    orderComplete: "#007A29",
     orderUncomplete: "#fe0000",
     horizontalLine: "#B8B8B8",
-    buttonBackground: "#AAC810",
-    buttonText: "black",
-    buttonBackgroundPink: "#AAC810",
+    buttonBackground: "#00FD54",
+    buttonText: "#001B0A",
+    buttonBackgroundPink: "#00FD54",
     buttonTextPink: "#FFF",
     textErrorColor: "#FA7751",
     headerBackground: "#FFF",
@@ -26,7 +26,7 @@ export const Colors = {
     fontMainColor: "#212121",
     fontSecondColor: "#949393",
     cartContainer: "#FFF",
-    startColor: "#AAC810",
+    startColor: "#00FD54",
     white: "#FFF",
     black: "#000",
     tabNaviatorBackground: "#1F2937",
@@ -55,7 +55,7 @@ export const Colors = {
     orderUncomplete: "#FF6B6B", // Softer red for dark mode
     horizontalLine: "#444444", // Dark gray for dividers
     buttonBackground: "#8CA30D", // Darker green for buttons
-    buttonText: "#FFFF", // Light text for buttons
+    buttonText: "#001B0A", // Light text for buttons
     buttonBackgroundPink: "#8CA30D",
     buttonTextPink: "#1E1E1E",
     textErrorColor: "#FF8A50", // Softer orange for errors

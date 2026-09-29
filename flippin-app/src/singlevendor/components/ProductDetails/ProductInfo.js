@@ -185,7 +185,7 @@ const styles = (props = null) =>
       justifyContent: 'space-between'
     },
     popular: {
-      backgroundColor: props !== null ? props?.singleVendorBrand : '#90E36D',
+      backgroundColor: props !== null ? props?.singleVendorBrand : '#00FD54',
       minWidth: 80,
       maxWidth: 120,
       gap: 4,

@@ -144,7 +144,7 @@ const styles = (props = null) =>
       width: scale(56),
       height: scale(56),
       borderRadius: scale(28),
-      backgroundColor: props?.singleVendorBrandSubtle || '#F3FFEE',
+      backgroundColor: props?.singleVendorBrandSubtle || '#E6FFEE',
       position: 'absolute',
       top: scale(-20)
     },
