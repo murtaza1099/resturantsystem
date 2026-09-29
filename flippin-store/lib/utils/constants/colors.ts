@@ -42,21 +42,21 @@ export const Colors = {
     error: "#ef4444",
   },
   dark: {
-    primary: "#A5C616", // Slightly darker green to avoid too much brightness
+    primary: "#00FD54", // Slightly darker green to avoid too much brightness
     themeBackground: "black", // Dark gray for background
     screenBackground: "black",
     iconColor: "black", // Light gray for icons
-    tagColor: "#8CA30D", // Muted green for tags
-    iconPink: "#8CA30D",
+    tagColor: "#00D447", // Muted green for tags
+    iconPink: "#00D447",
     radioColor: "#1E1E1E", // Matches the dark background
-    radioOuterColor: "#A5C616",
-    spinnerColor: "#A5C616",
+    radioOuterColor: "#00FD54",
+    spinnerColor: "#00FD54",
     orderComplete: "#6F8B05", // Muted green
     orderUncomplete: "#FF6B6B", // Softer red for dark mode
     horizontalLine: "#444444", // Dark gray for dividers
-    buttonBackground: "#8CA30D", // Darker green for buttons
-    buttonText: "#001B0A", // Light text for buttons
-    buttonBackgroundPink: "#8CA30D",
+    buttonBackground: "#00D447", // Darker green for buttons
+    buttonText: "#001B0A", // Dark text on Neon Green buttons
+    buttonBackgroundPink: "#00D447",
     buttonTextPink: "#1E1E1E",
     textErrorColor: "#FF8A50", // Softer orange for errors
     headerBackground: "#2A2A2A", // Darker gray for headers
@@ -64,7 +64,7 @@ export const Colors = {
     fontMainColor: "#E0E0E0", // Light gray for main text
     fontSecondColor: "#B0B0B0", // Medium gray for secondary text
     cartContainer: "#1E1E1E", // Matches the dark background
-    startColor: "#8CA30D",
+    startColor: "#00D447",
     white: "#E0E0E0", // Light gray instead of pure white
     black: "#000",
     secondaryTextColor: "#4B5563",

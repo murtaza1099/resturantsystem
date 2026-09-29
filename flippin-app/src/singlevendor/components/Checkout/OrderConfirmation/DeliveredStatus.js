@@ -70,14 +70,14 @@
 //       width: scale(85),
 //       height: scale(85),
 //       borderRadius: scale(50),
-//       backgroundColor: props?.headerMainFontColor || '#006189',
+//       backgroundColor: props?.headerMainFontColor || '#00FD54',
 //       opacity: 0.2
 //     },
 //     iconContainer: {
 //       width: scale(70),
 //       height: scale(70),
 //       borderRadius: scale(48),
-//       backgroundColor: props?.headerMainFontColor || '#006189',
+//       backgroundColor: props?.headerMainFontColor || '#00FD54',
 //       alignItems: 'center',
 //       justifyContent: 'center'
 //     },

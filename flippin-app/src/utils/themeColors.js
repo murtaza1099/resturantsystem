@@ -1,6 +1,6 @@
 export const FLIPPIN_BRAND_COLORS = Object.freeze({
   primary: '#00FD54',
-  onPrimary: '#10200A',
+  onPrimary: '#001B0A',
   foregroundLight: '#397A20',
   foregroundDark: '#B9F3A0',
   subtleLight: '#E6FFEE',
