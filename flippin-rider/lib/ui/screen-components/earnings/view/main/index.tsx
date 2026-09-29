@@ -108,7 +108,7 @@ export default function EarningsMain() {
         frontColor={appTheme.primary}
         barStyle={{ marginTop: 15 }}
         rulesColor={appTheme.secondaryTextColor}
-        topLabelTextStyle={{ color: appTheme.primary }}
+        topLabelTextStyle={{ color: appTheme.linkText }}
         xAxisLabelTextStyle={{
           display: "flex",
           fontSize: 9,

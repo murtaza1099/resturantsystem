@@ -223,7 +223,7 @@ export const PaymentSummary = ({
           adjustsFontSizeToFit
           minimumFontScale={0.75}
           numberOfLines={1}
-          style={[styles.amount, { color: appTheme.primary }]}
+          style={[styles.amount, { color: appTheme.linkText }]}
         >
           {currencySymbol}
           {formatAmount(amount)}

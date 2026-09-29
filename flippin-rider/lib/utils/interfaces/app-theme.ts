@@ -21,6 +21,7 @@ export interface AppTheme {
   horizontalLine: string;
   buttonBackground: string;
   buttonText: string;
+  linkText: string;
   buttonBackgroundPink: string;
   buttonTextPink: string;
   textErrorColor: string;

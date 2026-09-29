@@ -288,7 +288,7 @@ const Order = ({
         <View style={styles.detailAffordance}>
           <Text
             style={{
-              color: appTheme.primary,
+              color: appTheme.linkText,
               fontSize: 13,
               fontWeight: "600",
             }}

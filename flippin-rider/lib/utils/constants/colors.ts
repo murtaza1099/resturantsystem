@@ -5,6 +5,7 @@
 
 export const Colors = {
   light: {
+    linkText: "#007A29", // green text on light surfaces (AA)
     primary: "#00FD54",
     themeBackground: "#FAFAFA",
     iconColor: "#333333",
@@ -19,7 +20,7 @@ export const Colors = {
     buttonBackground: "#00FD54",
     buttonText: "#001B0A",
     buttonBackgroundPink: "#00FD54",
-    buttonTextPink: "#FFF",
+    buttonTextPink: "#001B0A",
     textErrorColor: "#FA7751",
     headerBackground: "#FFF",
     headerText: "#2a2a2a",
@@ -46,6 +47,7 @@ export const Colors = {
     mapControlBackground: "#FFFFFF",
   },
   dark: {
+    linkText: "#00FD54", // Neon Green text is fine on dark surfaces
     primary: "#00FD54", // Slightly darker green to avoid too much brightness
     themeBackground: "black", // Dark gray for background
     screenBackground: "black",

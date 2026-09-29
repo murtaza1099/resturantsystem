@@ -30,7 +30,7 @@ export default function ProfileHeader() {
           <Text
             className="text-[16px] font-semibold"
             style={{
-              color: appTheme.primary,
+              color: appTheme.linkText,
             }}
           >
             {dataProfile?.name
