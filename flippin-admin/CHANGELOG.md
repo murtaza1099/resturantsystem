@@ -1,5 +1,7 @@
 # Changelog
 
+## Unreleased — Rebranded to Flippin (Phase 0)
+
 ## 10.1.0
 
 - Update to PrimeReact 10.2.1

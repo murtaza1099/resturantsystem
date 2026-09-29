@@ -1,54 +1,20 @@
-# Flippin Store App
+# Flippin Store
 
-## Requirements
+The Flippin store and vendor mobile app (Expo / React Native) for managing orders and menus.
 
-- Node `v20.16.0`
-- npm
-- Xcode for iOS or Android Studio for Android
+Part of the Flippin monorepo. See the [root README](../README.md) for the overview, status, and brand guard.
 
-## Development
+## Setup
 
-```bash
-nvm use
-npm install
-npm run ios
-```
-
-Or:
+Requires Node 22+.
 
 ```bash
-npm run android
+npm ci
+npx expo start
 ```
 
-## Important
+## Environment
 
-- This is not an Expo Go project
-- It uses `expo-dev-client`, so use a custom dev build on a simulator or emulator
+Build profiles and public env vars (API URL, `EXPO_PUBLIC_VENDOR_MODE`) are defined in `eas.json`. Firebase files are supplied through EAS file env vars `GOOGLE_SERVICES_JSON` and `GOOGLE_SERVICE_INFO_PLIST`.
 
-## Production
-
-This app does not currently expose dedicated `build:production` npm scripts.
-Use EAS directly:
-
-```bash
-nvm use
-npm install
-eas build --profile production -p all
-```
-
-Platform-specific builds:
-
-```bash
-eas build --profile production -p ios
-eas build --profile production -p android
-```
-
-## Endpoint setup
-
-This app currently uses the committed values in `environment.ts`.
-Those defaults were left unchanged here to avoid switching local setup between hosted and local backends without confirmation.
-
-## Notes
-
-- Expo SDK: `54`
-- If you need Sentry sourcemap uploads in EAS, set `SENTRY_AUTH_TOKEN` as an EAS secret or environment variable, not in `eas.json`
+The backend `flippin-api` is Phase 1, so the app will not load data until it exists.

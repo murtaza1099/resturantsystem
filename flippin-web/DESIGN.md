@@ -1,22 +1,24 @@
 ---
-name: "Flippin Quiet Orbit"
-description: "An elegant everyday-delivery system shaped by a pure-white landing canvas, precise type, alpha product still lifes, and brand-green route geometry."
+name: "Flippin"
+description: "A Saudi-first, Arabic-first local delivery marketplace design system: pure-white canvas, precise type, and Neon Green route signals on Midnight Forest ink."
 colors:
-  primary: "#75d04b"
-  primary-light: "#f3ffee"
-  primary-dark: "#5ac12f"
-  primary-hover: "#68c73e"
-  primary-pressed: "#56b02f"
-  primary-focus: "rgba(117, 208, 75, 0.32)"
-  primary-disabled: "#b9e8a3"
+  primary: "#00FD54"
+  primary-light: "#E6FFEE"
+  primary-dark: "#007A29"
+  primary-hover: "#00E64C"
+  primary-pressed: "#00D447"
+  primary-focus: "rgba(0, 253, 84, 0.32)"
+  primary-disabled: "#99FEBB"
+  on-primary: "#001B0A"
+  brand-link: "#007A29"
   warm-ivory: "#f7f6f0"
   white-surface: "#ffffff"
   pale-map: "#f8f7f3"
-  charcoal-ink: "#151914"
+  charcoal-ink: "#001B0A"
   muted-ink: "#62685f"
   hairline: "#e8e9e4"
   pale-sage-plinth: "#e5ecda"
-  dark-ground: "#111410"
+  dark-ground: "#001B0A"
   dark-surface: "#181c17"
   dark-map: "#20251f"
   dark-ink: "#f7f8f3"
@@ -24,29 +26,29 @@ colors:
   dark-hairline: "#343a32"
 typography:
   display:
-    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Satoshi, 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(3.2rem, 5.5vw, 5.25rem)"
     fontWeight: 500
     lineHeight: 0.98
     letterSpacing: "-0.035em"
   editorial:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Satoshi, 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "inherit"
     fontWeight: 500
     lineHeight: 0.92
   headline:
-    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Satoshi, 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(3rem, 5vw, 5rem)"
     fontWeight: 500
     lineHeight: 0.98
     letterSpacing: "-0.035em"
   body:
-    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Satoshi, 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.75
   label:
-    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Satoshi, 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 600
     lineHeight: 1.25
@@ -101,13 +103,13 @@ components:
     size: "128px"
 ---
 
-# Design System: Flippin Quiet Orbit
+# Design System: Flippin
 
 ## Overview
 
-**Creative North Star: "Quiet Orbit"**
+**Creative North Star: "Flippin"**
 
-Quiet Orbit makes Flippin feel like one elegant everyday-delivery system. The multivendor root uses a pure-white canvas; charcoal carries information; pale sage grounds product objects; brand green appears as a route signal, active state, or decisive action. Editorial italic phrases add humanity without turning the interface into a magazine pastiche.
+The Flippin system makes the product feel like one elegant everyday-delivery system. The multivendor root uses a pure-white canvas; charcoal carries information; pale sage grounds product objects; brand green appears as a route signal, active state, or decisive action. Editorial italic phrases add humanity without turning the interface into a magazine pastiche.
 
 The system is spacious, precise, and product-led. Alpha-validated isolated still lifes, autonomous orbit markers, fine route drawings, and hairline rules explain movement without ornamental chrome. The multivendor root landing page is the fullest expression of this world: it owns the city gateway, product orbit, restored More than delivery strip, and Choose–Moving–Arrived scroll story. Those compositions are route-specific and must not be copied into discovery or other transactional screens.
 
@@ -115,7 +117,7 @@ The system is spacious, precise, and product-led. Alpha-validated isolated still
 
 - A pure-white root canvas with charcoal contrast and pale-sage support.
 - One purposeful green route language, never a wash of decorative accent color.
-- Inter for clarity, with Cormorant Garamond italic reserved for short emotional accents.
+- Satoshi for Latin clarity, with Arabic set in IBM Plex Sans Arabic for RTL parity.
 - Real isolated product imagery on generous negative space; no people or invented marketplace listings on the root landing surface.
 - Code-native SVG and CSS geometry, restrained shadows, and low-amplitude motion.
 
@@ -131,7 +133,7 @@ The palette is a quiet neutral field punctuated by Flippin green; light and dark
 
 ### Neutral
 
-- **Warm Ivory:** The shared application ground outside the root-only Quiet Orbit override.
+- **Warm Ivory:** The shared application ground outside the root-only Flippin override.
 - **White Surface:** The pure-white multivendor landing canvas and its control surfaces.
 - **Charcoal Ink:** Primary text, dark action fills, and partnership bands.
 - **Muted Ink:** Supporting copy, labels, and inactive states.
@@ -143,23 +145,23 @@ The palette is a quiet neutral field punctuated by Flippin green; light and dark
 
 **The Route Signal Rule.** Green denotes movement, progress, selection, or action. Keep it concentrated enough that every green mark feels operational.
 
-**The Pure Canvas Rule.** The multivendor Quiet Orbit landing uses pure white for both page ground and controls, separated by hairlines and restrained shadow; charcoal remains a deliberate high-contrast field.
+**The Pure Canvas Rule.** The multivendor Flippin landing uses pure white for both page ground and controls, separated by hairlines and restrained shadow; charcoal remains a deliberate high-contrast field.
 
 ## Typography
 
-**Display Font:** Inter (with system sans-serif fallback)  
-**Body Font:** Inter (with system sans-serif fallback)  
-**Editorial Accent Font:** Cormorant Garamond italic (with Georgia fallback)
+**Display Font:** Satoshi (with IBM Plex Sans Arabic and system sans-serif fallback)  
+**Body Font:** Satoshi / IBM Plex Sans Arabic (with system sans-serif fallback)  
+**Editorial Accent Font:** Satoshi italic (Arabic falls back to IBM Plex Sans Arabic)
 
-**Character:** Inter gives the system an exact, contemporary voice with compact tracking and moderate weight. Cormorant Garamond supplies one graceful tonal shift inside large headlines; it is an accent, not a second reading face.
+**Character:** Satoshi gives the system an exact, contemporary voice with compact tracking and moderate weight. Italic Satoshi supplies one graceful tonal shift inside large headlines; it is an accent, not a second reading face.
 
 ### Hierarchy
 
 - **Display:** Medium-weight, tightly tracked, nearly solid leading; used for the root hero statement.
-- **Headline:** A slightly smaller version of the same Inter construction for major narrative sections.
+- **Headline:** A slightly smaller version of the same Satoshi construction for major narrative sections.
 - **Editorial Accent:** Medium italic at the surrounding display size; one short phrase per headline.
-- **Body:** Regular Inter with open leading and a practical 38–52 character measure on landing copy.
-- **Label:** Semibold uppercase Inter with wide tracking for eyebrows, stage titles, and numbered product annotations.
+- **Body:** Regular Satoshi with open leading and a practical 38–52 character measure on landing copy.
+- **Label:** Semibold uppercase Satoshi with wide tracking for eyebrows, stage titles, and numbered product annotations.
 
 ### Named Rules
 
@@ -175,7 +177,7 @@ RTL is structural: border sides, directional icons, annotation anchors, and tran
 
 ## Elevation & Depth
 
-Quiet Orbit is flat by default. Depth appears only where an object or control must float above the white field: city search, suggestion menu, orbit previews, and product still lifes. Pale-sage elliptical plinths provide most object grounding; shadows remain diffuse and low contrast.
+Flippin is flat by default. Depth appears only where an object or control must float above the white field: city search, suggestion menu, orbit previews, and product still lifes. Pale-sage elliptical plinths provide most object grounding; shadows remain diffuse and low contrast.
 
 ### Shadow Vocabulary
 
@@ -210,8 +212,8 @@ The signature silhouette is the orbit or route: a single continuous green path p
 
 ### Cards / Containers
 
-- **Corner Style:** Quiet Orbit avoids generic card grids. When containment is necessary, use 14–16px corners.
-- **Background:** The root Quiet Orbit surface stays pure white; shared application containers may use white or pale-map on the existing warm-ivory ground. Charcoal is reserved for strong terminal bands.
+- **Corner Style:** Flippin avoids generic card grids. When containment is necessary, use 14–16px corners.
+- **Background:** The root Flippin surface stays pure white; shared application containers may use white or pale-map on the existing warm-ivory ground. Charcoal is reserved for strong terminal bands.
 - **Shadow Strategy:** Flat unless the element is a control, overlay, or isolated object.
 - **Border:** One-pixel hairlines instead of heavy outlines.
 
@@ -250,7 +252,7 @@ The desktop section pins while a single SVG route progresses through Choose, Mov
 ### Don't:
 
 - **Don't** duplicate restaurant, store, offer, or product-listing discovery content on the multivendor root landing page.
-- **Don't** add people, lifestyle scenes, decorative gradients, glass effects, or a grid of generic rounded marketing cards to Quiet Orbit.
+- **Don't** add people, lifestyle scenes, decorative gradients, glass effects, or a grid of generic rounded marketing cards to the Flippin landing.
 - **Don't** use the editorial serif for body copy, controls, navigation, or more than one accent phrase in a major headline.
 - **Don't** copy the product orbit, pinned route story, or root-only hidden header controls onto non-root screens.
 - **Don't** amplify motion beyond the shipped small fades, route draws, slight scale changes, and low-amplitude object movement.

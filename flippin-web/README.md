@@ -1,50 +1,24 @@
-# Flippin Customer Web
+# Flippin Web
 
-## Requirements
+The Flippin customer website and PWA (Next.js): browse local restaurants, grocery, pharmacy, and shops, order, and track deliveries. Arabic-first with RTL and English.
 
-- Node `v20.16.0`
-- npm `>=10`
+Part of the Flippin monorepo. See the [root README](../README.md) for the overview, status, and brand guard.
 
-## Development
+## Setup
+
+Requires Node 22+.
 
 ```bash
-nvm use
-npm install
-cp .env.example .env.local
+npm ci
+cp .env.example .env.local   # fill in the six NEXT_PUBLIC_FIREBASE_* values
 npm run dev
 ```
 
-The app runs on `http://localhost:3000`.
+## Environment
 
-## Production
+Copy `.env.example` to `.env.local` and set the six Firebase values (`NEXT_PUBLIC_FIREBASE_API_KEY`, `_AUTH_DOMAIN`, `_PROJECT_ID`, `_STORAGE_BUCKET`, `_MESSAGING_SENDER_ID`, `_APP_ID`) plus the API and vendor mode settings listed there. `predev` and `prebuild` generate the Firebase service worker from them.
 
-```bash
-nvm use
-npm install
-cp .env.example .env.local
-npm run build
-npm run start
-```
+## Scripts
 
-The production server also uses port `3000` unless `PORT` is overridden.
-
-## Backend selection
-
-This module supports two setup styles:
-
-- Local backend: keep `.env.local` pointed at `http://localhost:8001/`
-- Hosted backend: replace the values in `.env.local` with a hosted `https://` API URL and matching `wss://` websocket URL
-
-Examples already exist in `.env.stage` and `.env.prod`.
-
-## Google setup
-
-- `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` is required for Google Maps in the browser
-- Google OAuth, Firebase, payments, currency, and other browser configuration is
-  loaded from the Multi Vendor `configuration` query in both storefront modes.
-- Single Vendor environment variables only select its GraphQL, WebSocket, and
-  REST endpoints.
-
-## Notes
-
-- Use `wss://` when the API is served over `https://`
+- `npm run dev` starts the dev server.
+- `npm run build` then `npm start` runs a production build.

@@ -1,54 +1,20 @@
-# Flippin Customer App
+# Flippin App
 
-## Requirements
+The Flippin customer mobile app (Expo / React Native).
 
-- Node `v20.16.0`
-- npm
-- Xcode for iOS or Android Studio for Android
+Part of the Flippin monorepo. See the [root README](../README.md) for the overview, status, and brand guard.
 
-## Development
+## Setup
 
-```bash
-nvm use
-npm install
-npm run ios
-```
-
-Or:
+Requires Node 22+.
 
 ```bash
-npm run android
+npm ci
+npx expo start
 ```
 
-## Important
+## Environment
 
-- This is not an Expo Go project
-- It uses native modules including `expo-dev-client` and `react-native-maps`
-- Run it with a custom dev build on a simulator or emulator
+Build profiles and public env vars (API URL, `EXPO_PUBLIC_VENDOR_MODE`) are defined in `eas.json`. Firebase files are supplied through EAS file env vars `GOOGLE_SERVICES_JSON` and `GOOGLE_SERVICE_INFO_PLIST`.
 
-## Production
-
-Use the existing EAS build scripts:
-
-```bash
-nvm use
-npm install
-npm run build:production
-```
-
-Platform-specific builds:
-
-```bash
-npm run build:production:ios
-npm run build:production:android
-```
-
-## Endpoint setup
-
-The app currently uses the committed environment config in `environment.config.js`.
-That file still controls whether local development targets the hosted API or a local backend.
-
-## Notes
-
-- Expo SDK: `53`
-- If sourcemap upload is needed in CI, provide Sentry credentials through environment variables instead of committing tokens
+The backend `flippin-api` is Phase 1, so the app will not load data until it exists.

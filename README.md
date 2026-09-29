@@ -1,412 +1,71 @@
-<div align="right">
-<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/flippin-sa/flippin" style="text-decoration:none">
-  <img src="https://img.shields.io/badge/-0d1117?logo=facebook"  width="40" height="30">
-</a>
-<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/flippin-sa/flippin" style="text-decoration:none">
-  <img src="https://img.shields.io/badge/-0d1117?logo=linkedin"  width="40" height="30">
-</a>
-<a target="_blank" href="https://twitter.com/intent/tweet?&url=https://github.com/flippin-sa/flippin&via=TWITTER-HANDLE" style="text-decoration:none">
-  <img src="https://img.shields.io/badge/-0d1117?logo=twitter" width="40" height="30">
-</a>
+# Flippin
 
-</div>
+Flippin is a multi-category local delivery marketplace launching in Saudi Arabia: restaurants first, plus grocery, pharmacy, and shops. It is Arabic-first (RTL) with English support, priced in SAR with 15% VAT. This monorepo holds the customer, rider, and store apps and the admin dashboards; the backend (`flippin-api`) is planned for Phase 1.
 
-<div align="center">
-  <h2>Flippin Delivery Management System</h2>
-  <i>A modern and customizable platform for managing online ordering and logistics across industries.</i>
- <br/>
-<br />
-</div>
+## Apps
 
-<div align="center">
+| Folder | Tech | Used by |
+| --- | --- | --- |
+| `flippin-app` | Expo / React Native | Customers (mobile) |
+| `flippin-rider` | Expo / React Native | Delivery riders |
+| `flippin-store` | Expo / React Native | Store and restaurant owners |
+| `flippin-web` | Next.js, PWA | Customers (website) |
+| `flippin-admin` | Next.js | Super-admin, vendors, stores |
+| `flippin-singlevendor-admin` | Next.js | Single-vendor operators |
 
-[![Static Badge](https://img.shields.io/badge/License-MIT-red)](https://github.com/flippin-sa/flippin/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/stargazers)
-[![Forks](https://img.shields.io/github/forks/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/network/members)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/flippin-official/Flippin-Multivendor-Food-Delivery-Solution)
-[![GitHub contributors](https://img.shields.io/github/contributors/flippin-official/Flippin-Multivendor-Food-Delivery-Solution)](https://github.com/flippin-sa/flippin/graphs/contributors)
-[![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/pulls)
-[![Activity](https://img.shields.io/github/last-commit/flippin-official/Flippin-Multivendor-Food-Delivery-Solution.svg)](https://github.com/flippin-sa/flippin/commits/main)
-[![YouTube Channel](https://img.shields.io/badge/Watch_us-Youtube-red)](https://rms.flippin.pk)
-[![Company Website](https://img.shields.io/badge/Visit_us-Website-blue)](https://rms.flippin.pk)
-[![Closed Issues](https://img.shields.io/github/issues-closed/flippin-official/Flippin-Multivendor-Food-Delivery-Solution?color=success)](https://github.com/flippin-sa/flippin/issues?q=is%3Aissue+is%3Aclosed)
-[![Closed Pull Requests](https://img.shields.io/badge/Closed%20Pull%20Requests-View%20on%20GitHub-blue.svg)](https://github.com/flippin-sa/flippin/pulls?q=is%3Apr+is%3Aclosed)
+## Status
 
-</div>
+Phase 0 (rebrand to Flippin) is done. The backend `flippin-api` (Node, Apollo GraphQL, MongoDB, Redis) is Phase 1 and is not in this repo yet. Apps point at `https://api.rms.flippin.pk/graphql` (staging: `https://api-staging.rms.flippin.pk/graphql`), so they will not load data until it exists.
 
-<div align="center">
+## Getting started
 
-[![Static Badge](https://img.shields.io/badge/facebook-blue?logo=facebook&logoColor=Blue&color=%23fbfbfb)](https://rms.flippin.pk)
-[![Static Badge](https://img.shields.io/badge/Instagram-blue?logo=instagram&logoColor=D815BE&color=%23fcfcfc)](https://rms.flippin.pk)
-[![Static Badge](https://img.shields.io/badge/Twitter-blue?logo=Twitter&logoColor=blue&color=%23fcfcfc)](https://rms.flippin.pk)
-[![Static Badge](https://img.shields.io/badge/LinkedIn-blue?logo=LinkedIn&logoColor=darkblue&color=%23fcfcfc)](https://www.linkedin.com/company/14583783/)
+Requires Node 22+. Run these inside the app folder.
 
-</div>
-
-<div align="center">
-
-  <a href="https://www.youtube.com/watch?v=00voqzkFpHU">
-    <img src="./assets/Multi Service Solution.webp" alt="Demo video" style="border-radius: 6px; width: auto;">
-  </a>
-
-</div>
-
-<br>
-
-The Flippin Delivery Management System is designed for businesses looking to deploy a complete, ready-to-use platform for running their online ordering and delivery operations. Whether it is food or grocery delivery, parcel logistics, home services, flowers, pharmacy orders, or other delivery-based businesses, Flippin can be adapted to your needs.
-Built with ease of use and intuitiveness in mind, the Flippin system supports multiple vendors and multiple service regions. With separate applications for customers, vendors and delivery agents, along with a powerful admin dashboard, Flippin enables you to launch and operate your own end-to-end ordering and delivery ecosystem without building everything from scratch.
-
-The solution is fully open source, but the backend and API are proprietary and can be licensed as part of a paid package.
-
-
-<!-- Add a horizontal rule for separation -->
-<hr/>
-
-## :fast_forward: Quick Links
-
-- [:book: What is included](#heading-1)
-- [:rocket: Features](#heading-2)
-- [:wrench: Setup](#heading-3)
-- [:gear: Prerequisites](#heading-4)
-- [:computer: Technologies](#heading-5)
-- [:camera: Screenshots](#heading-6)
-- [:triangular_ruler: High Level Architecture](#heading-7)
-- [:page_with_curl: Documentation](#heading-8)
-- [:movie_camera: Demo Videos](#heading-14)
-- [:video_game: Demos](#heading-9)
-- [:busts_in_silhouette: Contributors](#heading-10)
-- [:warning: Disclaimer](#heading-12)
-- [:email: Contact Us](#heading-13)
-- [:computer: Project Setup Guide](#heading-15)
-
-<!-- Add a horizontal rule for separation -->
-<hr/>
-
-## :question: What is included: <a id="heading-1"></a>
-
-Flippin provides a complete set of software components, including:
-
-- Flippin Customer App
-- Flippin Rider/Driver App
-- Flippin Vendor/Store App
-- Customer Ordering Website
-- Admin Web Dashboard
-- API Server
-- Analytics Dashboard using Expo Amplitude
-- Error monitoring and reporting with Sentry
-
-## :fire: Features: <a id="heading-2"></a>
-
-- Authentication using Google, Apple, and Facebook
-- Dynamic home sections for highlighting top vendors and services
-- Push notifications and email alerts for account creation, order updates, and delivery progress
-- Real-time tracking of delivery agents and in-app chat
-- Email and phone number verification
-- Location-based vendor discovery on Maps and Home Screen
-- Multi-language support and customizable themes
-- Ratings and reviews for orders and service experiences
-- Vendor/service details including ratings, schedules, delivery timelines, offerings, location, minimum order or service amount, and more
-- Payment integrations including PayPal and Stripe
-- Order and booking history with the ability to favorite vendors
-- Address management with Google Places suggestions and Maps integration
-- Analytics and error reporting with Amplitude and Sentry
-- Support for item/service variations, notes, pickup and delivery modes, and customizable timing options
-
-
-## :repeat_one: Setup: <a id="heading-3"></a>
-
-As we've mentioned above, the solution includes five separate modules. To setup these modules, follow the steps below:
-
-To run the module, you need to have nodejs installed on your machine. Once nodejs is installed, go to the directory and enter the following commands
-
-The required credentials and keys have been set already. You can setup your own keys and credentials
-
-The version of nodejs should be between 18 to 20 (with 16 as minor version and 0 as patch)
-
-[![Guide Badge](https://img.shields.io/badge/Do_with_guided_tutorial-blue?style=for-the-badge&logo=book-reader)](https://rms.flippin.pk/multi-vendor-doc/)
-
-## :information_source: Prerequisites: <a id="heading-4"></a>
-
-App Ids for Mobile App in app.json
-
-- Facebook Scheme
-- Facebook App Id
-- Facebook Display Name
-- iOS Client Id Google
-- Android Id Google
-- Amplitude Api Key
-- server url
-
-Set credentials in API in file helpers/config.js and helpers/credentials.js
-
-- Email User Name
-- Password For Email
-- Mongo User
-- Mongo Password
-- Mongo DB Name
-- Reset Password Link
-- Admin User name
-- Admin Password
-- User Id
-- Name
-
-Set credentials in Admin Dashboard in file src/index.js
-
-- Firebase Api Key
-- Auth Domain
-- Database Url
-- Project Id
-- Storage Buck
-- Messaging Sender Id
-- App Id
-
-NOTE: Email provider has been only been tested for gmail accounts
-
-## :hammer_and_wrench: Technologies: <a id="heading-5"></a>
-
-|                                               Expo                                                |                                                   React-Navigation                                                   |                                                Apollo GraphQL                                                |                                               ReactJS                                                |                                                NodeJS                                                 |                                                 MongoDB                                                 |                                                   Firebase                                                   |
-| :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-| <a href="https://expo.dev/"><img src="./assets/expoicon.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactnavigation.org/"><img src="./assets/react-navigation.png" alt="Flippin Logos" width="100"></a> | <a href="https://www.apollographql.com/"><img src="./assets/apollo.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactjs.org/"><img src="./assets/react-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://nodejs.org/en/"><img src="./assets/node-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://www.mongodb.com/"><img src="./assets/mongoDB.png" alt="Flippin Logos" width="100"></a> | <a href="https://firebase.google.com/"><img src="./assets/firebase.png" alt="Flippin Logos" width="100"></a> |
-
-|                                                 React Native                                                 |                                                       React Router                                                       |                                                GraphQL                                                |                                                ExpressJS                                                 |                                                   React Strap                                                    |                                                Amplitude                                                |
-| :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
-| <a href="https://reactnative.dev/"><img src="./assets/react-native.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactrouter.com/"><img src="./assets/react-router-svgrepo-com.png" alt="Flippin Logos" width="100"></a> | <a href="https://graphql.org/"><img src="./assets/graphQl-1.png" alt="Flippin Logos" width="100"></a> | <a href="https://expressjs.com/"><img src="./assets/express-js.png" alt="Flippin Logos" width="100"></a> | <a href="https://reactstrap.github.io/"><img src="./assets/React-strap.png" alt="Flippin Logos" width="100"></a> | <a href="https://amplitude.com/"><img src="./assets/amplitude.png" alt="Flippin Logos" width="100"></a> |
-
-## :framed_picture: Screenshots: <a id="heading-6"></a>
-
-|          Rider App           |
-| :--------------------------: |
-| ![](./assets/RiderApp.webp) |
-
-|               Store APP               |
-| :----------------------------------------: |
-| ![](./assets/StoreApps.webp) |
-
-|          Customer App           |
-| :-----------------------------: |
-| ![](./assets/CustomerApp.webp) |
-
-|           Customer Web            |
-| :-------------------------------: |
-| ![](./assets/customerWeb.webp) |
-
-|             Dashboard              |
-| :--------------------------------: |
-| ![](./assets/AdminDashboard.webp) |
-
-## :wrench: High Level Architecture: <a id="heading-7"></a>
-
-![](./assets/high-level.webp)
-
-## :book: Documentation <a id="heading-8"></a>
-
-Find the link for the complete documentation of the Flippin Solution [here](https://rms.flippin.pk/multivendor-documentation/).
-
-## :tv: Demo Videos: <a id="heading-14"></a>
-
-|                                               Admin Dashboard Demo                                               |                                                 Mobile App Demo                                                  |
-| :--------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-| <a href="https://www.youtube.com/watch?v=18d_POMa8B4"><img src="./assets/1111.webp" width="200" alt="Video"></a> | <a href="https://www.youtube.com/watch?v=ZOBW4kdCsD4"><img src="./assets/1111.webp" width="200" alt="Video"></a> |
-
-## :iphone: Demos: <a id="heading-9"></a>
-
-|                                                                                                                                               Customer App                                                                                                                                                |                                                                                                                                                   Rider App                                                                                                                                                    |                                                                                                                                                       Store App                                                                                                                                                        |                                                   Customer Web                                                   |                                                    Admin Dashboard                                                     |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
-|                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                           |                                                                                          <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Rider-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                          |                                                                                            <a href="#heading-9" style="pointer-events: none;"><img src="./assets/Store-app-logo.png" alt="Flippin Logos" width="180"></a>                                                                                            | <a href="http://rms.flippin.pk/"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a> | <a href="http://multivendor-admin.rms.flippin.pk/"><img src="./assets/customer-app-logo.png" alt="Flippin Logos" width="180"></a> |
-| <a href="https://play.google.com/store/apps/details?id=pk.flippin.customer"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=pk.flippin.rider"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> | <a href="https://play.google.com/store/apps/details?id=pk.flippin.store"><img src="./assets/android_518705.png" alt="Android Logo" width="25"></a> <a href="https://rms.flippin.pk/download"><img src="./assets/social_10096939.png" alt="iOS Logo" width="25"></a> |
-
-## :people_holding_hands: Contributors: <a id="heading-10"></a>
-
-<div align="center">
-<br>
-<a href="https://github.com/flippin-sa/flippin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=flippin-official/Flippin-Multivendor-Food-Delivery-Solution" style="max-width: 50%; height: auto;" />
-</a>
-</div>
-
-## :warning: Disclaimer: <a id="heading-12"></a>
-
-The frontend source code for our solution is completely open source. However, the API and backend is proprietary and can be accessed via a paid license. For further information, contact us on the channels provided below.
-
-## :mailbox_with_mail: Contact Us: <a id="heading-13"></a>
-
-[Check out the Product Page and Pricing and more for Flippin Food Delivery Solution](https://rms.flippin.pk/?utm_source=github&utm_medium=referral&utm_campaign=github_guide&utm_id=12345678)
-
-## :computer: Project Setup Guide <a id="heading-15"></a>
-
-This section provides detailed instructions for setting up and running each component of the Flippin Food Delivery Solution.
-
-### Quick Run Matrix
-
-| Module | Development | Production |
-| :--- | :--- | :--- |
-| API | `cd ../flippin-multivendor-api && npm install && npm run start:dev` | `cd ../flippin-multivendor-api && npm install && npm start` |
-| Admin | `cd flippin-admin && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd flippin-admin && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
-| Web | `cd flippin-web && nvm use && npm install && cp .env.example .env.local && npm run dev` | `cd flippin-web && nvm use && npm install && cp .env.example .env.local && npm run build && npm run start` |
-| Customer App | `cd flippin-app && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-app && nvm use && npm install && npm run build:production` |
-| Store App | `cd flippin-store && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-store && nvm use && npm install && eas build --profile production -p all` |
-| Rider App | `cd flippin-rider && nvm use && npm install && npm run ios` or `npm run android` | `cd flippin-rider && nvm use && npm install && eas build --profile production -p all` |
-
-### Recommended local full-stack order
-
-1. Start the API from `../flippin-multivendor-api`
-2. Start `flippin-admin` or `flippin-web`
-3. Start the mobile app you need from `flippin-app`, `flippin-store`, or `flippin-rider`
-
-### Flippin Admin Dashboard (Next.js)
-
-The admin dashboard allows you to manage restaurants, orders, riders, and more.
+Web apps (`flippin-web`, `flippin-admin`, `flippin-singlevendor-admin`):
 
 ```bash
-# Navigate to the admin dashboard directory
-cd flippin-admin
-
-# Install dependencies
-npm install
-
-# Start the development server
+npm ci
+cp .env.example .env.local   # fill in the six NEXT_PUBLIC_FIREBASE_* values
 npm run dev
 ```
 
-After running these commands, open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the admin dashboard. You can also CTRL+click on the localhost link that appears in your terminal.
+The six Firebase values are `NEXT_PUBLIC_FIREBASE_API_KEY`, `_AUTH_DOMAIN`, `_PROJECT_ID`, `_STORAGE_BUCKET`, `_MESSAGING_SENDER_ID`, and `_APP_ID`. The `predev` and `prebuild` scripts use them to generate the Firebase service worker.
 
-### Flippin Customer Web (React.js)
-
-The customer web application allows users to browse restaurants and place orders through a web browser.
+Mobile apps (`flippin-app`, `flippin-rider`, `flippin-store`):
 
 ```bash
-# Navigate to the customer web directory
-cd flippin-web
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
+npm ci
+npx expo start
 ```
 
-After running these commands, the application will be available at [http://localhost:3000](http://localhost:3000) in your web browser.
+Firebase config files come from EAS file environment variables `GOOGLE_SERVICES_JSON` and `GOOGLE_SERVICE_INFO_PLIST`.
 
-### Flippin Customer App (React Native)
+## Vendor mode
 
-The customer mobile application allows users to browse restaurants and place orders on their mobile devices.
+The apps support `SINGLE`, `MULTI`, and `TOGGLE` vendor modes via `EXPO_PUBLIC_VENDOR_MODE` (mobile) and `NEXT_PUBLIC_VENDOR_MODE` (web). See [VENDOR_MODE_CONFIGURATION.md](VENDOR_MODE_CONFIGURATION.md).
+
+## Brand guard
+
+A script keeps stale names out of the codebase:
 
 ```bash
-# Navigate to the customer app directory
-cd flippin-app
-
-# Install dependencies
-npm install
-
-# Start the Expo development server
-npx expo start -c
-# OR
-npm start -c
+npm run brand:check    # fails on forbidden legacy names
+npm run test:scripts   # tests for the brand and Firebase service-worker scripts
 ```
 
-#### Testing on a Physical Device with Expo Go
+Brand colours: Neon Green `#00FD54`, Midnight Forest `#001B0A`, Frosted White `#FFFFFF`, link green `#007A29`. Fonts: Satoshi (Latin) and IBM Plex Sans Arabic.
 
-1. Press `s` in the terminal to switch to Expo Go mode
-2. Scan the QR code displayed in the terminal:
-   - Android: Open the Expo Go app and scan the QR code
-   - iOS: Use the device's camera app to scan the QR code
+## Docs
 
-### Flippin Rider App (React Native)
+- [Product requirements](docs/flippin/01-PRD.md)
+- [Features](docs/flippin/02-FEATURES.md)
+- [Flows](docs/flippin/03-FLOWS.md)
+- [Plan](docs/flippin/04-PLAN.md)
 
-The rider app allows delivery personnel to manage and complete deliveries.
+## Credits
 
-```bash
-# Navigate to the rider app directory
-cd flippin-rider
+Flippin includes software originally developed by Ninjas Code under the MIT License. See [NOTICE.md](NOTICE.md).
 
-# Install dependencies
-npm install
+## License
 
-# Start the Expo development server
-npx expo start -c
-# OR
-npm start -c
-```
-
-#### Testing on a Physical Device with Expo Go
-
-1. Press `s` in the terminal to switch to Expo Go mode
-2. Scan the QR code displayed in the terminal:
-   - Android: Open the Expo Go app and scan the QR code
-   - iOS: Use the device's camera app to scan the QR code
-
-### Flippin Restaurant App (React Native)
-
-The restaurant app allows restaurant owners to manage orders and their menu.
-
-```bash
-# Navigate to the restaurant app directory
-cd flippin-multivendor-restaurant
-
-# Install dependencies
-npm install
-
-# Start the Expo development server
-npx expo start -c
-# OR
-npm start -c
-```
-
-#### Testing on a Physical Device with Expo Go
-
-1. Press `s` in the terminal to switch to Expo Go mode
-2. Scan the QR code displayed in the terminal:
-   - Android: Open the Expo Go app and scan the QR code
-   - iOS: Use the device's camera app to scan the QR code
-
-### Building Development Versions
-
-For all mobile apps (Customer, Rider, and Restaurant), you can create development builds using EAS Build.
-
-#### Configure EAS Build
-
-```bash
-# From the app directory (customer, rider, or restaurant)
-eas build:configure
-```
-
-Select your desired platform:
-- android
-- ios
-- all
-
-#### Build for Android
-
-```bash
-eas build --platform android --profile development
-```
-
-This will create an APK file that you can install directly on your Android device.
-
-#### Build for iOS
-
-```bash
-eas build --platform ios --profile development
-```
-
-For iOS simulator builds, modify the `eas.json` file to include:
-
-```json
-"development": {
-  "developmentClient": true,
-  "distribution": "internal",
-  "channel": "development",
-  "ios": {
-    "simulator": true
-  },
-  "android": {
-    "buildType": "apk"
-  }
-}
-```
-
-Then run:
-
-```bash
-eas build --platform ios --profile development
-```
+MIT. See [LICENSE](LICENSE).

@@ -1,51 +1,24 @@
-# Flippin Admin Dashboard
+# Flippin Admin
 
-## Requirements
+The Flippin admin dashboard (Next.js) for super-admins, vendors, and stores in multivendor mode.
 
-- Node `v20.16.0`
-- npm `>=10`
+Part of the Flippin monorepo. See the [root README](../README.md) for the overview, status, and brand guard.
 
-## Development
+## Setup
+
+Requires Node 22+.
 
 ```bash
-nvm use
-npm install
-cp .env.example .env.local
+npm ci
+cp .env.example .env.local   # fill in the six NEXT_PUBLIC_FIREBASE_* values
 npm run dev
 ```
 
-The app runs on `http://localhost:3000`.
+## Environment
 
-## Production
+Copy `.env.example` to `.env.local` and set the six Firebase values (`NEXT_PUBLIC_FIREBASE_API_KEY`, `_AUTH_DOMAIN`, `_PROJECT_ID`, `_STORAGE_BUCKET`, `_MESSAGING_SENDER_ID`, `_APP_ID`) plus the API and vendor mode settings listed there. `predev` and `prebuild` generate the Firebase service worker from them.
 
-```bash
-nvm use
-npm install
-cp .env.example .env.local
-npm run build
-npm run start
-```
+## Scripts
 
-The production server also uses port `3000` unless `PORT` is overridden.
-
-## Backend selection
-
-This module supports two setup styles:
-
-- Local backend: keep `.env.local` pointed at `http://localhost:8001/`
-- Hosted backend: replace the values in `.env.local` with a hosted `https://` API URL and matching `wss://` websocket URL
-
-## Admin application link
-
-Set `NEXT_PUBLIC_SINGLE_VENDOR_ADMIN_URL` in `.env.local` to the deployed Single-vendor Admin URL. The header link defaults to `https://store-admin.rms.flippin.pk/` when the variable is not configured.
-
-## Google Maps
-
-- Set `GOOGLE_MAPS_API_KEY` in `.env.local` for the browser Google Maps SDK
-- Reverse geocoding is proxied through the API at `/maps/reverse-geocode`
-- Google OAuth client IDs still come from backend configuration
-
-## Notes
-
-- The committed `.env.example` is set up for the local API in this repo
-- Use `wss://` when the API is served over `https://`
+- `npm run dev` starts the dev server.
+- `npm run build` then `npm start` runs a production build.

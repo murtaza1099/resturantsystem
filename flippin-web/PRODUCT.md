@@ -8,17 +8,17 @@ web
 
 ## Users
 
-Flippin serves people ordering food, groceries, and other local goods for delivery or pickup. They typically arrive with a location and an immediate need to discover what is available, compare options, place an order, and track it. The same customer website can operate as a neighborhood multivendor marketplace or as a focused single-vendor storefront.
+Flippin launches in Saudi Arabia and serves people ordering food, groceries, medicine, and other local goods for delivery or pickup. Restaurants are the hero category; grocery, pharmacy, and shops sit alongside. Customers typically arrive with a location and an immediate need to discover what is available, compare options, place an order, and track it. The experience is Arabic-first (RTL) with full English support, priced in SAR with 15% VAT. The same customer website can operate as a neighborhood multivendor marketplace or as a focused single-vendor storefront.
 
 Secondary audiences use the public marketing surfaces to evaluate becoming a restaurant, store, or rider partner.
 
 ## Product Purpose
 
-Turn a customer's location into an actionable local marketplace, carry them from discovery through checkout and tracking, and support the complete account and post-purchase journey. Success means customers can quickly understand what is available, trust the ordering information, and complete an order without mode or navigation confusion.
+Turn a customer's location into an actionable local marketplace, carry them from discovery through checkout and tracking, and support the complete account and post-purchase journey. Success means customers can quickly understand what is available, trust the ordering information, and complete an order without mode or navigation confusion. Payments are planned via Moyasar (mada, Apple Pay, STC Pay) alongside cash on delivery; Stripe is being replaced.
 
 ## Positioning
 
-Flippin provides one adaptable customer experience for two distinct operating models: a multivendor neighborhood marketplace spanning restaurants and stores, and a single-vendor catalog with deals, categories, and direct ordering. Mode-specific carts and active orders remain isolated while customers can move safely between services.
+Flippin provides one adaptable customer experience for two operating models: a multivendor neighborhood marketplace spanning restaurants, grocery, pharmacy, and shops in Saudi Arabia, and a single-vendor catalog with deals, categories, and direct ordering. Mode-specific carts and active orders remain isolated while customers can move safely between services.
 
 ## Operating Context
 
@@ -26,7 +26,7 @@ Customers browse by current or saved delivery address, search nearby vendors or 
 
 ## Capabilities and Constraints
 
-- Next.js App Router, React, Tailwind CSS, PrimeReact, Apollo GraphQL, next-intl, Google Maps, Stripe, Firebase, and PWA/service-worker integration are established constraints.
+- Next.js App Router, React, Tailwind CSS, PrimeReact, Apollo GraphQL, next-intl, Google Maps, Stripe (to be replaced by Moyasar), Firebase, and PWA/service-worker integration are established constraints.
 - Preserve existing GraphQL contracts, route compatibility, authentication, payment, cart, order, tracking, localization, and business behavior unless a change is explicitly part of the redesign.
 - Multivendor `/` is an ordering-first marketplace entry page.
 - Single-vendor `/` resolves to `/discovery`, which is its default home surface.
@@ -37,15 +37,15 @@ Customers browse by current or saved delivery address, search nearby vendors or 
 ## Brand Commitments
 
 - Preserve the Flippin name and existing logo.
-- Preserve the current primary green family: `#75D04B` primary, `#F3FFEE` light, `#5AC12F` dark, plus the established hover, pressed, focus, and disabled states.
-- The shipped visual direction is **Quiet Orbit**: an elegant pure-white multivendor landing canvas with precise Inter typography, restrained Cormorant Garamond italic accents, brand-green route geometry, pale-sage grounding fields, and address-first interaction.
+- Use the Flippin brand palette: Neon Green `#00FD54` primary, Midnight Forest `#001B0A` ink, Frosted White `#FFFFFF`, `#007A29` for links and dark green, `#E6FFEE` light tint, plus hover `#00E64C`, pressed `#00D447`, and disabled `#99FEBB` states.
+- The shipped visual direction is **Flippin**: an elegant pure-white multivendor landing canvas with precise Satoshi (Latin) and IBM Plex Sans Arabic typography, brand-green route geometry, pale-sage grounding fields, and address-first interaction.
 - The result must avoid generic AI/SaaS styling, interchangeable food-delivery templates, gratuitous glass effects, excessive rounded cards, decorative gradients, and ungrounded marketing copy.
 - New surface development is comp-first: high-fidelity desktop and mobile compositions are approved before production UI code.
 - The approved multivendor root composition uses one city gateway with a green landing action, an isolated food-grocery-essentials product orbit with autonomous oval route markers, the restored More than delivery customer-business-rider strip, a low-amplitude Choose–Moving–Arrived scroll journey, and a final branch to restaurant or rider partnership. It intentionally sends marketplace listings to discovery instead of duplicating them on `/`.
 
 ## Evidence on Hand
 
-- Existing logos and product imagery live under `public/assets/` and `lib/assets/`; the regenerated Quiet Orbit still lifes, per-asset generation metadata, and aggregate provenance live under `public/assets/images/landing/quiet-orbit/`. Their transparent alpha was validated before the final WebP encoding.
+- Existing logos and product imagery live under `public/assets/` and `lib/assets/`; the regenerated landing still lifes, per-asset generation metadata, and aggregate provenance live under `public/assets/images/landing/quiet-orbit/`. Their transparent alpha was validated before the final WebP encoding.
 - Real vendor, product, category, banner, rating, delivery, and order data is supplied by the existing GraphQL APIs.
 - The current implementation demonstrates the complete route set and product behavior but is visual evidence and an anti-reference rather than authority for the replacement design.
 - Existing promotional percentage, zero-fee, and superlative claims require product-owner verification before reuse.

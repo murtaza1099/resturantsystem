@@ -13,7 +13,7 @@ The following versions of the Flippin Food Delivery System are currently support
 
 If you discover a security vulnerability, please follow the steps below to report it:
 
-1. **Contact Us**: Report the vulnerability by emailing our security team at [sales@rms.flippin.pk](mailto:sales@rms.flippin.pk). Please provide as much information as possible, including:
+1. **Contact Us**: Report the vulnerability by emailing our security team at [security@rms.flippin.pk](mailto:security@rms.flippin.pk). Please provide as much information as possible, including:
     - A detailed description of the vulnerability.
     - Steps to reproduce the vulnerability.
     - Any potential impact of the vulnerability.
@@ -29,4 +29,4 @@ If you discover a security vulnerability, please follow the steps below to repor
 
 Thank you for helping us keep the Flippin Food Delivery System secure.
 
-For any other security-related questions or concerns, please contact us at [sales@rms.flippin.pk](mailto:sales@rms.flippin.pk).
+For any other security-related questions or concerns, please contact us at [security@rms.flippin.pk](mailto:security@rms.flippin.pk).
