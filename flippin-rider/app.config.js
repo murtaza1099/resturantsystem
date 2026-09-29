@@ -98,7 +98,7 @@ module.exports = {
     },
     android: {
       versionCode: 96,
-      googleServicesFile: './google-services.json',
+      googleServicesFile: process.env.GOOGLE_SERVICES_JSON ?? './google-services.json',
       config: {
         googleMaps: {
           ...(androidGoogleMapsApiKey ? { apiKey: androidGoogleMapsApiKey } : {})

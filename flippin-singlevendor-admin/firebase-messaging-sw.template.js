@@ -6,15 +6,7 @@ importScripts(
   'https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging-compat.js'
 );
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyDx_iSQ9LroTF7NMm20aRvw2wJqhwSnJ3U',
-  authDomain: 'flippin-multivender-web.firebaseapp.com',
-  projectId: 'flippin-multivender-web',
-  storageBucket: 'flippin-multivender-web.firebasestorage.app',
-  messagingSenderId: '438532750182',
-  appId: '1:438532750182:web:516b850eff4e0349f0a6a7',
-  measurementId: 'G-KLBJSEHRYQ',
-});
+firebase.initializeApp(__FIREBASE_CONFIG__);
 
 const messaging = firebase.messaging();
 

@@ -8,7 +8,9 @@
     "yarn": "Please use npm instead."
   },
   "scripts": {
+    "predev": "node ../scripts/firebase-sw/write-sw.mjs serviceWorker.template.js public/serviceWorker.js",
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev --webpack",
+    "prebuild": "node ../scripts/firebase-sw/write-sw.mjs serviceWorker.template.js public/serviceWorker.js",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",

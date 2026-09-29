@@ -6,7 +6,8 @@ import * as Sentry from "@sentry/react-native";
 // from __DEV__, which mirrors environment.ts's own dev/prod split.
 export const initSentry = () => {
   Sentry.init({
-    dsn: "https://9303b1d33deae903abe4e00ea9f25467@o4507787652694016.ingest.us.sentry.io/4508759522017280",
+    dsn: process.env.EXPO_PUBLIC_SENTRY_DSN,
+    enabled: Boolean(process.env.EXPO_PUBLIC_SENTRY_DSN),
     // Tag events by build so production crashes aren't mis-triaged as "development".
     environment: __DEV__ ? "development" : "production",
     debug: false,

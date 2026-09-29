@@ -56,7 +56,7 @@ module.exports = () => {
       bundleIdentifier: 'pk.flippin.customer',
       buildNumber: '143',
       icon: './assets/icon.png',
-      googleServicesFile: './GoogleService-Info.plist',
+      googleServicesFile: process.env.GOOGLE_SERVICE_INFO_PLIST ?? './GoogleService-Info.plist',
       infoPlist: {
         NSSupportsLiveActivities: true,
         NSCameraUsageDescription:
@@ -94,7 +94,7 @@ module.exports = () => {
       // Disable ADB/cloud backups so the AsyncStorage DB (JWT) can't be pulled
       // off a connected device without root (SEC-002).
       allowBackup: false,
-      googleServicesFile: './google-services.json',
+      googleServicesFile: process.env.GOOGLE_SERVICES_JSON ?? './google-services.json',
       config: {
         ...(androidGoogleMapsApiKey
           ? {

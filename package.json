@@ -7,6 +7,6 @@
     "brand:check": "node scripts/brand/check.mjs .",
     "brand:rebrand": "node scripts/brand/rebrand.mjs .",
     "brand:recolor": "node scripts/brand/recolor.mjs .",
-    "test:scripts": "node --test scripts/brand/*.test.mjs"
+    "test:scripts": "node --test scripts/brand/*.test.mjs scripts/firebase-sw/*.test.mjs"
   }
 }

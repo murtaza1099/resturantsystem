@@ -13,15 +13,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 
 
 // ✅ Firebase Config
-firebase.initializeApp({
-  apiKey: "AIzaSyDx_iSQ9LroTF7NMm20aRvw2wJqhwSnJ3U",
-  authDomain: "flippin-multivender-web.firebaseapp.com",
-  projectId: "flippin-multivender-web",
-  storageBucket: "flippin-multivender-web.appspot.com",
-  messagingSenderId: "438532750182",
-  appId: "1:438532750182:web:516b850eff4e0349f0a6a7",
-  measurementId: 'G-KLBJSEHRYQ',
-});
+firebase.initializeApp(__FIREBASE_CONFIG__);
 
 // ✅ Get messaging instance
 const messaging = firebase.messaging();

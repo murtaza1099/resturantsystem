@@ -73,3 +73,11 @@ flippin-app/.env
 goodbite-multivendor-app
 **/*service-account*.json
 **/serviceAccountKey*.json
+
+# Firebase native configs: provided via EAS file env vars
+google-services.json
+GoogleService-Info.plist
+# Generated service workers
+flippin-web/public/sw.js
+flippin-web/public/serviceWorker.js
+flippin-*/public/firebase-messaging-sw.js

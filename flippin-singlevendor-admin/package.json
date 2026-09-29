@@ -8,7 +8,9 @@
     "yarn": "Please use npm instead."
   },
   "scripts": {
+    "predev": "node ../scripts/firebase-sw/write-sw.mjs firebase-messaging-sw.template.js public/firebase-messaging-sw.js",
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "prebuild": "node ../scripts/firebase-sw/write-sw.mjs firebase-messaging-sw.template.js public/firebase-messaging-sw.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
