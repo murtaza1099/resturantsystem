@@ -31,7 +31,7 @@ export default function OTPVerificationMain() {
             </div>
 
             <CustomButton
-              className="h-12 w-full border-primary-color bg-primary-color text-white hover:bg-white hover:text-primary-color"
+              className="h-12 w-full border-primary-color bg-primary-color text-on-primary hover:bg-white hover:text-brand-link"
               label="Continue"
               rounded={true}
             />

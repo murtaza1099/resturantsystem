@@ -275,7 +275,7 @@ body {
 
 .p-multiselect-token {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--on-primary);
   /* optional: change the text color to white for better contrast */
 }
 
@@ -355,7 +355,7 @@ body {
 .dark .p-multiselect-header .p-checkbox-box.p-highlight {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
-  color: #ffffff !important;
+  color: var(--on-primary) !important;
 }
 
 .dark .p-multiselect-item .p-checkbox-box svg,
@@ -917,6 +917,7 @@ body {
 .p-stepper-number {
   font-size: 16px;
   background-color: var(--primary-color);
+  color: var(--on-primary);
 }
 
 /* Sidebar */
@@ -1457,4 +1458,9 @@ body {
 
 .p-paginator .p-dropdown-item {
   @apply dark:text-white dark:hover:bg-gray-700;
+}
+
+/* Neon Green text is AA on dark surfaces */
+.dark {
+  --brand-link: #00fd54;
 }

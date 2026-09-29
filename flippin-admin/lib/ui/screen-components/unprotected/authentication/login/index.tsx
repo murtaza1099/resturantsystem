@@ -45,14 +45,14 @@ export default function LoginMain() {
 
             <div className="flex flex-col items-center justify-center gap-2">
               <CustomButton
-                className="border-gray-30 h-12 w-full border bg-primary-color text-white hover:bg-gray-100 hover:text-black"
+                className="border-gray-30 h-12 w-full border bg-primary-color text-on-primary hover:bg-gray-100 hover:text-black"
                 label="Login"
                 rounded={true}
                 onClick={() => router.push('/authentication/login')}
               />
 
               <CustomButton
-                className="border-gray-30 h-12 w-full border bg-secondary-color text-white hover:bg-gray-100 hover:text-black"
+                className="border-gray-30 h-12 w-full border bg-secondary-color text-on-primary hover:bg-gray-100 hover:text-black"
                 label="Sign up"
                 rounded={true}
                 onClick={() => router.push('/authentication/sign-up')}

@@ -252,7 +252,7 @@ const AppTopbar = () => {
             title={t('Zone')}
             className={
               pathname === '/zone'
-                ? 'rounded bg-primary-color text-white'
+                ? 'rounded bg-primary-color text-on-primary'
                 : 'bg-transparent hover:rounded hover:bg-secondary-color dark:hover:text-black '
             }
             iconStyles={{
@@ -267,7 +267,7 @@ const AppTopbar = () => {
             title={t('Dispatch')}
             className={
               pathname === '/dispatch'
-                ? 'rounded bg-primary-color text-white'
+                ? 'rounded bg-primary-color text-on-primary'
                 : 'bg-transparent hover:rounded hover:bg-secondary-color dark:hover:text-black'
             }
             iconStyles={{

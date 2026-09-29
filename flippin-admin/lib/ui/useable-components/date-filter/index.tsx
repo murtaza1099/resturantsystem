@@ -34,7 +34,7 @@ export default function DashboardDateFilter({
   return (
     <div className="flex items-center justify-center p-3">
       <div className="w-full rounded-lg bg-white dark:bg-dark-900 shadow-lg">
-        <div className="rounded-t-lg bg-primary-color py-2 text-center text-white">
+        <div className="rounded-t-lg bg-primary-color py-2 text-center text-on-primary">
           <h2 className="text-lg font-semibold">{t('Graph Filter')}</h2>
         </div>
         <div className="flex flex-col items-center justify-between space-y-4 p-4 md:flex-row md:space-x-4 md:space-y-0">

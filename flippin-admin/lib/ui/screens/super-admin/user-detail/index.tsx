@@ -223,8 +223,8 @@ const UserDetailScreen: React.FC<UserDetailScreenProps> = ({ userId }) => {
           flex-1 text-center rounded-none
           ${
             selected
-              ? 'border-b-2 border-primary-color text-primary-color dark:bg-dark-900'
-              : 'text-gray-600 hover:text-primary-color dark:bg-dark-900 dark:text-dark-600'
+              ? 'border-b-2 border-primary-color text-brand-link dark:bg-dark-900'
+              : 'text-gray-600 hover:text-brand-link dark:bg-dark-900 dark:text-dark-600'
           }
           p-4 font-semibold cursor-pointer transition-colors duration-200
         `}

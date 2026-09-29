@@ -126,7 +126,7 @@ export default function TemplateDemo() {
         >
           <FontAwesomeIcon
             icon={faLocationCrosshairs}
-            className="text-primary-color"
+            className="text-brand-link"
             size="lg"
           />
         </button>
