@@ -4,7 +4,7 @@ const saveToLocalStorage = (key: string, data: string) => {
     try {
       modeStorage.set(key, data);
       return key;
-    } catch (err) {
+    } catch {
       return '';
     }
   };
@@ -12,7 +12,7 @@ const saveToLocalStorage = (key: string, data: string) => {
   const getFromLocalStorage = (key: string) => {
     try {
       return modeStorage.get(key);
-    } catch (err) {
+    } catch {
       return '';
     }
   };
@@ -21,7 +21,7 @@ const saveToLocalStorage = (key: string, data: string) => {
     try {
       modeStorage.remove(key);
       return key;
-    } catch (err) {
+    } catch {
       return '';
     }
   };

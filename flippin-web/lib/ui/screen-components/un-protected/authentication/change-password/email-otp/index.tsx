@@ -125,7 +125,7 @@ const VerificationEmailForChangePassword = ({
         } else {
           handleSubmitAfterVerification();
         }
-      } catch (error) {
+      } catch {
         showToast({
           type: "error",
           title: t("toast_error"),

@@ -148,7 +148,7 @@ export const formatDateForCreatedAt = (timestamp: string) => {
     const diffYears = Math.floor(diffDays / 365);
     if (diffYears === 1) return "1 Year ago";
     return `${diffYears} Years ago`;
-  } catch (error) {
+  } catch {
     return "Unknown date";
   }
 };

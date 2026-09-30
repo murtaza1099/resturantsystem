@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { pathToFileURL } from 'node:url'
 
 export const REQUIRED_KEYS = [
@@ -21,6 +21,10 @@ export function renderServiceWorker(template, env) {
 // Usage: node write-sw.mjs <template> <output>
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const [template, output] = process.argv.slice(2)
+  // Match Next.js: read the app's env files (real env vars still take precedence).
+  for (const file of ['.env.local', '.env']) {
+    if (existsSync(file)) process.loadEnvFile(file)
+  }
   writeFileSync(output, renderServiceWorker(readFileSync(template, 'utf8'), process.env))
   console.log(`wrote ${output}`)
 }

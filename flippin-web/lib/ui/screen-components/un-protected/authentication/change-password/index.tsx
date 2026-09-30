@@ -37,7 +37,7 @@ export default function ChangePassword({
         '',
         setFormData
       );
-    } catch (error) {
+    } catch {
       showToast({
         type: "error",
         title: t("update_phone_name_update_error_title"),

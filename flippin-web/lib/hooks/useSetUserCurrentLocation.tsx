@@ -96,7 +96,7 @@ export default function useSetUserCurrentLocation() {
           deliveryAddress: address,
         });
       }
-    } catch (fetchError) {
+    } catch {
       setIsLocationFetching(false);
       console.error("Error fetching address using Google Maps API");
     }

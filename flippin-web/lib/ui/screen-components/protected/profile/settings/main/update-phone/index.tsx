@@ -104,7 +104,7 @@ export default function UpdatePhoneModal({
     }
     // If phoneExists is true, just return and don't proceed further
     
-  } catch (error) {
+  } catch {
     showToast({
       type: "error",
       title: t("update_phone_name_update_error_title"),

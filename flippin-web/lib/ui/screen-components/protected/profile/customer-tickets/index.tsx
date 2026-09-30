@@ -86,7 +86,7 @@ export default function CustomerTicketsMain() {
         month: 'short', 
         day: 'numeric' 
       });
-    } catch (error) {
+    } catch {
       return "unknown date";
     }
   };

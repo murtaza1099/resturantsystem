@@ -125,7 +125,7 @@ const pollingIntervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
       const date = new Date(parseInt(timestamp));
       return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + 
         ' ' + date.toLocaleDateString();
-    } catch (error) {
+    } catch {
       return "unknown time";
     }
   };

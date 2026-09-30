@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { execSync } = require('child_process');
 
 const commitMsg = execSync('cat .git/COMMIT_EDITMSG').toString().trim();
@@ -21,7 +20,7 @@ const [, , , version] = commitMsg
 let lastCommitMsg: string | undefined;
 try {
   lastCommitMsg = execSync('git log -1 --pretty=%B').toString().trim();
-} catch (error) {
+} catch {
   console.error('Failed to get last commit message');
   process.exit(1);
 }

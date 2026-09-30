@@ -267,7 +267,7 @@ export default function OrderCheckoutScreen() {
             setCoupon(parsedCoupon);
             setCouponText(savedCouponText);
             setIsCouponApplied(true);
-          } catch (error) {
+          } catch {
             // Clear invalid data
             onUseLocalStorage("delete", COUPON_STORAGE_KEY);
             onUseLocalStorage("delete", COUPON_TEXT_STORAGE_KEY);
@@ -453,7 +453,7 @@ export default function OrderCheckoutScreen() {
         setDirections(null);
       }
       setIsCheckingCache(false); // done checking
-    } catch (err) {
+    } catch {
       setDirections(null);
       setIsCheckingCache(false);
     }
@@ -794,7 +794,7 @@ export default function OrderCheckoutScreen() {
           `stripe/create-checkout-session?id=${data?.placeOrder?.orderId}&platform=web`,
           SERVER_URL,
         ).toString();
-      } catch (error) {
+      } catch {
         showToast({
           title: "Checkout Configuration Error",
           message: "Unable to start Stripe checkout. Please contact support.",

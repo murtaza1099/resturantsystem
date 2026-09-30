@@ -1,6 +1,5 @@
 import { useRef, useCallback } from "react";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 const useDebounceFunction = <T extends (...args: any[]) => void>(callback: T, delay: number) => {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 

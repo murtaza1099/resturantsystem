@@ -1,7 +1,10 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
-const production = process.env.NODE_ENV === 'production';
+// `next lint` also loads this config as a production build; skip the URL guard there.
+const production =
+  process.env.NODE_ENV === 'production' &&
+  process.env.npm_lifecycle_event !== 'lint';
 
 const backendImagePattern = (() => {
   try {
